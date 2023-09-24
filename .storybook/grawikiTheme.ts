@@ -7,7 +7,7 @@ export const GrawikiTheme = create({
 
   brandTitle: "Grawiki",
   brandUrl: "",
-  brandImage: "../src/stories/assets/gwklogowhite.svg",
+  brandImage: "../gwklogowhite.svg",
   brandTarget: "_self",
 
   //
