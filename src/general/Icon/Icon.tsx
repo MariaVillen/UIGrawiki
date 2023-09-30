@@ -1,4 +1,5 @@
 import { ComponentType, HTMLAttributes } from "react";
+import { cn } from "../../utils/partiallyApply/cn-utility-function";
 
 export type iconProps = {
   alt?: string;
@@ -15,7 +16,9 @@ const Icon = ({ alt, elementSrc, className, round, ...rest }: iconProps) => {
   }
 
   if (typeof elementSrc === "string") {
-    return <img src={elementSrc} alt={alt} {...rest} className={classNames} />;
+    return (
+      <img src={elementSrc} alt={alt} {...rest} className={cn(classNames)} />
+    );
   } else {
     const Component = elementSrc as ComponentType<
       Omit<iconProps, "elementSrc">

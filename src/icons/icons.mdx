@@ -1,6 +1,7 @@
 import { Meta, IconGallery, IconItem } from "@storybook/blocks";
 import * as Icons from "../icons";
-import { CodeToClipboard, Icon, CloseRoundedFill } from "..";
+import { CodeToClipboard, CloseRoundedFill as Close } from "..";
+import MyIcon from "../general/Icon/Icon.tsx";
 
 <Meta title="Foundation/icons" />
 <h3> Icons </h3>
@@ -12,9 +13,9 @@ Icon Component allows you to use a react component or an image as an icon.
 Exemple:
 
 <div className="gwk-p-6">
-  <Icon
+  <MyIcon
     alt="Close this modal"
-    elementSrc={CloseRoundedFill}
+    elementSrc={Close}
     className="gwk-text-white gwk-h-8 gwk-w-8 gwk-rounded-full gwk-bg-black"
   />
 </div>
@@ -27,7 +28,11 @@ Exemple:
 You can also use un image instead. You need to use the url or path to the image:
 
 <div className="gwk-p-6">
-  <Icon alt="GrawikiLogo" elementSrc="/vite.svg" className="gwk-h-8 gwk-w-8" />
+  <MyIcon
+    alt="GrawikiLogo"
+    elementSrc="/vite.svg"
+    className="gwk-h-8 gwk-w-8"
+  />
 </div>
 <CodeToClipboard
   code={`<Icon alt="GrawikiLogo" elementSrc="../../public/vite.svg" className="gwk-h-8 gwk-w-8" />`}
