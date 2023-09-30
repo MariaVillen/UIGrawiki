@@ -5,20 +5,31 @@
 
 @layer base {
   :root {
-    --color-primary: 0, 102, 255;
-    --color-primary-hover: 6, 54, 127;
-    --color-primary-dark: 1, 25, 61;
-    --color-positive: 11, 140, 9;
-    --color-positive-hover: 3, 158, 0;
-    --color-negative: 216, 75, 75;
-    --color-negative-hover: 187, 37, 37;
-    --color-negative-pressed: 146, 3, 3;
-    --color-warning: 223, 227, 12;
-    --color-warning-hover: 149, 152, 28;
-    --color-triarty: 255, 255, 255;
-    --color-triarty-hover: 228, 228, 228;
-    --color-triarty-disable: 171, 171, 171;
+    /* colors */
+    --color-blue-ligth: 0, 102, 255;
+    --color-blue: 6, 54, 125;
+    --color-blue-dark: 1, 25, 61;
+    --color-green: 11, 140, 9;
+    --color-green-light: 3, 158, 0;
+    --color-red-light: 216, 75, 75;
+    --color-red: 187, 37, 37;
+    --color-red-dark: 146, 3, 3;
+    --color-yellow: 223, 227, 12;
+    --color-yellow-dark: 149, 152, 28;
+    --color-white: 255, 255, 255;
+    --color-grey-light: 228, 228, 228;
+    --color-grey: 171, 171, 171;
     --color-black: 0, 0, 0;
+    --color-black-light: 30, 30, 30;
+    /* spacing */
+    --spacing-05: "4px";
+    --spacing-1: "8px";
+    --spacing-2: "16px";
+    --spacing-3: "24px";
+    --spacing-4: "32px";
+    --spacing-5: "40px";
+    --spacing-6: "48px";
+    --spacing-13: "104px";
   }
 
   html {

@@ -13,12 +13,16 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": ["vitest/globals"],
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@ui/*": ["./src/components/*"]
+    }
   },
   "include": ["src", "vite-env.d.ts", "postcss.config.js"],
   "references": [{ "path": "./tsconfig.node.json" }]

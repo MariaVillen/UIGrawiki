@@ -40,7 +40,7 @@
       "require": "./dist/ui-grawiki.cjs.js",
       "types": "./dist/index.d.ts"
     },
-    "./style.css": "./dist/style.css"
+    "./styles/index.css": "./dist/index.css"
   },
   "typesVersions": {
     "*": {
@@ -57,10 +57,14 @@
     "test": "vitest --ui",
     "coverage": "vitest run --coverage",
     "svgr": "svgr --icon --typescript --title-prop --replace-attr-values '#000=currentColor' -d src/icons iconAssets",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "concurrently 'npm:watch:*'",
+    "watch:storybook": "storybook dev -p 6006",
+    "watch:tailwind": "npx tailwindcss -i ./src/index.css -o ./src/styles/index.css --watch",
+    "build:tailwind": "npx tailwindcss -i ./src/index.css -o ./src/styles/index.css",
+    "build:storybook": "npm run build:tailwind && storybook build"
   },
   "dependencies": {
+    "concurrently": "^8.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "ts-node": "10.9.1"
@@ -86,6 +90,7 @@
     "@vitejs/plugin-react": "4.0.3",
     "@vitest/ui": "0.34.5",
     "autoprefixer": "10.4.16",
+    "clsx": "^2.0.0",
     "eslint": "8.45.0",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react-hooks": "4.6.0",
@@ -95,6 +100,7 @@
     "postcss": "8.4.30",
     "prettier": "3.0.3",
     "storybook": "7.4.4",
+    "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.0.2",
     "vite": "4.4.5",
