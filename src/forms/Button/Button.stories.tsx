@@ -1,12 +1,13 @@
 import Button from "./Button";
 import type { Meta, StoryObj } from "@storybook/react";
+import { CloseTag } from "../../icons";
 
 const meta = {
   title: "Buttons/Button",
   component: Button,
   tags: ["autodocs"],
   parameters: {
-    layout: "fullscreen",
+    layout: "padded",
   },
   argTypes: {
     variant: {
@@ -37,5 +38,14 @@ export const Default: Story = {
     size: "normal",
     children: "Botón",
     fluid: false,
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    variant: "primary",
+    size: "small",
+    btnType: "icon",
+    children: <CloseTag />,
   },
 };

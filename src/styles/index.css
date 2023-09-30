@@ -592,6 +592,10 @@ html {
   height: 2rem;
 }
 
+.gwk-h-auto{
+  height: auto;
+}
+
 .gwk-h-mediumBtn{
   height: 2.875rem;
 }
@@ -618,6 +622,10 @@ html {
 
 .gwk-w-\[4em\]{
   width: 4em;
+}
+
+.gwk-w-auto{
+  width: auto;
 }
 
 .gwk-w-bigBtn{
@@ -718,6 +726,10 @@ html {
 .gwk-bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.gwk-p-0{
+  padding: 0px;
 }
 
 .gwk-p-1{
