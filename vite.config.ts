@@ -16,11 +16,11 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        icons: path.resolve(__dirname, "src/icons/index.ts"),
-        forms: path.resolve(__dirname, "src/forms/index.ts"),
-        nav: path.resolve(__dirname, "src/nav/index.ts"),
-        layouts: path.resolve(__dirname, "src/layouts/index.ts"),
-        general: path.resolve(__dirname, "src/general/index.ts"),
+        icons: path.resolve(__dirname, "src/components/icons/index.ts"),
+        forms: path.resolve(__dirname, "src/components/forms/index.ts"),
+        nav: path.resolve(__dirname, "src/components/nav/index.ts"),
+        layouts: path.resolve(__dirname, "src/components/layouts/index.ts"),
+        general: path.resolve(__dirname, "src/components/general/index.ts"),
         "": path.resolve(__dirname, "src/index.ts"),
       },
       name: "ui-grawiki",

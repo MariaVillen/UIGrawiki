@@ -9,7 +9,7 @@ export type accordionProps = HTMLAttributes<HTMLElement> & {
   rounded?: boolean;
 };
 
-const Accordion = ({
+export const Accordion = ({
   bar: Bar,
   rounded,
   children,
@@ -51,12 +51,6 @@ export default Accordion;
 
 Accordion.Context = AccordionContext;
 Accordion.Bar = AccordionBar;
-
-export const BlueAccordion = partiallyApply(Accordion, {
-  rounded: true,
-  className:
-    "gwk-mh-[3.125rem] gwk-w-full gwk-text-triarty-white gwk-bg-primary-hover gwk-p-[0.8125rem] gwk-text-lg",
-});
 
 export const RedAccordion = partiallyApply(Accordion, {
   rounded: true,

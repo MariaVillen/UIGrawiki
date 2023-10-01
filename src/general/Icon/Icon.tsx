@@ -1,5 +1,5 @@
 import { ComponentType, HTMLAttributes } from "react";
-import { cn } from "../../utils/partiallyApply/cn-utility-function";
+import { cn } from "../../utils";
 
 export type iconProps = {
   alt?: string;

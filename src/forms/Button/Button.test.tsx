@@ -21,11 +21,11 @@ describe("Button Component", () => {
     expect(queryByText("Secondary Button")).not.toBeNull();
   });
 
-  it("renders with disabled variant", () => {
+  it("renders with ghost variant", () => {
     const { queryByText } = render(
-      <Button variant="disabled">Disabled Button</Button>,
+      <Button variant="ghost">ghost Button</Button>,
     );
-    expect(queryByText("Disabled Button")).not.toBeNull();
+    expect(queryByText("ghost Button")).not.toBeNull();
   });
 
   it("renders with big size", () => {
