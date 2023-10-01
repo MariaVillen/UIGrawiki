@@ -858,11 +858,6 @@ html {
   padding-right: 1rem;
 }
 
-.gwk-px-sm{
-  padding-left: var(--spacing-1);
-  padding-right: var(--spacing-1);
-}
-
 .gwk-py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;

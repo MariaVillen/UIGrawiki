@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgEditRounded = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgEditRounded = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"

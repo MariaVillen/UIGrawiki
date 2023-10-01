@@ -3,7 +3,11 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgThumbsDown3D = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -14,548 +18,797 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <g filter="url(#ThumbsUp3D_svg__a)">
+
+    <g filter="url(#filter0_i_45_9812)">
       <path
-        fill="url(#ThumbsUp3D_svg__b)"
-        d="M12.351 5.289a3.289 3.289 0 1 1 6.577 0v3.784c0 .323-.022.645-.072.966-.018.118-.037.235-.048.352-.036.37.008.855.26 1.18l-.601.58a9.338 9.338 0 0 1 5.08 8.326c0 .985-.15 1.934-.432 2.826l-.996 6.506h-8.102v-.003C9.014 29.7 5 26.436 5 20.476c0-3.502 1.677-6.322 4.215-7.912l-.006-.005c.172-.12.376-.242.595-.374h.001c.72-.432 1.6-.96 2.064-1.822.402-.747.48-1.96.48-2.523h.002V5.29Z"
+        d="M12.3511 5.28854C12.3511 3.47234 13.8234 2 15.6396 2C17.4558 2 18.9282 3.47234 18.9282 5.28854V9.073C18.9282 9.39574 18.9058 9.71754 18.8559 10.0393C18.8377 10.1567 18.8195 10.274 18.8082 10.3912C18.7723 10.7617 18.8161 11.2456 19.0679 11.5705L18.4666 12.1506C21.4818 13.691 23.5479 16.8412 23.5479 20.4769C23.5479 21.4619 23.3962 22.4113 23.1151 23.3027L22.1187 29.8091H14.0172V29.8064C9.01402 29.6986 5 26.4361 5 20.4769C5 16.9739 6.6773 14.1539 9.21484 12.5638L9.20856 12.5588C9.38142 12.4387 9.58525 12.3165 9.80383 12.1854L9.80542 12.1845C10.5251 11.7531 11.4046 11.2258 11.8687 10.3635C12.2711 9.61589 12.3492 8.40254 12.3492 7.84004L12.3511 7.8409V5.28854Z"
+        fill="url(#paint0_linear_45_9812)"
       />
     </g>
     <path
-      fill="url(#ThumbsUp3D_svg__c)"
-      d="M12.351 5.289a3.289 3.289 0 1 1 6.577 0v3.784c0 .323-.022.645-.072.966-.018.118-.037.235-.048.352-.036.37.008.855.26 1.18l-.601.58a9.338 9.338 0 0 1 5.08 8.326c0 .985-.15 1.934-.432 2.826l-.996 6.506h-8.102v-.003C9.014 29.7 5 26.436 5 20.476c0-3.502 1.677-6.322 4.215-7.912l-.006-.005c.172-.12.376-.242.595-.374h.001c.72-.432 1.6-.96 2.064-1.822.402-.747.48-1.96.48-2.523h.002V5.29Z"
+      d="M12.3511 5.28854C12.3511 3.47234 13.8234 2 15.6396 2C17.4558 2 18.9282 3.47234 18.9282 5.28854V9.073C18.9282 9.39574 18.9058 9.71754 18.8559 10.0393C18.8377 10.1567 18.8195 10.274 18.8082 10.3912C18.7723 10.7617 18.8161 11.2456 19.0679 11.5705L18.4666 12.1506C21.4818 13.691 23.5479 16.8412 23.5479 20.4769C23.5479 21.4619 23.3962 22.4113 23.1151 23.3027L22.1187 29.8091H14.0172V29.8064C9.01402 29.6986 5 26.4361 5 20.4769C5 16.9739 6.6773 14.1539 9.21484 12.5638L9.20856 12.5588C9.38142 12.4387 9.58525 12.3165 9.80383 12.1854L9.80542 12.1845C10.5251 11.7531 11.4046 11.2258 11.8687 10.3635C12.2711 9.61589 12.3492 8.40254 12.3492 7.84004L12.3511 7.8409V5.28854Z"
+      fill="url(#paint1_radial_45_9812)"
     />
     <path
-      fill="url(#ThumbsUp3D_svg__d)"
-      d="M12.351 5.289a3.289 3.289 0 1 1 6.577 0v3.784c0 .323-.022.645-.072.966-.018.118-.037.235-.048.352-.036.37.008.855.26 1.18l-.601.58a9.338 9.338 0 0 1 5.08 8.326c0 .985-.15 1.934-.432 2.826l-.996 6.506h-8.102v-.003C9.014 29.7 5 26.436 5 20.476c0-3.502 1.677-6.322 4.215-7.912l-.006-.005c.172-.12.376-.242.595-.374h.001c.72-.432 1.6-.96 2.064-1.822.402-.747.48-1.96.48-2.523h.002V5.29Z"
+      d="M12.3511 5.28854C12.3511 3.47234 13.8234 2 15.6396 2C17.4558 2 18.9282 3.47234 18.9282 5.28854V9.073C18.9282 9.39574 18.9058 9.71754 18.8559 10.0393C18.8377 10.1567 18.8195 10.274 18.8082 10.3912C18.7723 10.7617 18.8161 11.2456 19.0679 11.5705L18.4666 12.1506C21.4818 13.691 23.5479 16.8412 23.5479 20.4769C23.5479 21.4619 23.3962 22.4113 23.1151 23.3027L22.1187 29.8091H14.0172V29.8064C9.01402 29.6986 5 26.4361 5 20.4769C5 16.9739 6.6773 14.1539 9.21484 12.5638L9.20856 12.5588C9.38142 12.4387 9.58525 12.3165 9.80383 12.1854L9.80542 12.1845C10.5251 11.7531 11.4046 11.2258 11.8687 10.3635C12.2711 9.61589 12.3492 8.40254 12.3492 7.84004L12.3511 7.8409V5.28854Z"
+      fill="url(#paint2_radial_45_9812)"
     />
     <path
-      fill="url(#ThumbsUp3D_svg__e)"
-      d="M12.351 5.289a3.289 3.289 0 1 1 6.577 0v3.784c0 .323-.022.645-.072.966-.018.118-.037.235-.048.352-.036.37.008.855.26 1.18l-.601.58a9.338 9.338 0 0 1 5.08 8.326c0 .985-.15 1.934-.432 2.826l-.996 6.506h-8.102v-.003C9.014 29.7 5 26.436 5 20.476c0-3.502 1.677-6.322 4.215-7.912l-.006-.005c.172-.12.376-.242.595-.374h.001c.72-.432 1.6-.96 2.064-1.822.402-.747.48-1.96.48-2.523h.002V5.29Z"
+      d="M12.3511 5.28854C12.3511 3.47234 13.8234 2 15.6396 2C17.4558 2 18.9282 3.47234 18.9282 5.28854V9.073C18.9282 9.39574 18.9058 9.71754 18.8559 10.0393C18.8377 10.1567 18.8195 10.274 18.8082 10.3912C18.7723 10.7617 18.8161 11.2456 19.0679 11.5705L18.4666 12.1506C21.4818 13.691 23.5479 16.8412 23.5479 20.4769C23.5479 21.4619 23.3962 22.4113 23.1151 23.3027L22.1187 29.8091H14.0172V29.8064C9.01402 29.6986 5 26.4361 5 20.4769C5 16.9739 6.6773 14.1539 9.21484 12.5638L9.20856 12.5588C9.38142 12.4387 9.58525 12.3165 9.80383 12.1854L9.80542 12.1845C10.5251 11.7531 11.4046 11.2258 11.8687 10.3635C12.2711 9.61589 12.3492 8.40254 12.3492 7.84004L12.3511 7.8409V5.28854Z"
+      fill="url(#paint3_radial_45_9812)"
     />
     <path
-      fill="url(#ThumbsUp3D_svg__f)"
-      d="M12.351 5.289a3.289 3.289 0 1 1 6.577 0v3.784c0 .323-.022.645-.072.966-.018.118-.037.235-.048.352-.036.37.008.855.26 1.18l-.601.58a9.338 9.338 0 0 1 5.08 8.326c0 .985-.15 1.934-.432 2.826l-.996 6.506h-8.102v-.003C9.014 29.7 5 26.436 5 20.476c0-3.502 1.677-6.322 4.215-7.912l-.006-.005c.172-.12.376-.242.595-.374h.001c.72-.432 1.6-.96 2.064-1.822.402-.747.48-1.96.48-2.523h.002V5.29Z"
+      d="M12.3511 5.28854C12.3511 3.47234 13.8234 2 15.6396 2C17.4558 2 18.9282 3.47234 18.9282 5.28854V9.073C18.9282 9.39574 18.9058 9.71754 18.8559 10.0393C18.8377 10.1567 18.8195 10.274 18.8082 10.3912C18.7723 10.7617 18.8161 11.2456 19.0679 11.5705L18.4666 12.1506C21.4818 13.691 23.5479 16.8412 23.5479 20.4769C23.5479 21.4619 23.3962 22.4113 23.1151 23.3027L22.1187 29.8091H14.0172V29.8064C9.01402 29.6986 5 26.4361 5 20.4769C5 16.9739 6.6773 14.1539 9.21484 12.5638L9.20856 12.5588C9.38142 12.4387 9.58525 12.3165 9.80383 12.1854L9.80542 12.1845C10.5251 11.7531 11.4046 11.2258 11.8687 10.3635C12.2711 9.61589 12.3492 8.40254 12.3492 7.84004L12.3511 7.8409V5.28854Z"
+      fill="url(#paint4_linear_45_9812)"
     />
-    <g filter="url(#ThumbsUp3D_svg__g)">
+    <g filter="url(#filter1_f_45_9812)">
       <path
-        fill="url(#ThumbsUp3D_svg__h)"
-        d="M23.762 14.839a2.552 2.552 0 0 0-2.552-2.552h-2.826a2.552 2.552 0 0 0-1.638 4.509 2.557 2.557 0 0 0-.115 3.992 2.547 2.547 0 0 0-.902 1.947v.126c0 .699.281 1.332.737 1.793a2.483 2.483 0 0 0 1.746 4.248h2.804a2.483 2.483 0 0 0 2.149-3.728 2.552 2.552 0 0 0 1.473-2.313v-.126c0-.79-.359-1.496-.922-1.964a2.56 2.56 0 0 0-.587-4.249c.394-.449.633-1.038.633-1.683Z"
+        d="M23.7623 14.839C23.7623 13.4297 22.6198 12.2872 21.2105 12.2872H18.384C16.9747 12.2872 15.8322 13.4297 15.8322 14.839C15.8322 15.6249 16.1875 16.3279 16.7462 16.796C16.1285 17.2633 15.7292 18.0052 15.7292 18.8384C15.7292 19.6185 16.0793 20.3186 16.6308 20.7882C16.0793 21.2563 15.7292 21.9547 15.7292 22.7348V22.8607C15.7292 23.5599 16.0104 24.1934 16.4658 24.6543C16.011 25.1043 15.7292 25.729 15.7292 26.4195C15.7292 27.7909 16.8409 28.9026 18.2123 28.9026H21.0159C22.3874 28.9026 23.4991 27.7909 23.4991 26.4195C23.4991 25.9655 23.3773 25.5401 23.1646 25.1739C24.0347 24.7675 24.6377 23.8845 24.6377 22.8607V22.7348C24.6377 21.9452 24.279 21.2393 23.7158 20.7712C24.256 20.3018 24.5976 19.6091 24.5976 18.8384C24.5976 17.8161 23.9965 16.9312 23.1284 16.5223C23.5231 16.073 23.7623 15.484 23.7623 14.839Z"
+        fill="url(#paint5_linear_45_9812)"
       />
     </g>
-    <g filter="url(#ThumbsUp3D_svg__i)" transform="rotate(90 26.04 10.86)">
-      <rect width={5.82} height={9.043} x={26.04} y={10.861} fill="url(#ThumbsUp3D_svg__j)" rx={2.91} />
-      <rect width={5.82} height={9.043} x={26.04} y={10.861} fill="url(#ThumbsUp3D_svg__k)" rx={2.91} />
+    <g filter="url(#filter2_i_45_9812)">
+      <rect
+        x="26.0403"
+        y="10.8607"
+        width="5.82021"
+        height="9.0435"
+        rx="2.9101"
+        transform="rotate(90 26.0403 10.8607)"
+        fill="url(#paint6_linear_45_9812)"
+      />
+      <rect
+        x="26.0403"
+        y="10.8607"
+        width="5.82021"
+        height="9.0435"
+        rx="2.9101"
+        transform="rotate(90 26.0403 10.8607)"
+        fill="url(#paint7_radial_45_9812)"
+      />
     </g>
-    <g filter="url(#ThumbsUp3D_svg__l)" transform="rotate(90 25.74 24.145)">
-      <rect width={5.664} height={8.861} x={25.74} y={24.145} fill="url(#ThumbsUp3D_svg__m)" rx={2.832} />
-      <rect width={5.664} height={8.861} x={25.74} y={24.145} fill="url(#ThumbsUp3D_svg__n)" rx={2.832} />
-      <rect width={5.664} height={8.861} x={25.74} y={24.145} fill="url(#ThumbsUp3D_svg__o)" rx={2.832} />
+    <g filter="url(#filter3_i_45_9812)">
+      <rect
+        x="25.7401"
+        y="24.1455"
+        width="5.6636"
+        height="8.86086"
+        rx="2.8318"
+        transform="rotate(90 25.7401 24.1455)"
+        fill="url(#paint8_linear_45_9812)"
+      />
+      <rect
+        x="25.7401"
+        y="24.1455"
+        width="5.6636"
+        height="8.86086"
+        rx="2.8318"
+        transform="rotate(90 25.7401 24.1455)"
+        fill="url(#paint9_radial_45_9812)"
+      />
+      <rect
+        x="25.7401"
+        y="24.1455"
+        width="5.6636"
+        height="8.86086"
+        rx="2.8318"
+        transform="rotate(90 25.7401 24.1455)"
+        fill="url(#paint10_radial_45_9812)"
+      />
     </g>
     <rect
-      width={5.664}
-      height={8.861}
-      x={25.74}
-      y={24.145}
-      fill="url(#ThumbsUp3D_svg__p)"
-      rx={2.832}
-      transform="rotate(90 25.74 24.145)"
+      x="25.7401"
+      y="24.1455"
+      width="5.6636"
+      height="8.86086"
+      rx="2.8318"
+      transform="rotate(90 25.7401 24.1455)"
+      fill="url(#paint11_linear_45_9812)"
     />
     <rect
-      width={5.664}
-      height={8.861}
-      x={25.74}
-      y={24.145}
-      fill="url(#ThumbsUp3D_svg__q)"
-      rx={2.832}
-      transform="rotate(90 25.74 24.145)"
+      x="25.7401"
+      y="24.1455"
+      width="5.6636"
+      height="8.86086"
+      rx="2.8318"
+      transform="rotate(90 25.7401 24.1455)"
+      fill="url(#paint12_radial_45_9812)"
     />
-    <g filter="url(#ThumbsUp3D_svg__r)">
-      <rect width={5.37} height={1.476} x={19.705} y={25.829} fill="url(#ThumbsUp3D_svg__s)" rx={0.738} />
+    <g filter="url(#filter4_f_45_9812)">
+      <rect
+        x="19.705"
+        y="25.8289"
+        width="5.37025"
+        height="1.4762"
+        rx="0.7381"
+        fill="url(#paint13_linear_45_9812)"
+      />
     </g>
     <rect
-      width={5.964}
-      height={10.159}
-      x={27.039}
-      y={19.865}
+      x="27.0386"
+      y="19.8651"
+      width="5.96377"
+      height="10.1593"
+      rx="2.98188"
+      transform="rotate(90 27.0386 19.8651)"
       fill="#C4C4C4"
-      fillOpacity={0.66}
-      rx={2.982}
-      transform="rotate(90 27.039 19.865)"
+      fill-opacity="0.66"
     />
-    <g filter="url(#ThumbsUp3D_svg__t)" transform="rotate(90 27.039 19.865)">
-      <rect width={5.964} height={10.159} x={27.039} y={19.865} fill="url(#ThumbsUp3D_svg__u)" rx={2.91} />
-      <rect width={5.964} height={10.159} x={27.039} y={19.865} fill="url(#ThumbsUp3D_svg__v)" rx={2.91} />
-      <rect width={5.964} height={10.159} x={27.039} y={19.865} fill="url(#ThumbsUp3D_svg__w)" rx={2.91} />
+    <g filter="url(#filter5_i_45_9812)">
+      <rect
+        x="27.0386"
+        y="19.8651"
+        width="5.96377"
+        height="10.1593"
+        rx="2.9101"
+        transform="rotate(90 27.0386 19.8651)"
+        fill="url(#paint14_linear_45_9812)"
+      />
+      <rect
+        x="27.0386"
+        y="19.8651"
+        width="5.96377"
+        height="10.1593"
+        rx="2.9101"
+        transform="rotate(90 27.0386 19.8651)"
+        fill="url(#paint15_radial_45_9812)"
+      />
+      <rect
+        x="27.0386"
+        y="19.8651"
+        width="5.96377"
+        height="10.1593"
+        rx="2.9101"
+        transform="rotate(90 27.0386 19.8651)"
+        fill="url(#paint16_radial_45_9812)"
+      />
     </g>
-    <g filter="url(#ThumbsUp3D_svg__x)">
-      <rect width={6.725} height={1.476} x={19.315} y={21.959} fill="url(#ThumbsUp3D_svg__y)" rx={0.738} />
+    <g filter="url(#filter6_f_45_9812)">
+      <rect
+        x="19.3154"
+        y="21.9589"
+        width="6.72485"
+        height="1.4762"
+        rx="0.7381"
+        fill="url(#paint17_linear_45_9812)"
+      />
     </g>
-    <g filter="url(#ThumbsUp3D_svg__z)" transform="rotate(90 26.993 15.415)">
-      <rect width={5.833} height={10.114} x={26.993} y={15.415} fill="url(#ThumbsUp3D_svg__A)" rx={2.91} />
-      <rect width={5.833} height={10.114} x={26.993} y={15.415} fill="url(#ThumbsUp3D_svg__B)" rx={2.91} />
+    <g filter="url(#filter7_i_45_9812)">
+      <rect
+        x="26.9929"
+        y="15.4152"
+        width="5.83326"
+        height="10.1136"
+        rx="2.9101"
+        transform="rotate(90 26.9929 15.4152)"
+        fill="url(#paint18_linear_45_9812)"
+      />
+      <rect
+        x="26.9929"
+        y="15.4152"
+        width="5.83326"
+        height="10.1136"
+        rx="2.9101"
+        transform="rotate(90 26.9929 15.4152)"
+        fill="url(#paint19_radial_45_9812)"
+      />
     </g>
     <path
-      fill="url(#ThumbsUp3D_svg__C)"
-      d="M15.64 2a3.289 3.289 0 0 0-3.289 3.289V7.84l-.002-.001c0 .563-.078 1.776-.48 2.524-.464.862-1.344 1.39-2.064 1.82-.219.132-.423.254-.596.375.994.797 3.032 2.389 3.082 2.351.05-.037 2.343-1.255 3.484-1.859l-.049-.69a3.289 3.289 0 0 0 3.202-3.288V5.289A3.289 3.289 0 0 0 15.64 2Z"
+      d="M15.6396 2C13.8234 2 12.3511 3.47234 12.3511 5.28854V7.8409L12.3492 7.84004C12.3492 8.40254 12.2711 9.61589 11.8687 10.3635C11.4046 11.2258 10.5251 11.7531 9.80542 12.1845C9.58624 12.3159 9.38184 12.4384 9.20856 12.5588C10.2034 13.3557 12.2406 14.9479 12.2906 14.9104C12.3406 14.8728 14.6343 13.6552 15.775 13.051L15.7264 12.3604C17.5025 12.3144 18.9282 10.8602 18.9282 9.073V5.28854C18.9282 3.47234 17.4558 2 15.6396 2Z"
+      fill="url(#paint20_radial_45_9812)"
     />
     <path
-      fill="url(#ThumbsUp3D_svg__D)"
-      d="M15.64 2a3.289 3.289 0 0 0-3.289 3.289V7.84l-.002-.001c0 .563-.078 1.776-.48 2.524-.464.862-1.344 1.39-2.064 1.82-.219.132-.423.254-.596.375.994.797 3.032 2.389 3.082 2.351.05-.037 2.343-1.255 3.484-1.859l-.049-.69a3.289 3.289 0 0 0 3.202-3.288V5.289A3.289 3.289 0 0 0 15.64 2Z"
+      d="M15.6396 2C13.8234 2 12.3511 3.47234 12.3511 5.28854V7.8409L12.3492 7.84004C12.3492 8.40254 12.2711 9.61589 11.8687 10.3635C11.4046 11.2258 10.5251 11.7531 9.80542 12.1845C9.58624 12.3159 9.38184 12.4384 9.20856 12.5588C10.2034 13.3557 12.2406 14.9479 12.2906 14.9104C12.3406 14.8728 14.6343 13.6552 15.775 13.051L15.7264 12.3604C17.5025 12.3144 18.9282 10.8602 18.9282 9.073V5.28854C18.9282 3.47234 17.4558 2 15.6396 2Z"
+      fill="url(#paint21_radial_45_9812)"
     />
-    <g filter="url(#ThumbsUp3D_svg__E)">
-      <rect width={6.136} height={2.516} x={18.94} y={11.655} fill="url(#ThumbsUp3D_svg__F)" rx={1.258} />
+    <g filter="url(#filter8_f_45_9812)">
+      <rect
+        x="18.9396"
+        y="11.6548"
+        width="6.13569"
+        height="2.51555"
+        rx="1.25777"
+        fill="url(#paint22_linear_45_9812)"
+      />
     </g>
-    <g filter="url(#ThumbsUp3D_svg__G)">
-      <rect width={7.172} height={2.516} x={18.868} y={16.13} fill="url(#ThumbsUp3D_svg__H)" rx={1.258} />
+    <g filter="url(#filter9_f_45_9812)">
+      <rect
+        x="18.8682"
+        y="16.1302"
+        width="7.17206"
+        height="2.51555"
+        rx="1.25777"
+        fill="url(#paint23_linear_45_9812)"
+      />
     </g>
-    <g filter="url(#ThumbsUp3D_svg__I)">
-      <rect width={2.865} height={7.997} x={15.234} y={3.243} fill="url(#ThumbsUp3D_svg__J)" rx={1.433} />
+    <g filter="url(#filter10_f_45_9812)">
+      <rect
+        x="15.2338"
+        y="3.24268"
+        width="2.86524"
+        height="7.9974"
+        rx="1.43262"
+        fill="url(#paint24_linear_45_9812)"
+      />
     </g>
     <defs>
-      <linearGradient
-        id="ThumbsUp3D_svg__b"
-        x1={19.337}
-        x2={9.275}
-        y1={6.77}
-        y2={27.957}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFCA44" />
-        <stop offset={1} stopColor="#F8A528" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__f"
-        x1={14.274}
-        x2={14.274}
-        y1={25.692}
-        y2={30.793}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#D8796F" stopOpacity={0} />
-        <stop offset={1} stopColor="#D8796F" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__h"
-        x1={20.183}
-        x2={20.183}
-        y1={12.287}
-        y2={25.575}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#D1730B" />
-        <stop offset={1} stopColor="#E27D47" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__j"
-        x1={28.95}
-        x2={28.95}
-        y1={10.861}
-        y2={19.904}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFDB44" />
-        <stop offset={1} stopColor="#F9A928" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__m"
-        x1={28.572}
-        x2={28.572}
-        y1={24.922}
-        y2={33.006}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFDB44" />
-        <stop offset={1} stopColor="#F9A928" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__p"
-        x1={31.988}
-        x2={30.155}
-        y1={28.576}
-        y2={28.576}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#DC7C6A" />
-        <stop offset={1} stopColor="#DC7C6A" stopOpacity={0} />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__s"
-        x1={24.796}
-        x2={19.008}
-        y1={26.234}
-        y2={26.234}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFF166" />
-        <stop offset={1} stopColor="#FFF166" stopOpacity={0} />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__u"
-        x1={30.02}
-        x2={30.02}
-        y1={20.755}
-        y2={30.024}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFDB44" />
-        <stop offset={1} stopColor="#F9A928" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__y"
-        x1={25.691}
-        x2={18.442}
-        y1={22.364}
-        y2={22.364}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFF166" />
-        <stop offset={1} stopColor="#FFF166" stopOpacity={0} />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__A"
-        x1={29.91}
-        x2={29.91}
-        y1={15.415}
-        y2={25.529}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFDB44" />
-        <stop offset={1} stopColor="#F9A928" />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__F"
-        x1={24.756}
-        x2={18.143}
-        y1={12.345}
-        y2={12.345}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFF166" />
-        <stop offset={1} stopColor="#FFF166" stopOpacity={0} />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__H"
-        x1={25.668}
-        x2={17.937}
-        y1={16.82}
-        y2={16.82}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFF166" />
-        <stop offset={1} stopColor="#FFF166" stopOpacity={0} />
-      </linearGradient>
-      <linearGradient
-        id="ThumbsUp3D_svg__J"
-        x1={17.95}
-        x2={14.862}
-        y1={5.435}
-        y2={5.435}
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFF166" />
-        <stop offset={1} stopColor="#FFF166" stopOpacity={0} />
-      </linearGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__c"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="rotate(141.116 9.384 6.11) scale(5.01564 14.8034)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFE34C" />
-        <stop offset={1} stopColor="#FFE34C" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__d"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="rotate(125.191 1.573 10.906) scale(7.43021 5.38256)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#FFCA2E" />
-        <stop offset={1} stopColor="#FFCA2E" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__e"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(-13.53897 8.8789 -15.5384 -23.69368 19.453 18.262)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop offset={0.681} stopColor="#E18E3F" stopOpacity={0} />
-        <stop offset={1} stopColor="#E18E3F" />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__k"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(-1.40872 1.84473 -1.2348 -.94296 31.53 18.433)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#D98320" />
-        <stop offset={1} stopColor="#D98320" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__n"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 -7.31347 2.78222 0 31.404 31.211)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#F29545" />
-        <stop offset={1} stopColor="#F29545" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__o"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 -7.4169 1.99096 0 26.734 31.562)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#DA810B" />
-        <stop offset={1} stopColor="#FFB610" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__q"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 -5.60324 8.4227 0 28.572 34.18)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#E38811" />
-        <stop offset={1} stopColor="#E38811" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__v"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 -8.38517 2.92967 0 33.002 27.966)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#F29545" />
-        <stop offset={1} stopColor="#F29545" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__w"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 -8.50376 2.09648 0 28.085 28.369)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#DA810B" />
-        <stop offset={1} stopColor="#FFB610" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__B"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 -5.50067 2.44847 0 32.12 23.437)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#F29545" />
-        <stop offset={1} stopColor="#F29545" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__C"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(0 6.36013 -2.36143 0 12.62 4.974)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#F3A52A" />
-        <stop offset={1} stopColor="#F3A52A" stopOpacity={0} />
-      </radialGradient>
-      <radialGradient
-        id="ThumbsUp3D_svg__D"
-        cx={0}
-        cy={0}
-        r={1}
-        gradientTransform="matrix(2.32995 2.17252 -3.28739 3.5256 10.763 9.162)"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop stopColor="#CDA25E" />
-        <stop offset={1} stopColor="#CDA25E" stopOpacity={0} />
-      </radialGradient>
       <filter
-        id="ThumbsUp3D_svg__a"
-        width={19.048}
-        height={27.809}
-        x={5}
-        y={2}
-        colorInterpolationFilters="sRGB"
+        id="filter0_i_45_9812"
+        x="5"
+        y="2"
+        width="19.0479"
+        height="27.8091"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-        <feOffset dx={0.5} />
-        <feGaussianBlur stdDeviation={1} />
-        <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
-        <feColorMatrix values="0 0 0 0 0.847059 0 0 0 0 0.458824 0 0 0 0 0.360784 0 0 0 1 0" />
-        <feBlend in2="shape" result="effect1_innerShadow_45_9812" />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="0.5" />
+        <feGaussianBlur stdDeviation="1" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.847059 0 0 0 0 0.458824 0 0 0 0 0.360784 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__g"
-        width={12.909}
-        height={20.615}
-        x={13.729}
-        y={10.287}
-        colorInterpolationFilters="sRGB"
+        id="filter1_f_45_9812"
+        x="13.7292"
+        y="10.2872"
+        width="12.9085"
+        height="20.6154"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={1} />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="1"
+          result="effect1_foregroundBlur_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__i"
-        width={9.543}
-        height={5.82}
-        x={16.997}
-        y={10.861}
-        colorInterpolationFilters="sRGB"
+        id="filter2_i_45_9812"
+        x="16.9968"
+        y="10.8607"
+        width="9.5435"
+        height="5.82022"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-        <feOffset dx={0.5} />
-        <feGaussianBlur stdDeviation={0.75} />
-        <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
-        <feColorMatrix values="0 0 0 0 0.878431 0 0 0 0 0.541176 0 0 0 0 0.0627451 0 0 0 1 0" />
-        <feBlend in2="shape" result="effect1_innerShadow_45_9812" />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="0.5" />
+        <feGaussianBlur stdDeviation="0.75" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.878431 0 0 0 0 0.541176 0 0 0 0 0.0627451 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__l"
-        width={9.361}
-        height={6.164}
-        x={16.879}
-        y={23.645}
-        colorInterpolationFilters="sRGB"
+        id="filter3_i_45_9812"
+        x="16.8793"
+        y="23.6455"
+        width="9.36086"
+        height="6.1636"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-        <feOffset dx={0.5} dy={-0.5} />
-        <feGaussianBlur stdDeviation={0.75} />
-        <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
-        <feColorMatrix values="0 0 0 0 0.941176 0 0 0 0 0.643137 0 0 0 0 0.215686 0 0 0 1 0" />
-        <feBlend in2="shape" result="effect1_innerShadow_45_9812" />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="0.5" dy="-0.5" />
+        <feGaussianBlur stdDeviation="0.75" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.941176 0 0 0 0 0.643137 0 0 0 0 0.215686 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__r"
-        width={7.87}
-        height={3.976}
-        x={18.455}
-        y={24.579}
-        colorInterpolationFilters="sRGB"
+        id="filter4_f_45_9812"
+        x="18.455"
+        y="24.5789"
+        width="7.87024"
+        height="3.9762"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="0.625"
+          result="effect1_foregroundBlur_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__t"
-        width={10.659}
-        height={6.464}
-        x={16.879}
-        y={19.365}
-        colorInterpolationFilters="sRGB"
+        id="filter5_i_45_9812"
+        x="16.8793"
+        y="19.3651"
+        width="10.6593"
+        height="6.46378"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-        <feOffset dx={0.5} dy={-0.5} />
-        <feGaussianBlur stdDeviation={0.75} />
-        <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
-        <feColorMatrix values="0 0 0 0 0.941176 0 0 0 0 0.643137 0 0 0 0 0.215686 0 0 0 1 0" />
-        <feBlend in2="shape" result="effect1_innerShadow_45_9812" />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="0.5" dy="-0.5" />
+        <feGaussianBlur stdDeviation="0.75" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.941176 0 0 0 0 0.643137 0 0 0 0 0.215686 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__x"
-        width={9.225}
-        height={3.976}
-        x={18.065}
-        y={20.709}
-        colorInterpolationFilters="sRGB"
+        id="filter6_f_45_9812"
+        x="18.0654"
+        y="20.7089"
+        width="9.22485"
+        height="3.9762"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="0.625"
+          result="effect1_foregroundBlur_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__z"
-        width={10.614}
-        height={6.333}
-        x={16.879}
-        y={14.915}
-        colorInterpolationFilters="sRGB"
+        id="filter7_i_45_9812"
+        x="16.8793"
+        y="14.9152"
+        width="10.6136"
+        height="6.33325"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
-        <feOffset dx={0.5} dy={-0.5} />
-        <feGaussianBlur stdDeviation={0.75} />
-        <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
-        <feColorMatrix values="0 0 0 0 0.941176 0 0 0 0 0.643137 0 0 0 0 0.215686 0 0 0 1 0" />
-        <feBlend in2="shape" result="effect1_innerShadow_45_9812" />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="0.5" dy="-0.5" />
+        <feGaussianBlur stdDeviation="0.75" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.941176 0 0 0 0 0.643137 0 0 0 0 0.215686 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__E"
-        width={8.636}
-        height={5.016}
-        x={17.69}
-        y={10.405}
-        colorInterpolationFilters="sRGB"
+        id="filter8_f_45_9812"
+        x="17.6896"
+        y="10.4048"
+        width="8.63568"
+        height="5.01553"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="0.625"
+          result="effect1_foregroundBlur_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__G"
-        width={9.672}
-        height={5.016}
-        x={17.618}
-        y={14.88}
-        colorInterpolationFilters="sRGB"
+        id="filter9_f_45_9812"
+        x="17.6182"
+        y="14.8802"
+        width="9.67206"
+        height="5.01553"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="0.625"
+          result="effect1_foregroundBlur_45_9812"
+        />
       </filter>
       <filter
-        id="ThumbsUp3D_svg__I"
-        width={5.365}
-        height={10.497}
-        x={13.984}
-        y={1.993}
-        colorInterpolationFilters="sRGB"
+        id="filter10_f_45_9812"
+        x="13.9838"
+        y="1.99268"
+        width="5.36523"
+        height="10.4974"
         filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="0.625"
+          result="effect1_foregroundBlur_45_9812"
+        />
       </filter>
+      <linearGradient
+        id="paint0_linear_45_9812"
+        x1="19.3375"
+        y1="6.76973"
+        x2="9.27496"
+        y2="27.9572"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFCA44" />
+        <stop offset="1" stop-color="#F8A528" />
+      </linearGradient>
+      <radialGradient
+        id="paint1_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(20.5234 4.97445) rotate(141.116) scale(5.01564 14.8034)"
+      >
+        <stop stop-color="#FFE34C" />
+        <stop offset="1" stop-color="#FFE34C" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient
+        id="paint2_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(11.3925 15.9046) rotate(125.191) scale(7.43021 5.38256)"
+      >
+        <stop stop-color="#FFCA2E" />
+        <stop offset="1" stop-color="#FFCA2E" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient
+        id="paint3_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(19.4529 18.2615) rotate(146.743) scale(16.1907 28.3343)"
+      >
+        <stop offset="0.681103" stop-color="#E18E3F" stop-opacity="0" />
+        <stop offset="1" stop-color="#E18E3F" />
+      </radialGradient>
+      <linearGradient
+        id="paint4_linear_45_9812"
+        x1="14.2739"
+        y1="25.6921"
+        x2="14.2739"
+        y2="30.7928"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#D8796F" stop-opacity="0" />
+        <stop offset="1" stop-color="#D8796F" />
+      </linearGradient>
+      <linearGradient
+        id="paint5_linear_45_9812"
+        x1="20.1834"
+        y1="12.2872"
+        x2="20.1834"
+        y2="25.5753"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#D1730B" />
+        <stop offset="1" stop-color="#E27D47" />
+      </linearGradient>
+      <linearGradient
+        id="paint6_linear_45_9812"
+        x1="28.9504"
+        y1="10.8607"
+        x2="28.9504"
+        y2="19.9042"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFDB44" />
+        <stop offset="1" stop-color="#F9A928" />
+      </linearGradient>
+      <radialGradient
+        id="paint7_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(31.53 18.4333) rotate(127.367) scale(2.3211 1.55368)"
+      >
+        <stop stop-color="#D98320" />
+        <stop offset="1" stop-color="#D98320" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient
+        id="paint8_linear_45_9812"
+        x1="28.5719"
+        y1="24.9218"
+        x2="28.5719"
+        y2="33.0064"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFDB44" />
+        <stop offset="1" stop-color="#F9A928" />
+      </linearGradient>
+      <radialGradient
+        id="paint9_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(31.4037 31.2114) rotate(-90) scale(7.31347 2.78222)"
+      >
+        <stop stop-color="#F29545" />
+        <stop offset="1" stop-color="#F29545" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient
+        id="paint10_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(26.7344 31.5624) rotate(-90) scale(7.4169 1.99096)"
+      >
+        <stop stop-color="#DA810B" />
+        <stop offset="1" stop-color="#FFB610" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient
+        id="paint11_linear_45_9812"
+        x1="31.9875"
+        y1="28.5759"
+        x2="30.1554"
+        y2="28.5759"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#DC7C6A" />
+        <stop offset="1" stop-color="#DC7C6A" stop-opacity="0" />
+      </linearGradient>
+      <radialGradient
+        id="paint12_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(28.5719 34.1792) rotate(-90) scale(5.60324 8.4227)"
+      >
+        <stop stop-color="#E38811" />
+        <stop offset="1" stop-color="#E38811" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient
+        id="paint13_linear_45_9812"
+        x1="24.7963"
+        y1="26.2336"
+        x2="19.0076"
+        y2="26.2336"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFF166" />
+        <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="paint14_linear_45_9812"
+        x1="30.0205"
+        y1="20.7551"
+        x2="30.0205"
+        y2="30.0244"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFDB44" />
+        <stop offset="1" stop-color="#F9A928" />
+      </linearGradient>
+      <radialGradient
+        id="paint15_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(33.0023 27.9664) rotate(-90) scale(8.38517 2.92967)"
+      >
+        <stop stop-color="#F29545" />
+        <stop offset="1" stop-color="#F29545" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient
+        id="paint16_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(28.0855 28.3689) rotate(-90) scale(8.50376 2.09648)"
+      >
+        <stop stop-color="#DA810B" />
+        <stop offset="1" stop-color="#FFB610" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient
+        id="paint17_linear_45_9812"
+        x1="25.6909"
+        y1="22.3636"
+        x2="18.4421"
+        y2="22.3636"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFF166" />
+        <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="paint18_linear_45_9812"
+        x1="29.9095"
+        y1="15.4152"
+        x2="29.9095"
+        y2="25.5288"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFDB44" />
+        <stop offset="1" stop-color="#F9A928" />
+      </linearGradient>
+      <radialGradient
+        id="paint19_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(32.1209 23.4372) rotate(-90) scale(5.50067 2.44847)"
+      >
+        <stop stop-color="#F29545" />
+        <stop offset="1" stop-color="#F29545" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient
+        id="paint20_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(12.6205 4.97445) rotate(90) scale(6.36013 2.36143)"
+      >
+        <stop stop-color="#F3A52A" />
+        <stop offset="1" stop-color="#F3A52A" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient
+        id="paint21_radial_45_9812"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(10.7628 9.16206) rotate(42.9975) scale(3.18567 4.82045)"
+      >
+        <stop stop-color="#CDA25E" />
+        <stop offset="1" stop-color="#CDA25E" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient
+        id="paint22_linear_45_9812"
+        x1="24.7565"
+        y1="12.3445"
+        x2="18.1427"
+        y2="12.3445"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFF166" />
+        <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="paint23_linear_45_9812"
+        x1="25.6677"
+        y1="16.82"
+        x2="17.9368"
+        y2="16.82"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFF166" />
+        <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient
+        id="paint24_linear_45_9812"
+        x1="17.9502"
+        y1="5.43549"
+        x2="14.8617"
+        y2="5.43549"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#FFF166" />
+        <stop offset="1" stop-color="#FFF166" stop-opacity="0" />
+      </linearGradient>
     </defs>
   </svg>
 );
-export default SvgThumbsUp3D;
+export default SvgThumbsDown3D;

@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgControlFill = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgControlFill = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -22,9 +27,9 @@ const SvgControlFill = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & 
       />
     </mask>
     <path
-      fill="currentColor"
+      fill="#000"
       fillRule="evenodd"
-      stroke="currentColor"
+      stroke="#000"
       strokeWidth={2}
       d="M28 18a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8Zm0-12a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v6.286a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6ZM14.286 6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h6.286a2 2 0 0 0 2-2V6Z"
       clipRule="evenodd"

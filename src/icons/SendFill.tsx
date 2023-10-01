@@ -4,7 +4,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgArrowRigth = ({
+const SvgSendFill = ({
   title,
   titleId,
   ...props
@@ -14,17 +14,19 @@ const SvgArrowRigth = ({
     width="1em"
     height="1em"
     fill="none"
-    viewBox="0 0 16 16"
+    viewBox="0 0 32 32"
     aria-labelledby={titleId}
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <path
-      fill="#000"
-      fillRule="evenodd"
-      d="M10.821 7.629 10.45 8l.371.371a.525.525 0 0 0 0-.742ZM9.708 8l-4.53 4.529a.525.525 0 1 0 .743.742l4.9-4.9L10.45 8l.371-.371-4.9-4.9a.525.525 0 1 0-.742.742L9.708 8Z"
-      clipRule="evenodd"
-    />
+    <g clipPath="url(#SendFill_svg__a)">
+      <path fill="#000" d="M6.01 25 27 16 6.01 7 6 14l15 2-15 2 .01 7Z" />
+    </g>
+    <defs>
+      <clipPath id="SendFill_svg__a">
+        <path fill="#fff" d="M6 7h21v18H6z" />
+      </clipPath>
+    </defs>
   </svg>
 );
-export default SvgArrowRigth;
+export default SvgSendFill;

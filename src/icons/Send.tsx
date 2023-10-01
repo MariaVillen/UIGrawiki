@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgSend = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgSend = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -15,7 +20,7 @@ const SvgSend = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRPro
   >
     {title ? <title id={titleId}>{title}</title> : null}
     <g clipPath="url(#Send_svg__a)">
-      <path fill="currentColor" d="M6.01 25 27 16 6.01 7 6 14l15 2-15 2 .01 7Z" />
+      <path fill="#000" d="M6.01 25 27 16 6.01 7 6 14l15 2-15 2 .01 7Z" />
     </g>
     <defs>
       <clipPath id="Send_svg__a">

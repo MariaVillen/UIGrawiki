@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgInterfaceOutline = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgInterfaceOutline = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -15,7 +20,7 @@ const SvgInterfaceOutline = ({ title, titleId, ...props }: SVGProps<SVGSVGElemen
   >
     {title ? <title id={titleId}>{title}</title> : null}
     <path
-      stroke="currentColor"
+      stroke="#000"
       strokeWidth={1.5}
       d="M4.923 6.923a2 2 0 0 1 2-2h18.154a2 2 0 0 1 2 2v18.154a2 2 0 0 1-2 2H6.923a2 2 0 0 1-2-2V6.923Z"
     />

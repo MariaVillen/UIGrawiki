@@ -4,7 +4,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgPasswordHideOutline = ({
+const SvgUploadOuline = ({
   title,
   titleId,
   ...props
@@ -19,16 +19,13 @@ const SvgPasswordHideOutline = ({
     {...props}
   >
     {title ? <title id={titleId}>{title}</title> : null}
-    <g
+    <path
       stroke="#000"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      opacity={0.5}
-    >
-      <path d="m5 5 22 22M10.184 10.195C6.831 12.475 5 16 5 16s4 8 11 8c2.255 0 4.2-1.1 5.798-2.183M15 8c.358-.042.625 0 1 0 7 0 11 8 11 8s-.761 1.465-2.2 3.117" />
-      <path d="M18.2 18.46a3.3 3.3 0 0 1-4.544-4.783" />
-    </g>
+      d="M22.154 22.154h.012m-1.735-3.692h2.954c1.147 0 1.72 0 2.172.187.604.25 1.083.729 1.333 1.332.187.452.187 1.026.187 2.173s0 1.72-.187 2.173a2.463 2.463 0 0 1-1.333 1.332c-.452.187-1.025.187-2.172.187H8.615c-1.147 0-1.72 0-2.172-.187a2.462 2.462 0 0 1-1.333-1.332c-.187-.453-.187-1.026-.187-2.173s0-1.72.187-2.173a2.462 2.462 0 0 1 1.333-1.332c.452-.187 1.025-.187 2.172-.187h2.954M16 19.692V6.154m0 0 3.692 3.692M16 6.154l-3.692 3.692"
+    />
   </svg>
 );
-export default SvgPasswordHideOutline;
+export default SvgUploadOuline;

@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgPinchedFingers3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgPinchedFingers3D = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -209,7 +214,11 @@ const SvgPinchedFingers3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElemen
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} dy={-1} />
         <feGaussianBlur stdDeviation={1} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -227,7 +236,10 @@ const SvgPinchedFingers3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElemen
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9808" stdDeviation={0.75} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9808"
+          stdDeviation={0.75}
+        />
       </filter>
       <linearGradient
         id="PinchedFingers3D_svg__n"

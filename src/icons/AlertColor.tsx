@@ -1,8 +1,9 @@
+import * as React from "react";
 import type { SVGProps } from "react";
-export type SVGRProps = {
+interface SVGRProps {
   title?: string;
   titleId?: string;
-};
+}
 const SvgAlertColor = ({
   title,
   titleId,

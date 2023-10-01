@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgWriting3D = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -32,9 +37,30 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       fill="url(#Writing3D_svg__e)"
       d="m15.173 27.116-.671-1.724 1.352-1.986h14.03v4.579a2 2 0 0 1-2 2h-8.517a4.5 4.5 0 0 1-4.194-2.869Z"
     />
-    <rect width={4.832} height={6.985} x={9.933} y={22.892} fill="url(#Writing3D_svg__f)" rx={2.416} />
-    <rect width={4.832} height={6.985} x={9.933} y={22.892} fill="url(#Writing3D_svg__g)" rx={2.416} />
-    <rect width={4.832} height={6.985} x={9.933} y={22.892} fill="url(#Writing3D_svg__h)" rx={2.416} />
+    <rect
+      width={4.832}
+      height={6.985}
+      x={9.933}
+      y={22.892}
+      fill="url(#Writing3D_svg__f)"
+      rx={2.416}
+    />
+    <rect
+      width={4.832}
+      height={6.985}
+      x={9.933}
+      y={22.892}
+      fill="url(#Writing3D_svg__g)"
+      rx={2.416}
+    />
+    <rect
+      width={4.832}
+      height={6.985}
+      x={9.933}
+      y={22.892}
+      fill="url(#Writing3D_svg__h)"
+      rx={2.416}
+    />
     <path
       fill="url(#Writing3D_svg__i)"
       d="M18.14 2.266a.5.5 0 0 1 .684-.184l2.963 1.71a.5.5 0 0 1 .184.681L8.43 28.12a.5.5 0 0 1-.211.199l-3.176 1.575c-.162.08-.298 0-.306-.18l-.226-3.541a.5.5 0 0 1 .065-.273L18.14 2.266Z"
@@ -44,7 +70,11 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       d="M18.14 2.266a.5.5 0 0 1 .684-.184l2.963 1.71a.5.5 0 0 1 .184.681L8.43 28.12a.5.5 0 0 1-.211.199l-3.176 1.575c-.162.08-.298 0-.306-.18l-.226-3.541a.5.5 0 0 1 .065-.273L18.14 2.266Z"
     />
     <g filter="url(#Writing3D_svg__k)">
-      <path stroke="#FF7150" strokeLinecap="round" d="M17.241 8.382 8.19 24.319" />
+      <path
+        stroke="#FF7150"
+        strokeLinecap="round"
+        d="M17.241 8.382 8.19 24.319"
+      />
     </g>
     <g filter="url(#Writing3D_svg__l)">
       <path
@@ -72,13 +102,22 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       fill="url(#Writing3D_svg__r)"
       d="M9.933 22.03c-1.251.875-1.653 2.634-.838 3.924.836 1.321 2.674 1.709 4.005.89l3.53-2.174a.912.912 0 0 1 1.263.313 6.84 6.84 0 0 0 6.588 3.321l3.832-.394a1.75 1.75 0 0 0 1.57-1.741v-7.13a2.81 2.81 0 0 0-1.736-2.585c-2.227-.928-6.282-2.689-10.295-4.785l-4.741 8.28-3.178 2.082Z"
     />
-    <path fill="url(#Writing3D_svg__s)" d="m12.467 20.343.53-.354.083-.029-.611.384-.002-.001Z" />
+    <path
+      fill="url(#Writing3D_svg__s)"
+      d="m12.467 20.343.53-.354.083-.029-.611.384-.002-.001Z"
+    />
     <path
       fill="url(#Writing3D_svg__t)"
       d="m16.925 13.287-3.807 6.65 1.758-1.104a5.25 5.25 0 0 1 3.498-.757l2.431.33-3.88-5.119Z"
     />
-    <path fill="url(#Writing3D_svg__u)" d="m16 5.995 1.073-1.869 3.823 2.225-1.07 1.87L16 5.995Z" />
-    <path fill="url(#Writing3D_svg__v)" d="m16 5.995 1.073-1.869 3.823 2.225-1.07 1.87L16 5.995Z" />
+    <path
+      fill="url(#Writing3D_svg__u)"
+      d="m16 5.995 1.073-1.869 3.823 2.225-1.07 1.87L16 5.995Z"
+    />
+    <path
+      fill="url(#Writing3D_svg__v)"
+      d="m16 5.995 1.073-1.869 3.823 2.225-1.07 1.87L16 5.995Z"
+    />
     <path
       fill="url(#Writing3D_svg__w)"
       d="M8.386 28.182a.5.5 0 0 1-.168.136l-3.176 1.575c-.162.08-.298 0-.306-.18l-.226-3.541a.5.5 0 0 1 .02-.169l3.856 2.179Z"
@@ -91,7 +130,10 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       fill="url(#Writing3D_svg__y)"
       d="M8.386 28.182a.5.5 0 0 1-.168.136l-3.176 1.575c-.162.08-.298 0-.306-.18l-.226-3.541a.5.5 0 0 1 .02-.169l3.856 2.179Z"
     />
-    <path fill="url(#Writing3D_svg__z)" d="m5.859 29.488-.817.405c-.162.08-.298 0-.306-.18l-.058-.906 1.181.68Z" />
+    <path
+      fill="url(#Writing3D_svg__z)"
+      d="m5.859 29.488-.817.405c-.162.08-.298 0-.306-.18l-.058-.906 1.181.68Z"
+    />
     <g filter="url(#Writing3D_svg__A)">
       <path
         fill="#FFEF64"
@@ -218,15 +260,36 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
         <stop stopColor="#E28A85" />
         <stop offset={1} stopColor="#FF95B3" />
       </linearGradient>
-      <linearGradient id="Writing3D_svg__x" x1={7.69} x2={6.257} y1={29.509} y2={28.682} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Writing3D_svg__x"
+        x1={7.69}
+        x2={6.257}
+        y1={29.509}
+        y2={28.682}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#FF8DC2" />
         <stop offset={1} stopColor="#FF8DC2" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Writing3D_svg__y" x1={6.474} x2={6.353} y1={27.093} y2={27.32} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Writing3D_svg__y"
+        x1={6.474}
+        x2={6.353}
+        y1={27.093}
+        y2={27.32}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#FFA3AE" />
         <stop offset={1} stopColor="#FFA3AE" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Writing3D_svg__z" x1={4.942} x2={5.44} y1={29.424} y2={29.824} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Writing3D_svg__z"
+        x1={4.942}
+        x2={5.44}
+        y1={29.424}
+        y2={29.824}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#46144E" />
         <stop offset={1} stopColor="#5A1870" />
       </linearGradient>
@@ -373,7 +436,11 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={-0.3} dy={-1} />
         <feGaussianBlur stdDeviation={1} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -391,7 +458,10 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_116_9308" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_116_9308"
+          stdDeviation={0.5}
+        />
       </filter>
       <filter
         id="Writing3D_svg__l"
@@ -404,7 +474,11 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dy={-0.25} />
         <feGaussianBlur stdDeviation={0.5} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -422,7 +496,10 @@ const SvgWriting3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SV
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_116_9308" stdDeviation={1} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_116_9308"
+          stdDeviation={1}
+        />
       </filter>
     </defs>
   </svg>

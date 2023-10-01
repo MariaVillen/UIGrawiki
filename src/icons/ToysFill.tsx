@@ -1,9 +1,14 @@
+import * as React from "react";
 import type { SVGProps } from "react";
 interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-const SvgToysFill = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgToysFill = ({
+  title,
+  titleId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -15,10 +20,13 @@ const SvgToysFill = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVG
   >
     {title ? <title id={titleId}>{title}</title> : null}
     <path
-      fill="currentColor"
+      fill="#000"
       d="M26.8 14.8h-4.2V5.2A1.2 1.2 0 0 0 21.4 4H10.6a1.2 1.2 0 0 0-1.2 1.2v9.6H5.2A1.2 1.2 0 0 0 4 16v10.8A1.2 1.2 0 0 0 5.2 28h21.6a1.2 1.2 0 0 0 1.2-1.2V16a1.2 1.2 0 0 0-1.2-1.2Zm-12 10.8H6.4v-8.4h8.4v8.4Zm-3-10.8V6.4h8.4v8.4h-8.4Zm13.8 10.8h-8.4v-8.4h8.4v8.4Z"
     />
-    <path fill="#000" d="M7 17.8h7.2V25H7zM17.8 17.8H25V25h-7.2zM12.4 7h7.2v7.2h-7.2z" />
+    <path
+      fill="#000"
+      d="M7 17.8h7.2V25H7zM17.8 17.8H25V25h-7.2zM12.4 7h7.2v7.2h-7.2z"
+    />
   </svg>
 );
 export default SvgToysFill;
