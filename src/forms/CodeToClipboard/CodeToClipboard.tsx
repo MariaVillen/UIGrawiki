@@ -5,7 +5,11 @@ export interface clipboardTextProps extends HTMLAttributes<HTMLDivElement> {
   buttonStyles: string;
 }
 
-const CodeToClipboard = ({ code, buttonStyles, ...props }: clipboardTextProps) => {
+const CodeToClipboard = ({
+  code,
+  buttonStyles,
+  ...props
+}: clipboardTextProps) => {
   const [state, setState] = useState("copy");
 
   useEffect(() => {
@@ -24,7 +28,9 @@ const CodeToClipboard = ({ code, buttonStyles, ...props }: clipboardTextProps) =
       <code className="gwk-font-mono gwk-pl-2 ">{code} </code>
       <button
         type="button"
-        className={`gwk-p-1 gwk-w-[4em] ${buttonStyles ? buttonStyles : "gwk-bg-[#000]"}`}
+        className={`gwk-p-1 gwk-w-[4em] ${
+          buttonStyles ? buttonStyles : "gwk-bg-[#000]"
+        }`}
         onClick={copyText}
       >
         {state}

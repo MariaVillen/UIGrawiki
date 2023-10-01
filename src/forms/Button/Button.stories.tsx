@@ -1,6 +1,6 @@
 import Button from "./Button";
 import type { Meta, StoryObj } from "@storybook/react";
-import { CloseTag } from "../../icons";
+import { CloseTag, NotificationOutline } from "../../icons";
 
 const meta = {
   title: "Buttons/Button",
@@ -32,6 +32,15 @@ type Story = StoryObj<typeof meta>;
 
 // DEFAULT CATEGORY
 
+export const WithIcon: Story = {
+  args: {
+    variant: "primary",
+    size: "small",
+    btnType: "icon",
+    children: <CloseTag />,
+  },
+};
+
 export const Default: Story = {
   args: {
     variant: "default",
@@ -47,5 +56,16 @@ export const Icon: Story = {
     size: "small",
     btnType: "icon",
     children: <CloseTag />,
+  },
+};
+
+export const NotificationButton: Story = {
+  args: {
+    variant: "primary",
+    size: "small",
+    btnType: "icon",
+    children: (
+      <NotificationOutline className="gwk-text-text-white gwk-p-1 gwk-h-full gwk-w-full" />
+    ),
   },
 };

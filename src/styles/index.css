@@ -610,12 +610,28 @@ html {
   height: 0.5rem;
 }
 
+.gwk-h-20{
+  height: 5rem;
+}
+
+.gwk-h-32{
+  height: 8rem;
+}
+
 .gwk-h-8{
   height: 2rem;
 }
 
+.gwk-h-\[84px\]{
+  height: 84px;
+}
+
 .gwk-h-full{
   height: 100%;
+}
+
+.gwk-h-16{
+  height: 4rem;
 }
 
 .gwk-min-h-\[414px\]{
@@ -638,6 +654,14 @@ html {
   width: 3.5rem;
 }
 
+.gwk-w-20{
+  width: 5rem;
+}
+
+.gwk-w-32{
+  width: 8rem;
+}
+
 .gwk-w-7{
   width: 1.75rem;
 }
@@ -658,8 +682,16 @@ html {
   width: 4em;
 }
 
+.gwk-w-\[84px\]{
+  width: 84px;
+}
+
 .gwk-w-full{
   width: 100%;
+}
+
+.gwk-w-16{
+  width: 4rem;
 }
 
 .gwk-max-w-\[340px\]{
@@ -925,14 +957,22 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:gwk-bg-blue-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+.gwk-opacity-100{
+  opacity: 1;
+}
+
+.gwk-opacity-50{
+  opacity: 0.5;
 }
 
 .hover\:gwk-bg-red-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.hover\:gwk-bg-surface-background-dark:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--color-blue-dark), var(--tw-bg-opacity) );
 }
 
 .hover\:gwk-bg-surface-black-30:hover{

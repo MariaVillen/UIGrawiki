@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from "react";
 import { cn } from "../../utils/classesUtilities/cn-utility-function";
 import { cva, VariantProps } from "class-variance-authority";
 // variante de color y tamaño
-
+// TODO: Problema con el size medio en el tipo icon de boton
 const button = cva(
   [
     "gwk-flex",
@@ -115,10 +115,14 @@ const Button = ({
   children,
   btnType,
   fluid,
+  className,
   ...rest
 }: ButtonProps) => {
   return (
-    <button className={cn(button({ variant, size, btnType, fluid }))} {...rest}>
+    <button
+      className={cn(button({ variant, size, btnType, fluid }), className)}
+      {...rest}
+    >
       {children}
     </button>
   );
