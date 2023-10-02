@@ -15,16 +15,16 @@ import { cn } from "../../utils";
  * Component SlipButton
  * Description: A selector with suggestions
  */
-
 export type SlipButtonProps = InputHTMLAttributes<HTMLInputElement> & {
   fluid?: boolean;
   isOpened?: boolean;
   children?: ReactNode;
-  value: { icon?: ComponentType | string; text: string | number };
+  icon?: ComponentType;
+  alt?: string;
 };
 const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
   (
-    { children, isOpened = true, value, fluid, ...rest }: SlipButtonProps,
+    { children, isOpened = true, alt, icon, fluid, ...rest }: SlipButtonProps,
     ref: Ref<HTMLInputElement>,
   ) => {
     const [isOpen, setIsOpen] = useState(isOpened);
@@ -47,7 +47,7 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
             fluid && "gwk-w-full",
           )}
         >
-          <SlipButtonInput value={value} ref={ref || null} {...rest} />
+          <SlipButtonInput alt={alt} icon={icon} ref={ref || null} {...rest} />
           <ToggleButton
             className="gwk-h-4 gwk-w-4 gwk-mx-2"
             iconTrue={<ArrowTop />}

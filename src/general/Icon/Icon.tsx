@@ -2,7 +2,7 @@ import { ComponentType, HTMLAttributes } from "react";
 import { cn } from "../../utils";
 
 export type iconProps = {
-  alt?: string;
+  alt?: string | undefined;
   elementSrc: ComponentType | string;
   round?: boolean;
   className?: string;

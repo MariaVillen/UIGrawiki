@@ -3,32 +3,26 @@ import { cn } from "../../utils";
 import { Icon } from "../../general";
 
 export type SlipButtonInputProps = HTMLAttributes<HTMLInputElement> & {
-  value: {
-    icon?: ComponentType | string;
-    text: string | number | undefined;
-  };
+  icon?: ComponentType | string;
+  alt?: string;
   inputStyles?: string;
 };
 
 const SlipButtonInput = forwardRef<HTMLInputElement, SlipButtonInputProps>(
   (
-    { value, className, inputStyles, ...rest }: SlipButtonInputProps,
+    { icon, alt, className, inputStyles, ...rest }: SlipButtonInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
-    const icon = value.icon;
-    const text = value.text;
-
     return (
       <div className={cn("gwk-flex gwk-gap-2 gwk-items-center", className)}>
-        {icon && text && (
+        {icon && (
           <Icon
-            alt={text.toString()}
+            alt={alt || "Icon Category"}
             elementSrc={icon}
             className=" gwk-align-middle gwk-w-8 gwk-h-8"
           />
         )}
         <input
-          value={text || ""}
           className={cn(
             "gwk-border-none gwk-rounded-l-rdxl gwk-w-full gwk-text-base gwk-outline-none gwk-bg-transparent",
             inputStyles,

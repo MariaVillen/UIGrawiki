@@ -35,6 +35,8 @@ type Story = StoryObj<typeof meta>;
 export const WithIcon: Story = {
   args: {
     placeholder: "Categoría",
-    value: { icon: BankOutline as ComponentType, text: "Banco" },
+    value: "Banco",
+    icon: BankOutline as ComponentType,
+    alt: "Categoría Banco",
   },
 };
