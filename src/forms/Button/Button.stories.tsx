@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "radio",
-      options: ["default", "primary", "secondary", "disabled"],
+      options: ["default", "primary", "secondary", "ghost"],
     },
     size: {
       control: "radio",
@@ -31,13 +31,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // DEFAULT CATEGORY
-
 export const WithIcon: Story = {
   args: {
     variant: "primary",
     size: "small",
     btnType: "icon",
-    children: <CloseTag />,
+    children: <CloseTag className="gwk-w-full gwk-h-full gwk-p-1" />,
   },
 };
 
@@ -46,6 +45,7 @@ export const Default: Story = {
     variant: "default",
     size: "normal",
     children: "Botón",
+    btnType: "button",
     fluid: false,
   },
 };

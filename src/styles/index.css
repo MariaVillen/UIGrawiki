@@ -647,6 +647,22 @@ html {
   height: 100%;
 }
 
+.gwk-h-mediumBtn{
+  height: 2.875rem;
+}
+
+.gwk-h-smallBtn{
+  height: 2.0625rem;
+}
+
+.gwk-h-\[2\.0625rem\]{
+  height: 2.0625rem;
+}
+
+.gwk-h-\[2\.875rem\]{
+  height: 2.875rem;
+}
+
 .gwk-min-h-\[414px\]{
   min-height: 414px;
 }
@@ -717,6 +733,34 @@ html {
 
 .gwk-w-full{
   width: 100%;
+}
+
+.gwk-w-bigBtn{
+  width: 17.5rem;
+}
+
+.gwk-w-normalBtn{
+  width: 12.8125rem;
+}
+
+.gwk-w-smallBtn{
+  width: 7.375rem;
+}
+
+.gwk-w-\[12\.8125rem\]{
+  width: 12.8125rem;
+}
+
+.gwk-w-\[17\.rem\]{
+  width: 17.rem;
+}
+
+.gwk-w-\[7\.375rem\]{
+  width: 7.375rem;
+}
+
+.gwk-w-\[17\.5rem\]{
+  width: 17.5rem;
 }
 
 .gwk-max-w-\[340px\]{
