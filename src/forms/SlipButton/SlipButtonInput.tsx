@@ -19,7 +19,7 @@ const SlipButtonInput = forwardRef<HTMLInputElement, SlipButtonInputProps>(
           <Icon
             alt={alt || "Icon Category"}
             elementSrc={icon}
-            className=" gwk-align-middle gwk-w-8 gwk-h-8"
+            className="gwk-align-middle gwk-w-8 gwk-h-8"
           />
         )}
         <input
