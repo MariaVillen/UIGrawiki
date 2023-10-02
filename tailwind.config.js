@@ -30,6 +30,9 @@ export default {
         deskLg: "1920px",
         // => @media (min-width: 1920px) { ... }
       },
+      boxShadow: {
+        input: "0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset",
+      },
       width: {
         bigBtn: "17.5rem",
         normalBtn: "12.8125rem",
