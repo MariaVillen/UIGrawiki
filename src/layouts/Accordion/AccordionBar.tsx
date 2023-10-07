@@ -1,8 +1,9 @@
 import { HTMLAttributes } from "react";
+import { cn } from "../../utils";
 
-const AccordionBar = ({ children }: HTMLAttributes<HTMLElement>) => {
+const AccordionBar = ({ children, className }: HTMLAttributes<HTMLElement>) => {
   return (
-    <div className="gwk-mh-[3.125rem] gwk-w-full gwk-text-lg">{children}</div>
+    <div className={cn("gwk-w-full gwk-text-lg", className)}>{children}</div>
   );
 };
 

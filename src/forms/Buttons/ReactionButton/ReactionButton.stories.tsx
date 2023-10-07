@@ -1,6 +1,6 @@
 import ReactionButton from "./ReactionButton";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ThumbsDown3D, ThumbsDownOutline } from "../../icons";
+import { ThumbsDown3D, ThumbsDownOutline } from "../../../icons";
 
 const meta = {
   title: "Buttons/ReactionButton",

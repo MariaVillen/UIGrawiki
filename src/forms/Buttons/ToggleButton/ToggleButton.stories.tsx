@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowTop } from "../../icons";
+import { ArrowDown, ArrowTop } from "../../../icons";
 import ToggleButton from "./ToggleButton";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    isOpen: false,
+    isActive: false,
     iconFalse: <ArrowDown />,
     iconTrue: <ArrowTop />,
     className: "gwk-text-triarty-white",

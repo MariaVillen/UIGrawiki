@@ -1,6 +1,6 @@
 import MenuButton from "./MenuButton";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ControlOutline } from "../../icons";
+import { ControlOutline } from "../../../icons";
 
 const meta = {
   title: "Buttons/MenuButton",

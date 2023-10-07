@@ -32,6 +32,6 @@ export const Default: Story = {
     rounded: true,
     bar: <Accordion.Bar>Crear Artículo</Accordion.Bar>,
     className:
-      "gwk-mh-[3.125rem] gwk-w-full gwk-text-triarty-white gwk-bg-primary-hover gwk-p-[0.8125rem] gwk-text-lg",
+      "gwk-m-[3.125rem] gwk-w-full gwk-text-text-triarty-white gwk-bg-sufrace-primary-hover gwk-p-[0.8125rem] gwk-text-lg",
   },
 };

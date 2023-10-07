@@ -1,10 +1,10 @@
 import SlipButton from "./SlipButton";
 import type { Meta, StoryObj } from "@storybook/react";
-import { BankOutline } from "../../icons";
+import { BankOutline } from "../../../icons";
 import { ComponentType } from "react";
 
 const meta = {
-  title: "Buttons/SlipButton",
+  title: "Fields/SlipButton",
   component: SlipButton,
   tags: ["autodocs"],
   parameters: {

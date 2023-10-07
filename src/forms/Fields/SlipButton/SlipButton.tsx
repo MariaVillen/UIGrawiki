@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowTop, ToggleButton } from "../../index";
+import { ArrowDown, ArrowTop, ToggleButton } from "../../../index";
 import {
   useState,
   InputHTMLAttributes,
@@ -9,7 +9,7 @@ import {
   ComponentType,
 } from "react";
 import SlipButtonInput from "./SlipButtonInput";
-import { cn } from "../../utils";
+import { cn } from "../../../utils";
 
 /**
  * Component SlipButton
@@ -52,7 +52,7 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
             className="gwk-h-4 gwk-w-4 gwk-mx-2"
             iconTrue={<ArrowTop />}
             iconFalse={<ArrowDown />}
-            isOpen={isOpen}
+            isActive={isOpen}
             onClick={toggleMenu}
           />
         </div>

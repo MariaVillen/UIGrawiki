@@ -1,6 +1,6 @@
 import Button from "./Button";
 import type { Meta, StoryObj } from "@storybook/react";
-import { CloseTag, NotificationOutline } from "../../icons";
+import { CloseTag, NotificationOutline } from "../../../icons";
 
 const meta = {
   title: "Buttons/Button",

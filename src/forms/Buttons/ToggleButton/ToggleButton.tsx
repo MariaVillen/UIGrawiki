@@ -1,21 +1,23 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { ArrowDown, ArrowTop } from "../../icons";
+import { ArrowDown, ArrowTop } from "../../../icons";
 
 export type toggleButtonProps = HTMLAttributes<HTMLButtonElement> & {
   iconTrue?: ReactNode;
   iconFalse?: ReactNode;
-  isOpen?: boolean;
+  isActive?: boolean;
+  className?: string;
 };
 
 const ToggleButton = ({
   iconTrue: IconTrue = <ArrowTop />,
   iconFalse: IconFalse = <ArrowDown />,
-  isOpen = false,
+  isActive = false,
+  className,
   ...rest
 }: toggleButtonProps) => {
   return (
-    <button type="button" {...rest}>
-      {isOpen ? IconTrue : IconFalse}
+    <button type="button" {...rest} className={className}>
+      {isActive ? IconTrue : IconFalse}
     </button>
   );
 };

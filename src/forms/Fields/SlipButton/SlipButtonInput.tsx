@@ -1,6 +1,6 @@
 import { ComponentType, HTMLAttributes, Ref, forwardRef } from "react";
-import { cn } from "../../utils";
-import { Icon } from "../../general";
+import { cn } from "../../../utils";
+import { Icon } from "../../../general";
 
 export type SlipButtonInputProps = HTMLAttributes<HTMLInputElement> & {
   icon?: ComponentType | string;

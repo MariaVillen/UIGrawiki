@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, ComponentType } from "react";
-import { Icon } from "../../general";
+import { Icon } from "../../../general";
 
 export type ReactionButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   /* Not Selected Icon */
