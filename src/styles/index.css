@@ -795,12 +795,6 @@ html {
   flex-grow: 0;
 }
 
-.gwk-appearance-none{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .gwk-grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
