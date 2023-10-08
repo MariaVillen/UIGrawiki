@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, ReactNode, Ref, forwardRef } from "react";
-import { cn } from "../../../../utils";
-import { BaseInput } from "../../../index";
+import { cn } from "@ui/utils";
+import { BaseInput } from "@ui/forms";
 
 export type baseInputWithButtonProps = InputHTMLAttributes<HTMLInputElement> & {
   className?: string;

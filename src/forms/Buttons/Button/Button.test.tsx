@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import Button from "./Button";
+import { Button } from "@ui/forms";
 
 describe("Button Component", () => {
   it("renders with default props", () => {

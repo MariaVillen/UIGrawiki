@@ -1,5 +1,5 @@
 import { ComponentType, HTMLAttributes } from "react";
-import { cn } from "../../utils";
+import { cn } from "@ui/utils";
 
 export type iconProps = {
   alt?: string | undefined;

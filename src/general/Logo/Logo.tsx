@@ -1,11 +1,6 @@
 import { HTMLAttributes } from "react";
 import { Link } from "react-router-dom";
-import {
-  BaseLogo,
-  VerticalLogo,
-  HorizontalLogo,
-  MenuLogo,
-} from "../../assets/logos";
+import { BaseLogo, VerticalLogo, HorizontalLogo, MenuLogo } from "@ui/assets";
 
 export type LogoProps = HTMLAttributes<HTMLLinkElement> & {
   type: "horizontal" | "vertical" | "menu" | "base";

@@ -1,11 +1,7 @@
 import { HTMLAttributes, useState } from "react";
-import TagContainer from "../../../general/Tags/TagContainer";
-import BaseInput from "../Input/BaseInput/BaseInput";
+import { TagContainer, Suggest } from "@ui/layouts";
+import { BaseInput, TagButton, useTagField, ErrorField } from "@ui/forms";
 import { cn } from "../../../utils";
-import TagButton from "../../../general/Tags/TagButton";
-import useTagField from "./useTagField";
-import { ErrorField } from "../Input";
-import Suggest from "../../../layouts/Suggest/Suggest";
 
 const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
   const [isError, setIsError] = useState("");
@@ -19,6 +15,7 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
     isSuggestionOpen,
     applyValue,
     deleteTag,
+    selectedItem,
   } = useTagField({
     data: [
       { id: "0", label: "mercado" },
@@ -69,6 +66,7 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
           <Suggest
             data={suggestionList}
             nameList="tags"
+            selectedItem={selectedItem}
             onSelect={applyValue}
           />
         </ul>

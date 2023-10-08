@@ -10,3 +10,4 @@ export { default as SlipButton } from "./Fields/SlipButton/SlipButton";
 export { default as SlipButtonInput } from "./Fields/SlipButton/SlipButtonInput";
 export { default as TagField } from "./Fields/TagField/TagField";
 export { default as useTagField } from "./Fields/TagField/useTagField";
+export { default as TagButton } from "./Buttons/TagButton/TagButton";

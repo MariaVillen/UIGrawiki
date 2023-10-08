@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
-import { cn } from "../../../utils";
+import { cn } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 // variante de color y tamaño
 // TODO: Problema con el size medio en el tipo icon de boton

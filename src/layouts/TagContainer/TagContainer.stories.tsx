@@ -1,4 +1,4 @@
-import Tag from "./Tag";
+import { Tag } from "@ui/general";
 import TagContainer from "./TagContainer";
 import type { Meta, StoryObj } from "@storybook/react";
 

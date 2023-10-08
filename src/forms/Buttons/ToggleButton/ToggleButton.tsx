@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
-import { ArrowDown, ArrowTop } from "../../../icons";
+import { ArrowDown, ArrowTop } from "@ui/icons";
 
 export type toggleButtonProps = HTMLAttributes<HTMLButtonElement> & {
   iconTrue?: ReactNode;

@@ -1,7 +1,7 @@
-import { CloseTag } from "../../icons";
+import { CloseTag } from "@ui/icons";
 import { HTMLAttributes } from "react";
-import { cn } from "../../utils";
-import Tag from "./Tag";
+import { cn } from "@ui/utils";
+import { Tag } from "@ui/general";
 
 export type ButtonTagProps = HTMLAttributes<HTMLButtonElement> & {
   children: string;

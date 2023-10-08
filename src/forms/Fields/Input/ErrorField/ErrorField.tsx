@@ -1,6 +1,6 @@
-import { AlertColor } from "../../../../icons/index.ts";
+import { AlertColor } from "@ui/icons";
 import { HTMLAttributes, ReactNode } from "react";
-import { cn } from "../../../../utils/index.ts";
+import { cn } from "@ui/utils";
 
 export type errorFormProps = HTMLAttributes<HTMLDivElement> & {
   className?: string;

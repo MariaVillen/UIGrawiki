@@ -1,9 +1,8 @@
 import { HTMLAttributes, ReactNode, useState } from "react";
 import AccordionContext from "./AccordionContext";
-import ToggleButton from "../../forms/Buttons/ToggleButton/ToggleButton";
+import { ToggleButton } from "@ui/forms";
 import AccordionBar from "./AccordionBar";
-import { partiallyApply } from "../../utils/partiallyApply/partiallyApply";
-import { cn } from "../../utils";
+import { partiallyApply, cn } from "@ui/utils";
 
 export type accordionProps = HTMLAttributes<HTMLElement> & {
   bar: ReactNode;

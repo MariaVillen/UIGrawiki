@@ -21,7 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@ui/*": ["./src/components/*"]
+      "@ui/*": ["./src/*"]
     }
   },
   "include": ["src", "vite-env.d.ts", "postcss.config.js"],

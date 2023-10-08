@@ -1,4 +1,3 @@
-import { ArrowDown, ArrowTop, ToggleButton } from "../../../index";
 import {
   useState,
   InputHTMLAttributes,
@@ -8,8 +7,10 @@ import {
   ReactNode,
   ComponentType,
 } from "react";
+import { ArrowDown, ArrowTop } from "@ui/icons";
+import { ToggleButton } from "@ui/forms";
 import SlipButtonInput from "./SlipButtonInput";
-import { cn } from "../../../utils";
+import { cn } from "@ui/utils";
 
 /**
  * Component SlipButton

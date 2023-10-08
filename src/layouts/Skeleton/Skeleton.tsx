@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { cn } from "../../utils";
+import { cn } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 // variante de color y tamaño
 

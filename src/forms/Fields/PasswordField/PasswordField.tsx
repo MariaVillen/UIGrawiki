@@ -1,6 +1,6 @@
 import { HTMLAttributes, Ref, forwardRef, useState } from "react";
-import { InputWithButton, ToggleButton } from "../..";
-import { PasswordHideOutline, PasswordShowOutline } from "../../..";
+import { InputWithButton, ToggleButton } from "@ui/forms";
+import { PasswordHideOutline, PasswordShowOutline } from "@ui/icons";
 
 export type passwordFieldProps = HTMLAttributes<HTMLInputElement>;
 

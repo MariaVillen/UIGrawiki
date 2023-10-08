@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react";
-import { AvatarOutline } from "../../icons";
+import { AvatarOutline } from "@ui/icons";
 import { VariantProps, cva } from "class-variance-authority";
-import { cn } from "../../utils";
+import { cn } from "@ui/utils";
 
 const avatar = cva(
   ["gwk-bg-transparent", "gwk-rounded-full", "gwk-overflow-hidden"],

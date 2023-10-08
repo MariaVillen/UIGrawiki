@@ -16,11 +16,12 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        icons: path.resolve(__dirname, "src/components/icons/index.ts"),
-        forms: path.resolve(__dirname, "src/components/forms/index.ts"),
-        nav: path.resolve(__dirname, "src/components/nav/index.ts"),
-        layouts: path.resolve(__dirname, "src/components/layouts/index.ts"),
-        general: path.resolve(__dirname, "src/components/general/index.ts"),
+        icons: path.resolve(__dirname, "src/icons/index.ts"),
+        forms: path.resolve(__dirname, "src/forms/index.ts"),
+        nav: path.resolve(__dirname, "src/nav/index.ts"),
+        layouts: path.resolve(__dirname, "src/layouts/index.ts"),
+        general: path.resolve(__dirname, "src/general/index.ts"),
+        utils: path.resolve(__dirname, "src/utils/index.ts"),
         "": path.resolve(__dirname, "src/index.ts"),
       },
       name: "ui-grawiki",
@@ -31,13 +32,35 @@ export default defineConfig({
         `${entryName ? entryName + "/" : ""}ui-grawiki.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: [
+        "react",
+        "react-dom",
+        "@ui/utils",
+        "@ui/general",
+        "@ui/icons",
+        "@ui/assets",
+        "@ui/forms",
+        "@ui/layouts",
+        "@ui/nav",
+      ],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@ui": path.resolve(__dirname, "./src"),
+      "@ui/icons": path.resolve(__dirname, "./src/icons"),
+      "@ui/forms": path.resolve(__dirname, "./src/forms"),
+      "@ui/general": path.resolve(__dirname, "./src/general"),
+      "@ui/utils": path.resolve(__dirname, "./src/utils"),
+      "@ui/nav": path.resolve(__dirname, "./src/nav"),
+      "@ui/assets": path.resolve(__dirname, "./src/assets"),
+      "@ui/layouts": path.resolve(__dirname, "./src/layouts"),
     },
   },
 });

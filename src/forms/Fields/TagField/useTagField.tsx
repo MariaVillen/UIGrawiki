@@ -18,6 +18,7 @@ const useTagField = ({
   const [suggestionList, setSuggestionList] = useState(data || []);
   const [inputTagList, setInputTagList] = useState(articleTags || []);
   const [isSuggestionOpen, setIsSuggestionOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(-1);
   const tagRef = useRef<HTMLInputElement | null>(null);
 
   // Focus on the Input of TagField
@@ -67,11 +68,10 @@ const useTagField = ({
 
   /* Handler: Onkeydown - Add a tag if a space is insert */
   const onLocalKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
-    console.log("ekey ", e.key);
+    console.log(e.key, selectedItem);
     if (e.key === " " || e.key === "Tab" || e.key === "Enter") {
       e.preventDefault();
       const value = tagRef.current?.value;
-      console.log("value : ", value);
       if (value) {
         AddTag(value.trim());
         tagRef.current!.value = "";
@@ -83,8 +83,10 @@ const useTagField = ({
     } else {
       focus();
     }
-    if (e.key === "ArrowDown") {
-      focusNextElement();
+    if (e.key === "ArrowUp" && selectedItem > 0) {
+      setSelectedItem((prev) => prev - 1);
+    } else if (e.key === "ArrowDown" && selectedItem < data.length - 1) {
+      setSelectedItem((prev) => prev + 1);
     }
   };
 
@@ -120,6 +122,7 @@ const useTagField = ({
     isSuggestionOpen,
     deleteTag,
     applyValue,
+    selectedItem,
   };
 };
 

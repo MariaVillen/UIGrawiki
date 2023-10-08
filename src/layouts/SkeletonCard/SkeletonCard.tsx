@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import Skeleton from "../Skeleton/Skeleton";
+import { Skeleton } from "@ui/layouts";
 import { partiallyApply, cn } from "../../utils";
 import SkeletonCircle from "./SkeletonCircle";
 
