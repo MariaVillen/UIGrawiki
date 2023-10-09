@@ -5,7 +5,7 @@ import {
   focusNextElement,
 } from "../../../utils/domUtilities";
 
-import { tagDataPropos } from "@ui/general/DataTypes/tag";
+import { tagDataPropos } from "@ui/interface/tag";
 
 export type useTagFieldProps = {
   data: tagDataPropos[];
@@ -52,9 +52,10 @@ const useTagField = ({
     const newTagList = tagsOfArticle.filter(
       (el) => el.label.toLowerCase() !== val.toLowerCase(),
     );
-    setTagsOfArticle(newTagList);
+    setTagsOfArticle(() => newTagList);
     getSuggestionsFromValue(value);
     setIsSuggestionBoxOpen(false);
+    onChange(newTagList);
     focus();
   };
 
@@ -72,13 +73,11 @@ const useTagField = ({
       if (!isTagDuplicated(val) && tagsOfArticle.length < 5) {
         setTagsOfArticle((prev) => [...prev, { id, label: val }]);
         setValue("");
-        onChange(tagsOfArticle);
+        onChange([...tagsOfArticle, { id, label: val }]);
       } else {
-        console.log("Tag limit reached or tag duplicated");
         onError("Tags Limit reached or tag duplicated");
       }
     } else {
-      console.log("only alphanumerics values");
       onError("Only alphanumerics values");
     }
   };
@@ -86,7 +85,6 @@ const useTagField = ({
   /* Handler: Onkeydown - Add a tag if a space is insert */
   const onLocalKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
     if (e.key === " " || e.key === "Tab" || e.key === "Enter") {
-      console.log(" selectedItem: ", selectedItem, "value ", value);
       if (selectedItem >= 0 && e.key === "Enter") {
         setValue(() => suggestionList[selectedItem].label);
         AddTag(suggestionList[selectedItem]);
@@ -96,7 +94,6 @@ const useTagField = ({
       } else {
         const val = inputRef.current!.value.trim();
         setValue(val);
-        console.log(value);
         if (value) {
           const result = data.findIndex((el) => el.label === value);
           let newValue;
@@ -120,7 +117,6 @@ const useTagField = ({
       focus();
     }
     if (e.key === "ArrowDown" && suggestionList.length > 0) {
-      console.log("inputkeydown");
       if (selectedItem >= -1 && selectedItem < data.length - 1) {
         setSelectedItem((prev) => prev + 1);
       }

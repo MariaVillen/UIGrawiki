@@ -1,0 +1,120 @@
+import { useState } from "react";
+
+interface DropdownProps<T> {
+  options: (T | string)[];
+  selectedIndex: number;
+  onSelect: (index: number) => void;
+  getObjectValue?: (item: T) => string;
+}
+
+function Dropdown<T>({
+  options,
+  selectedIndex,
+  onSelect,
+  getObjectValue,
+}: DropdownProps<T>) {
+  return (
+    <div className="gwk-relative gwk-inline-block gwk-text-left">
+      <div>
+        <button
+          type="button"
+          id="options-menu"
+          aria-haspopup="listbox"
+          aria-expanded="true"
+          onClick={() => onSelect(selectedIndex === -1 ? 0 : -1)}
+        >
+          {selectedIndex === -1
+            ? "Seleccionar..."
+            : getObjectValue
+            ? getObjectValue(options[selectedIndex] as T)
+            : (options[selectedIndex] as string)}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.293 5.293a1 1 0 011.414 0L14 9.586V11a1 1 0 11-2 0V9.586L10.293 5.293a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {selectedIndex !== -1 && (
+        <div className="">
+          <div
+            className="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="options-menu"
+          >
+            {options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => onSelect(index)}
+                className={`${
+                  index === selectedIndex
+                    ? "gwk-bg-indigo-100 gwk-text-indigo-900"
+                    : "gwk-text-gray-700"
+                }`}
+                role="menuitem"
+              >
+                {getObjectValue
+                  ? getObjectValue(option as T)
+                  : (option as string)}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// function App() {
+//   const options = ["Opción 1", "Opción 2", "Opción 3"];
+//   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+
+//   return (
+//     <div className="container mx-auto p-4">
+//       <Dropdown
+//         options={options}
+//         selectedIndex={selectedIndex}
+//         onSelect={(index) => setSelectedIndex(index)}
+//       />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+function App() {
+  const options = [
+    "Opción 1",
+    "Opción 2",
+    { id: 3, label: "Opción 3" },
+    { id: 4, label: "Opción 4" },
+  ];
+  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+
+  // Define una función getObjectValue que extrae el campo 'label' de un objeto
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const getObjectValue = (item: any) =>
+    typeof item === "object" ? item.label : item;
+
+  return (
+    <div className="container mx-auto p-4">
+      <Dropdown
+        options={options}
+        selectedIndex={selectedIndex}
+        onSelect={(index) => setSelectedIndex(index)}
+        getObjectValue={getObjectValue}
+      />
+    </div>
+  );
+}
+
+export default App;

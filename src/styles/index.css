@@ -585,6 +585,11 @@ html {
   margin-right: 0.5rem;
 }
 
+.gwk-my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .gwk-my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -677,6 +682,10 @@ html {
 
 .gwk-h-full{
   height: 100%;
+}
+
+.gwk-min-h-\[40px\]{
+  min-height: 40px;
 }
 
 .gwk-min-h-\[414px\]{
@@ -1295,8 +1304,16 @@ html {
     width: 100px;
   }
 
+  .mobile\:gwk-w-full{
+    width: 100%;
+  }
+
   .mobile\:gwk-max-w-\[1120px\]{
     max-width: 1120px;
+  }
+
+  .mobile\:gwk-max-w-\[855px\]{
+    max-width: 855px;
   }
 
   .mobile\:gwk-flex-col{

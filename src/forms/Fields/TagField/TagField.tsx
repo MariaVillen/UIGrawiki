@@ -1,11 +1,18 @@
 import { HTMLAttributes, useState } from "react";
-import { TagContainer, Suggest } from "@ui/layouts";
+import { Suggest } from "@ui/layouts";
 import { BaseInput, TagButton, useTagField, ErrorField } from "@ui/forms";
 import { cn } from "../../../utils";
 
+const myData = [
+  { id: "0", label: "mercado" },
+  { id: "1", label: "moneda" },
+];
+
 const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
   const [isError, setIsError] = useState("");
-  const onError = (value: string) => setIsError(value);
+  const onError = (error: string) => setIsError(error);
+  const onChange = (submitedValue: typeof myData) =>
+    console.log("submit article ", submitedValue);
   const {
     inputRef,
     tagsOfArticle,
@@ -18,30 +25,34 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
     selectedItem,
     value,
   } = useTagField({
-    data: [
-      { id: "0", label: "mercado" },
-      { id: "1", label: "moneda" },
-    ],
+    data: myData,
     articleTags: [],
-    onChange: (value) => console.log("cambiando ", value),
+    onChange: onChange,
     onError: onError,
   });
 
   return (
     <>
-      <div className="gwk-group-focus-visible:border-primary gwk-flex gwk-flex-col gwk-max-w-screen-mobile gwk-shadow-input gwk-rounded-[20px] gwk-overflow-hidden ">
-        <div className=" gwk-flex gwk-flex-row gwk-max-w-full gwk-flex-wrap">
-          <TagContainer className="gwk-px-4 gwk-flex-wrap">
-            {tagsOfArticle.length > 0 &&
-              tagsOfArticle.map((el: { id: string; label: string }) => (
-                <TagButton key={el.id} onClick={() => deleteTag(el.label)}>
-                  {el.label}
-                </TagButton>
-              ))}
-          </TagContainer>
+      <div className="gwk-group-focus-visible:border-primary gwk-min-h-[40px] gwk-w-80 gwk-flex gwk-flex-col gwk-max-w-screen-mobile gwk-shadow-input gwk-rounded-[20px] gwk-overflow-hidden mobile:gwk-max-w-[855px] mobile:gwk-w-full">
+        <div
+          className={cn(
+            tagsOfArticle.length > 0 && "gwk-items-center gwk-gap-1 gwk-pl-2",
+            " gwk-flex gwk-flex-row gwk-max-w-full gwk-flex-wrap",
+          )}
+        >
+          {tagsOfArticle.length > 0 &&
+            tagsOfArticle.map((el: { id: string; label: string }) => (
+              <TagButton
+                className="gwk-my-1"
+                key={el.id}
+                onClick={() => deleteTag(el.label)}
+              >
+                {el.label}
+              </TagButton>
+            ))}
           <div
             className={cn(
-              " gwk-px-4 gwk-bg-transparent gwk-text-text-black",
+              " gwk-px-4 gwk-flex-grow gwk-bg-transparent gwk-text-text-black",
               className,
             )}
           >
@@ -50,7 +61,7 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
               placeholder="Etiquetas"
               onChange={onLocalChange}
               onKeyDown={onLocalKeyDown}
-              className="gwk-group"
+              className="gwk-group gwk-w-full"
               value={value}
               ref={inputRef}
               {...rest}
