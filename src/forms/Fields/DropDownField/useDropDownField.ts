@@ -16,25 +16,31 @@ function useDropDownField<T>({ value, options }: useDropDownProps<T>) {
 
   const getOptionsFromObject = (
     itemsToConvert: (T | string | number | readonly string[] | undefined)[],
-    filterChamp: string,
+    filterChamp: string[],
   ) => {
     return itemsToConvert.map((option) =>
       getObjectValue
-        ? getObjectValue(option as T | string, filterChamp as keyof T)
+        ? getObjectValue(option as T | string, filterChamp as Array<keyof T>)
         : (option as string),
     );
   };
 
-  console.log("opciones ", getOptionsFromObject(options, "text"));
+  console.log("opciones ", getOptionsFromObject(options, ["text", "icon"]));
 
   function getObjectValue<T>(
     item: T | string,
-    filterChamp: keyof T,
+    filterChamp: Array<keyof T>,
   ): string | T {
-    console.log(item);
     if (item && typeof item === "object") {
-      console.log(item[filterChamp]);
-      return item[filterChamp] as T;
+      const filteredObject: Partial<T> = {};
+
+      filterChamp.forEach((key) => {
+        if (Object.prototype.hasOwnProperty.call(item, key)) {
+          filteredObject[key] = item[key];
+        }
+      });
+
+      return filteredObject as T;
     } else {
       return item as string;
     }
@@ -56,3 +62,29 @@ function useDropDownField<T>({ value, options }: useDropDownProps<T>) {
 }
 
 export default useDropDownField;
+
+// const getOptionsFromObject = (
+//     itemsToConvert: (T | string | number | readonly string[] | undefined)[],
+//     filterChamp: string[],
+//   ) => {
+//     return itemsToConvert.map((option) =>
+//       getObjectValue
+//         ? getObjectValue(option as T | string, filterChamp as Array<keyof T>)
+//         : (option as string),
+//     );
+//   };
+
+//   console.log("opciones ", getOptionsFromObject(options, ["text"]));
+
+//   function getObjectValue<T>(
+//     item: T | string,
+//     filterChamp: Array<keyof T>,
+//   ): string | T {
+//     console.log(item);
+//     if (item && typeof item === "object") {
+//       console.log(item[filterChamp[0]]);
+//       return item[filterChamp[0]] as T;
+//     } else {
+//       return item as string;
+//     }
+//   }
