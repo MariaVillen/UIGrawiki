@@ -1,11 +1,16 @@
 import { KeyboardEventHandler, useRef, useState } from "react";
 import { validateOnlyAlphaNumerics } from "../../../utils/validations";
-import { focusNextElement } from "../../../utils/domUtilities";
+import {
+  deleteArrayfromArrayById,
+  focusNextElement,
+} from "../../../utils/domUtilities";
+
+import { tagDataPropos } from "@ui/general/DataTypes/tag";
 
 export type useTagFieldProps = {
-  data: { id: string; label: string }[];
-  articleTags: { id: string; label: string }[];
-  onChange: (value: { id: string; label: string }[]) => void;
+  data: tagDataPropos[];
+  articleTags: tagDataPropos[];
+  onChange: (value: tagDataPropos[]) => void;
   onError: (error: string) => void;
 };
 
@@ -15,39 +20,59 @@ const useTagField = ({
   onError,
   onChange,
 }: useTagFieldProps) => {
-  const [suggestionList, setSuggestionList] = useState(data || []);
-  const [inputTagList, setInputTagList] = useState(articleTags || []);
-  const [isSuggestionOpen, setIsSuggestionOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(-1);
-  const tagRef = useRef<HTMLInputElement | null>(null);
-
-  // Focus on the Input of TagField
-  const focus = () => tagRef.current !== null && tagRef.current.focus();
-
-  // Filter de data to have a new updated list of tags.
-  const refreshTagList = (value: string) =>
-    inputTagList.filter((el) => el.label.toLowerCase() !== value.toLowerCase());
+  // Input variables
+  // Input for all the list of tags for one article
+  const [tagsOfArticle, setTagsOfArticle] = useState(articleTags || []);
+  // the value of the input entry
+  const [value, setValue] = useState("");
+  // The input element
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   // Return a new array with all tags that match with the letter of the input value */
-  const getSuggestionsFromValue = (value: string) =>
-    suggestionList.filter((el) => el.label.toLowerCase().match(value));
+  const getSuggestionsFromValue = (val: string) =>
+    deleteArrayfromArrayById(
+      data.filter((el) => el.label.toLowerCase().match(val)),
+      tagsOfArticle,
+    );
+  // Suggestion List
+  // All the suggestion avaivables with the entry
+  const [suggestionList, setSuggestionList] = useState(
+    getSuggestionsFromValue(value),
+  );
+  // If the suggestion box is open or not
+  const [isSuggestionBoxOpen, setIsSuggestionBoxOpen] = useState(false);
+  // If a item was selected or not (-2) if no suggestions, -1 if suggestions open but not a selection
+  const [selectedItem, setSelectedItem] = useState(-2);
+
+  // Focus on the Input of TagField
+  const focus = () => inputRef.current!.focus();
+
+  /* Function: Delete tags from values tags array */
+  const deleteTag = (val: string) => {
+    const newTagList = tagsOfArticle.filter(
+      (el) => el.label.toLowerCase() !== val.toLowerCase(),
+    );
+    setTagsOfArticle(newTagList);
+    getSuggestionsFromValue(value);
+    setIsSuggestionBoxOpen(false);
+    focus();
+  };
 
   // Checks if the input text is already in the tags values array
-  const isTagDuplicated = (value: string) => {
-    const isRepeat = inputTagList.filter((el) => el.label === value);
+  const isTagDuplicated = (val: string) => {
+    const isRepeat = tagsOfArticle.filter((el) => el.label === val);
     return isRepeat.length > 0;
   };
 
   // Function: add a tag to de list of value tag array
-  const AddTag = (value: string) => {
-    value = value.toLowerCase();
-    if (validateOnlyAlphaNumerics(value)) {
+  const AddTag = ({ id, label }: tagDataPropos) => {
+    const val = label.toLowerCase();
+    if (validateOnlyAlphaNumerics(val)) {
       /* Add tags to the list (limit of tags 5) and reset input value */
-      if (!isTagDuplicated(value) && inputTagList.length < 5) {
-        setInputTagList((prev) => [...prev, { id: value, label: value }]);
-        setSuggestionList((prev) => [...prev, { id: value, label: value }]);
-        if (tagRef.current !== null) tagRef.current.value = "";
-        onChange(inputTagList);
+      if (!isTagDuplicated(val) && tagsOfArticle.length < 5) {
+        setTagsOfArticle((prev) => [...prev, { id, label: val }]);
+        setValue("");
+        onChange(tagsOfArticle);
       } else {
         console.log("Tag limit reached or tag duplicated");
         onError("Tags Limit reached or tag duplicated");
@@ -58,24 +83,35 @@ const useTagField = ({
     }
   };
 
-  /* Function: Delete tags from values tags array */
-  const deleteTag = (id: string) => {
-    const newTagList = refreshTagList(id);
-    setSuggestionList(refreshTagList(id));
-    setInputTagList(newTagList);
-    focus();
-  };
-
   /* Handler: Onkeydown - Add a tag if a space is insert */
   const onLocalKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
-    console.log(e.key, selectedItem);
     if (e.key === " " || e.key === "Tab" || e.key === "Enter") {
-      e.preventDefault();
-      const value = tagRef.current?.value;
-      if (value) {
-        AddTag(value.trim());
-        tagRef.current!.value = "";
-        setIsSuggestionOpen(false);
+      console.log(" selectedItem: ", selectedItem, "value ", value);
+      if (selectedItem >= 0 && e.key === "Enter") {
+        setValue(() => suggestionList[selectedItem].label);
+        AddTag(suggestionList[selectedItem]);
+        setSelectedItem(-1);
+        setIsSuggestionBoxOpen(false);
+        getSuggestionsFromValue("");
+      } else {
+        const val = inputRef.current!.value.trim();
+        setValue(val);
+        console.log(value);
+        if (value) {
+          const result = data.findIndex((el) => el.label === value);
+          let newValue;
+          if (result === -1) {
+            // agregarlo a la base de datos
+            newValue = { id: value, label: value };
+          } else {
+            newValue = { id: result.toString(), label: value };
+          }
+          // si no lo es agregarlo a value
+          AddTag(newValue);
+          setValue("");
+          setIsSuggestionBoxOpen(false);
+          setSelectedItem(-2);
+        }
       }
     }
     if (e.key === "Tab") {
@@ -83,46 +119,61 @@ const useTagField = ({
     } else {
       focus();
     }
-    if (e.key === "ArrowUp" && selectedItem > 0) {
-      setSelectedItem((prev) => prev - 1);
-    } else if (e.key === "ArrowDown" && selectedItem < data.length - 1) {
-      setSelectedItem((prev) => prev + 1);
+    if (e.key === "ArrowDown" && suggestionList.length > 0) {
+      console.log("inputkeydown");
+      if (selectedItem >= -1 && selectedItem < data.length - 1) {
+        setSelectedItem((prev) => prev + 1);
+      }
     }
+    if (e.key === "ArrowUp" && selectedItem > -1) {
+      setSelectedItem((prev) => prev - 1);
+    }
+    console.log(e.key);
   };
 
   const onLocalChange = () => {
     onError("");
-    if (tagRef.current !== null) {
-      const value = tagRef.current.value.trim();
-      if (validateOnlyAlphaNumerics(value)) {
-        const newSuggestionList = getSuggestionsFromValue(value);
+    if (inputRef.current !== null) {
+      const val = inputRef.current.value.trim();
+      setValue(val);
+      if (validateOnlyAlphaNumerics(val)) {
+        const newSuggestionList = getSuggestionsFromValue(val);
         if (newSuggestionList.length > 0) {
-          setIsSuggestionOpen(true);
+          setIsSuggestionBoxOpen(true);
+          setSelectedItem(-1);
           setSuggestionList(newSuggestionList);
         } else {
-          setIsSuggestionOpen(false);
+          setIsSuggestionBoxOpen(false);
+          setSelectedItem(-2);
         }
       } else {
-        onError(`value not allowed: ${value}`);
+        if (!val) {
+          setIsSuggestionBoxOpen(false);
+          setSelectedItem(-2);
+          setSuggestionList([]);
+        } else {
+          onError(`value not allowed: ${val}`);
+        }
       }
     }
   };
 
-  const applyValue = (el: { id: string; label: string }) => {
-    tagRef.current!.value = el.label;
+  const applyValue = (el: tagDataPropos) => {
+    setValue(el.label);
     focus();
   };
 
   return {
-    tagRef,
-    inputTagList,
+    inputRef,
+    tagsOfArticle,
     suggestionList,
     onLocalChange,
     onLocalKeyDown,
-    isSuggestionOpen,
+    isSuggestionBoxOpen,
     deleteTag,
     applyValue,
     selectedItem,
+    value,
   };
 };
 

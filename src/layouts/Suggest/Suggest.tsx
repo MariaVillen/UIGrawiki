@@ -1,4 +1,4 @@
-import { Button } from "@ui/forms";
+import { cn } from "@ui/utils";
 
 export type SuggestionProps = {
   data: { id: string; label: string }[];
@@ -17,32 +17,29 @@ const Suggestions = ({
     onSelect(el);
   };
 
-  const onKeyDown = (el: { id: string; label: string }, e: { key: string }) => {
-    if (e.key === "Enter" && selectedItem >= 0) {
-      handleSelect(el);
-    }
-  };
-
   return (
-    <>
+    <div role="menu" tabIndex={-1}>
       {data
-        ? data?.map((el) => (
+        ? data?.map((el, index) => (
             <li
               key={`${nameList}-${el.id}`}
-              className="gwk-flex gwk-border-t gwk-border-t-surface-black-30 gwk-w-full gwk-items-center gwk-h-10 gwk-px-4 hover:gwk-bg-surface-primary-hover hover:gwk-text-text-white"
+              className={cn(
+                "gwk-flex gwk-border-t gwk-border-t-surface-black-30 gwk-w-full gwk-items-center gwk-h-10 gwk-px-4 hover:gwk-bg-surface-primary-hover hover:gwk-text-text-white",
+                selectedItem === index &&
+                  "gwk-bg-surface-primary-hover gwk-text-text-white",
+              )}
             >
-              <Button
-                role="button"
-                className=""
+              <button
+                className=" gwk-flex gwk-justify-start gwk-items-center "
+                type="button"
                 onClick={() => handleSelect(el)}
-                onKeyDown={onKeyDown.bind(null, el)}
               >
                 {el.label}
-              </Button>
+              </button>
             </li>
           ))
         : null}
-    </>
+    </div>
   );
 };
 

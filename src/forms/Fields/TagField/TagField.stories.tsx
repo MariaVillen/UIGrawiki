@@ -7,6 +7,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    background: "light",
   },
   argTypes: {
     placeholder: {

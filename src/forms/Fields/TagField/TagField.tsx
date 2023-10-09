@@ -7,24 +7,22 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
   const [isError, setIsError] = useState("");
   const onError = (value: string) => setIsError(value);
   const {
-    tagRef,
-    inputTagList,
+    inputRef,
+    tagsOfArticle,
     suggestionList,
     onLocalChange,
     onLocalKeyDown,
-    isSuggestionOpen,
+    isSuggestionBoxOpen,
     applyValue,
     deleteTag,
     selectedItem,
+    value,
   } = useTagField({
     data: [
       { id: "0", label: "mercado" },
       { id: "1", label: "moneda" },
     ],
-    articleTags: [
-      { id: "0", label: "mercado" },
-      { id: "1", label: "moneda" },
-    ],
+    articleTags: [],
     onChange: (value) => console.log("cambiando ", value),
     onError: onError,
   });
@@ -33,9 +31,9 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
     <>
       <div className="gwk-group-focus-visible:border-primary gwk-flex gwk-flex-col gwk-max-w-screen-mobile gwk-shadow-input gwk-rounded-[20px] gwk-overflow-hidden ">
         <div className=" gwk-flex gwk-flex-row gwk-max-w-full gwk-flex-wrap">
-          <TagContainer className="gwk-px-4 ">
-            {inputTagList.length > 0 &&
-              inputTagList.map((el: { id: string; label: string }) => (
+          <TagContainer className="gwk-px-4 gwk-flex-wrap">
+            {tagsOfArticle.length > 0 &&
+              tagsOfArticle.map((el: { id: string; label: string }) => (
                 <TagButton key={el.id} onClick={() => deleteTag(el.label)}>
                   {el.label}
                 </TagButton>
@@ -53,20 +51,23 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
               onChange={onLocalChange}
               onKeyDown={onLocalKeyDown}
               className="gwk-group"
-              ref={tagRef}
+              value={value}
+              ref={inputRef}
               {...rest}
             />
           </div>
         </div>
         <ul
           className={
-            isSuggestionOpen ? "gwk-flex gwk-flex-col gwk-px-0" : "gwk-hidden"
+            isSuggestionBoxOpen
+              ? "gwk-flex gwk-flex-col gwk-px-0"
+              : "gwk-hidden"
           }
         >
           <Suggest
+            selectedItem={selectedItem}
             data={suggestionList}
             nameList="tags"
-            selectedItem={selectedItem}
             onSelect={applyValue}
           />
         </ul>
