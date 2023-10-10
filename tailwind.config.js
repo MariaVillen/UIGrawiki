@@ -32,6 +32,7 @@ export default {
       },
       boxShadow: {
         input: "0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset",
+        inputReverse: "0px -2px 4px -1px rgba(0,0,0,0.25) inset",
       },
       width: {
         bigBtn: "17.5rem",
@@ -79,7 +80,7 @@ export default {
         },
         border: {
           grey: "rgba(var(--color-grey-ligth), <alpha-value> )",
-          primary: "rgba(var(--color-blue-light), <alpha-value> )",
+          primary: "rgba(var(--color-blue-ligth), <alpha-value> )",
           positive: "rgba(var(--color-green), <alpha-value> )",
           negative: "rgba(var(--color-red-light), <alpha-value> )",
         },

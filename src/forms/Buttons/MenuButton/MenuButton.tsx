@@ -94,7 +94,7 @@ const menuIcon = cva("", {
 
 export type MenuButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof menuButton> & {
-    icon: ComponentType;
+    icon: ComponentType | string;
     iconStyles?: string;
     alt?: string;
   };

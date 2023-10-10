@@ -1,30 +1,35 @@
 import { cn } from "@ui/utils";
+import { ReactNode } from "react";
 
-export type suggestDropDownProps = {
-  options: string[];
+export type suggestDropDownProps<T> = {
+  options: (T | string | number | readonly string[] | undefined)[];
   nameList: string;
   selectedItem: number;
   onSelect: (index: number) => void;
+  setComponent?: ((el: T) => ReactNode | JSX.Element) | undefined;
+  className: string;
 };
 
-function SuggestDropDown({
+function SuggestDropDown<T>({
   options,
   nameList,
   selectedItem,
+  setComponent,
+  className,
   onSelect,
-}: suggestDropDownProps) {
+}: suggestDropDownProps<T>) {
   const handleSelect = (index: number) => {
     onSelect(index);
   };
 
   return (
-    <div role="menu" tabIndex={-1}>
+    <div role="menu" tabIndex={-1} className={className}>
       {options
         ? options?.map((el, index) => (
             <li
               key={`${nameList}-${index}`}
               className={cn(
-                "gwk-flex gwk-border-t gwk-border-t-surface-black-30 gwk-w-full gwk-items-center gwk-h-10 gwk-px-4 hover:gwk-bg-surface-primary-hover hover:gwk-text-text-white",
+                "gwk-flex gwk-border-t gwk-border-t-surface-black-10 gwk-w-full gwk-items-center gwk-h-10 gwk-px-4 hover:gwk-bg-surface-primary-hover hover:gwk-text-text-white",
                 selectedItem === index &&
                   "gwk-bg-surface-primary-hover gwk-text-text-white",
               )}
@@ -34,7 +39,11 @@ function SuggestDropDown({
                 type="button"
                 onClick={() => handleSelect(index)}
               >
-                {el}
+                {setComponent ? (
+                  setComponent(el as T)
+                ) : (
+                  <span>{el as string}</span>
+                )}
               </button>
             </li>
           ))

@@ -3,7 +3,6 @@ import {
   InputHTMLAttributes,
   Ref,
   forwardRef,
-  useEffect,
   ReactNode,
   ComponentType,
 } from "react";
@@ -17,35 +16,38 @@ import { cn } from "@ui/utils";
  * Description: A selector with suggestions
  */
 export type SlipButtonProps = InputHTMLAttributes<HTMLInputElement> & {
-  fluid?: boolean;
-  isOpened?: boolean;
+  onToggle: (val: boolean) => void;
+  isOpened: boolean;
   children?: ReactNode;
   icon?: ComponentType;
   alt?: string;
 };
 const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
   (
-    { children, isOpened = true, alt, icon, fluid, ...rest }: SlipButtonProps,
+    {
+      children,
+      onToggle,
+      isOpened,
+      className,
+      alt,
+      icon,
+      ...rest
+    }: SlipButtonProps,
     ref: Ref<HTMLInputElement>,
   ) => {
     const [isOpen, setIsOpen] = useState(isOpened);
+
     const toggleMenu = () => {
+      onToggle(!isOpen);
       setIsOpen(!isOpen);
     };
-
-    useEffect(() => {
-      if (isOpen) {
-        setIsOpen(false);
-      }
-    }, [isOpened]);
 
     return (
       <div className=" gwk-relative">
         <div
           className={cn(
-            " gwk-flex gwk-items-center gwk-justify-between gwk-h-10 gwk-w-36 gwk-bg-surface-triarty-white gwk-shadow-input gwk-rounded-rdlg gwk-pl-4 mobile:gwk-w-80   ",
-            isOpen && " gwk-rounded-b-[0px]",
-            fluid && "gwk-w-full",
+            " gwk-flex gwk-items-center gwk-justify-between gwk-h-10  gwk-bg-surface-triarty-white gwk-rounded-rdlg gwk-pl-4 gwk-w-full ",
+            className,
           )}
         >
           <SlipButtonInput alt={alt} icon={icon} ref={ref || null} {...rest} />

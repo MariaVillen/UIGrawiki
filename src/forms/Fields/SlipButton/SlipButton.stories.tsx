@@ -11,9 +11,6 @@ const meta = {
     layout: "padded",
   },
   argTypes: {
-    fluid: {
-      control: "boolean",
-    },
     value: {
       control: "string",
     },
@@ -34,6 +31,7 @@ type Story = StoryObj<typeof meta>;
 
 export const WithIcon: Story = {
   args: {
+    isOpened: true,
     placeholder: "Categoría",
     value: "Banco",
     icon: BankOutline as ComponentType,

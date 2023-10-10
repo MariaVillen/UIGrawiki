@@ -14,7 +14,12 @@ const SlipButtonInput = forwardRef<HTMLInputElement, SlipButtonInputProps>(
     ref: Ref<HTMLInputElement>,
   ) => {
     return (
-      <div className={cn("gwk-flex gwk-gap-2 gwk-items-center", className)}>
+      <div
+        className={cn(
+          "gwk-flex gwk-w-full gwk-gap-2 gwk-items-center",
+          className,
+        )}
+      >
         {icon && (
           <Icon
             alt={alt || "Icon Category"}
