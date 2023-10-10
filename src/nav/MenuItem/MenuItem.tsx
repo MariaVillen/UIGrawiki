@@ -1,11 +1,12 @@
-import { ButtonHTMLAttributes, ComponentType } from "react";
+import { ComponentType } from "react";
 import { cn } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { Icon } from "@ui/general";
+import { Link, LinkProps } from "react-router-dom";
 // variante de color y tamaño
 // TODO: Problema con el size medio en el tipo icon de boton
 
-const menuButton = cva(
+const menuItem = cva(
   [
     "gwk-flex",
     "gwk-justify-center",
@@ -13,6 +14,7 @@ const menuButton = cva(
     "gwk-text-sm",
     "gwk-text-text-black",
     "gwk-font-normal",
+    "gwk-text-center",
   ],
   {
     variants: {
@@ -92,37 +94,38 @@ const menuIcon = cva("", {
   },
 });
 
-export type MenuButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof menuButton> & {
+export type menuItemProps = LinkProps &
+  VariantProps<typeof menuItem> & {
     icon: ComponentType | string;
+    iconActive: ComponentType | string;
     iconStyles?: string;
     alt?: string;
+    isActive: boolean;
   };
 
 //TODO: cambiar los padding por medidas de ancho width y agregar fluid button
-const MenuButton = ({
+const MenuItem = ({
   variant,
   children,
   reverse,
   icon,
+  iconActive,
   iconStyles,
   className,
+  isActive = false,
   alt,
   ...rest
-}: MenuButtonProps) => {
+}: menuItemProps) => {
   return (
-    <button
-      className={cn(menuButton({ variant, reverse }), className)}
-      {...rest}
-    >
+    <Link className={cn(menuItem({ variant, reverse }), className)} {...rest}>
       <Icon
         alt={alt}
-        elementSrc={icon}
+        elementSrc={isActive ? iconActive : icon}
         className={cn(menuIcon({ variant }), iconStyles)}
       />
       {children}
-    </button>
+    </Link>
   );
 };
 
-export default MenuButton;
+export default MenuItem;

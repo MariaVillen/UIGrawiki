@@ -1,6 +1,5 @@
 // Buttons
 export { default as Button } from "./Buttons/Button/Button";
-export { default as MenuButton } from "./Buttons/MenuButton/MenuButton";
 export { default as ReactionButton } from "./Buttons/ReactionButton/ReactionButton";
 export { default as ToggleButton } from "./Buttons/ToggleButton/ToggleButton";
 export { default as TagButton } from "./Buttons/TagButton/TagButton";

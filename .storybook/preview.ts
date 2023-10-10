@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 import "../src/styles/index.css";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 const preview: Preview = {
   parameters: {
@@ -24,6 +25,7 @@ const preview: Preview = {
         },
       ],
     },
+    decorators: [withRouter],
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {

@@ -1,4 +1,4 @@
-import { DropDownField, MenuButton } from "@ui/forms";
+import { DropDownField } from "@ui/forms";
 import type { Meta, StoryObj } from "@storybook/react";
 import { TCategoryItem } from "@ui/interface/categories";
 import {
@@ -7,6 +7,7 @@ import {
   BankOutline,
   GovernmentOutline,
 } from "@ui/icons";
+import { Icon } from "@ui/general";
 
 const data: Array<TCategoryItem> = [
   {
@@ -70,9 +71,10 @@ export const Objects: Story = {
     component: (elem: unknown) => {
       const { icon, text } = elem as TCategoryItem;
       return (
-        <MenuButton icon={icon} variant="horizontal">
+        <>
+          <Icon elementSrc={icon} />
           {text}
-        </MenuButton>
+        </>
       );
     },
   },
