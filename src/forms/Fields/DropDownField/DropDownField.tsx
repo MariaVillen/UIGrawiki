@@ -41,7 +41,7 @@ function DropdownField<T>({
       />
       {isSuggestionsOpen && (
         <SuggestDropDown
-          className=" gwk-absolute gwk-w-36 gwk-rounded-b-rdlg mobile:gwk-w-80 gwk-border-x gwk-border-b gwk-border-border-primary"
+          className=" gwk-overflow-hidden gwk-absolute gwk-bg-surface-triarty-white gwk-w-36 gwk-rounded-b-rdlg mobile:gwk-w-80 gwk-border-x gwk-border-b gwk-border-border-primary"
           options={options}
           nameList={"categories"}
           selectedItem={selectedIndex}

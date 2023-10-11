@@ -7,7 +7,8 @@ import {
   BankOutline,
   GovernmentOutline,
 } from "@ui/icons";
-import { Icon } from "@ui/general";
+
+import CategoryLabel from "@ui/general/CategoryLabel/CategoryLabel";
 
 const data: Array<TCategoryItem> = [
   {
@@ -70,12 +71,7 @@ export const Objects: Story = {
     placeholder: "Categorias",
     component: (elem: unknown) => {
       const { icon, text } = elem as TCategoryItem;
-      return (
-        <>
-          <Icon elementSrc={icon} />
-          {text}
-        </>
-      );
+      return <CategoryLabel icon={icon} text={text} />;
     },
   },
   // Resto de las configuraciones...
