@@ -67,9 +67,7 @@ function useDropDownField<T>({
     setValue(el);
     const newInputValue = getValueOf("text", el as T | string);
     setInputValue(newInputValue);
-    console.log(inputValue);
     const newIcon = getValueOf("icon", el as T | string);
-    console.log("newicon", typeof newIcon);
     setIconValue(newIcon);
 
     focus();

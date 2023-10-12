@@ -37,7 +37,7 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
     const toggleMenu = () => {
       onToggle(!isOpened);
     };
-
+    console.log("icon: ", icon);
     return (
       <div className=" gwk-relative">
         <div
