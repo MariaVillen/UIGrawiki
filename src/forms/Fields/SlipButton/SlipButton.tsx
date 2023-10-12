@@ -1,5 +1,4 @@
 import {
-  useState,
   InputHTMLAttributes,
   Ref,
   forwardRef,
@@ -19,7 +18,7 @@ export type SlipButtonProps = InputHTMLAttributes<HTMLInputElement> & {
   onToggle: (val: boolean) => void;
   isOpened: boolean;
   children?: ReactNode;
-  icon?: ComponentType;
+  icon?: ComponentType | string;
   alt?: string;
 };
 const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
@@ -35,11 +34,8 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
     }: SlipButtonProps,
     ref: Ref<HTMLInputElement>,
   ) => {
-    const [isOpen, setIsOpen] = useState(isOpened);
-
     const toggleMenu = () => {
-      onToggle(!isOpen);
-      setIsOpen(!isOpen);
+      onToggle(!isOpened);
     };
 
     return (
@@ -55,7 +51,7 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
             className="gwk-h-4 gwk-w-4 gwk-mx-2"
             iconTrue={<ArrowTop />}
             iconFalse={<ArrowDown />}
-            isActive={isOpen}
+            isActive={isOpened}
             onClick={toggleMenu}
           />
         </div>

@@ -68,6 +68,8 @@ export const Default: Story = {
 export const Objects: Story = {
   args: {
     options: data,
+    indexChamp: "text",
+    iconChamp: "icon",
     placeholder: "Categorias",
     component: (elem: unknown) => {
       const { icon, text } = elem as TCategoryItem;

@@ -5,7 +5,7 @@ export type suggestDropDownProps<T> = {
   options: (T | string | number | readonly string[] | undefined)[];
   nameList: string;
   selectedItem: number;
-  onSelect: (index: number) => void;
+  onSelect: (el: T | string) => void;
   setComponent?: ((el: T) => ReactNode | JSX.Element) | undefined;
   className: string;
 };
@@ -18,8 +18,8 @@ function SuggestDropDown<T>({
   className,
   onSelect,
 }: suggestDropDownProps<T>) {
-  const handleSelect = (index: number) => {
-    onSelect(index);
+  const handleSelect = (el: string | T) => {
+    onSelect(el);
   };
 
   return (
@@ -35,9 +35,9 @@ function SuggestDropDown<T>({
               )}
             >
               <button
-                className="gwk-flex gwk-justify-start gwk-items-center"
+                className="gwk-flex gwk-w-full gwk-justify-start gwk-items-center"
                 type="button"
-                onClick={() => handleSelect(index)}
+                onClick={() => handleSelect(el as T | string)}
               >
                 {setComponent ? (
                   setComponent(el as T)

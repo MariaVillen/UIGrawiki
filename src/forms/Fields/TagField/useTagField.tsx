@@ -20,13 +20,14 @@ const useTagField = ({
   onError,
   onChange,
 }: useTagFieldProps) => {
-  // Input variables
   // Input for all the list of tags for one article
   const [tagsOfArticle, setTagsOfArticle] = useState(articleTags || []);
   // the value of the input entry
   const [value, setValue] = useState("");
   // The input element
   const inputRef = useRef<HTMLInputElement | null>(null);
+  // Focus on the Input of TagField
+  const focus = () => inputRef.current!.focus();
 
   // Return a new array with all tags that match with the letter of the input value */
   const getSuggestionsFromValue = (val: string) =>
@@ -43,9 +44,6 @@ const useTagField = ({
   const [isSuggestionBoxOpen, setIsSuggestionBoxOpen] = useState(false);
   // If a item was selected or not (-2) if no suggestions, -1 if suggestions open but not a selection
   const [selectedItem, setSelectedItem] = useState(-2);
-
-  // Focus on the Input of TagField
-  const focus = () => inputRef.current!.focus();
 
   /* Function: Delete tags from values tags array */
   const deleteTag = (val: string) => {

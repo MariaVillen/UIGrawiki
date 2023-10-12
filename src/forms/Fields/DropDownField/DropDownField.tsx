@@ -1,30 +1,43 @@
 import SuggestDropDown from "./SuggestDropDown";
 import SlipButton from "../SlipButton/SlipButton";
-import { InputHTMLAttributes, ReactNode, useRef } from "react";
+import { ComponentType, InputHTMLAttributes, ReactNode, useRef } from "react";
 import useDropDownField from "./useDropDownField";
 import { cn } from "@ui/utils";
 
 export type dropdownFieldProps<T> = InputHTMLAttributes<HTMLInputElement> & {
   options: (T | string | number | readonly string[] | undefined)[];
   component?: ((el: T) => ReactNode | JSX.Element) | undefined;
+  indexChamp?: string | keyof T;
+  iconChamp?: string | keyof T;
 };
 
 function DropdownField<T>({
   options,
   value,
+  indexChamp,
+  iconChamp,
   component: Component,
   ...rest
 }: dropdownFieldProps<T>) {
   const dropDownRef = useRef<HTMLInputElement | null>(null);
 
-  const { selectedIndex, handleSuggestSelect, isSuggestionsOpen, toggleMenu } =
-    useDropDownField({
-      value: value,
-      filterChamp: "",
-      options: options,
-      onChange: (val) => console.log(val),
-      onError: (error) => console.log(error),
-    });
+  const {
+    selectedIndex,
+    inputValue,
+    iconValue,
+    handleSuggestSelect,
+    isSuggestionsOpen,
+    toggleMenu,
+    onLocalChange,
+  } = useDropDownField({
+    value: value as T | string,
+    indexChamp,
+    iconChamp,
+    ref: dropDownRef,
+    options: options as (T | string)[],
+    onChange: (val) => console.log(val),
+    onError: (error) => console.log(error),
+  });
 
   return (
     <>
@@ -36,8 +49,11 @@ function DropdownField<T>({
         )}
         ref={dropDownRef}
         {...rest}
+        icon={iconValue as string | ComponentType}
+        value={inputValue as string}
         isOpened={isSuggestionsOpen}
         onToggle={toggleMenu}
+        onChange={onLocalChange}
       />
       {isSuggestionsOpen && (
         <SuggestDropDown
