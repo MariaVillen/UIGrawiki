@@ -1,9 +1,9 @@
 import { Icon } from "@ui/general";
 import { cn } from "@ui/utils";
-import { ComponentType, HTMLAttributes } from "react";
+import { ComponentType, HTMLAttributes, ReactElement } from "react";
 
 export type TCategoryLabelprops = HTMLAttributes<HTMLDivElement> & {
-  icon: ComponentType | string;
+  icon: ComponentType | string | ReactElement;
   text: string;
   alt?: string;
 };

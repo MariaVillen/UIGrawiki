@@ -1,14 +1,14 @@
 import {
   ComponentType,
   HTMLAttributes,
-  cloneElement,
+  ReactElement,
   isValidElement,
 } from "react";
 import { cn } from "@ui/utils";
 
 export type iconProps = {
   alt?: string | undefined;
-  elementSrc: ComponentType | string;
+  elementSrc: ComponentType | string | ReactElement;
   round?: boolean;
   className?: string;
 } & HTMLAttributes<HTMLElement>;
@@ -31,11 +31,7 @@ const Icon = ({ alt, elementSrc, className, round, ...rest }: iconProps) => {
     if (typeof elementSrc === "function") {
       return <Component {...rest} className={classNames} />;
     } else if (isValidElement(elementSrc)) {
-      return cloneElement(elementSrc, {
-        alt,
-        className: cn(classNames),
-        ...rest,
-      });
+      return elementSrc;
     }
   }
 };
