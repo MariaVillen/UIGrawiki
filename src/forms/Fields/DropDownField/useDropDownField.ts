@@ -1,4 +1,9 @@
-import { MutableRefObject, SetStateAction, useState } from "react";
+import {
+  KeyboardEventHandler,
+  MutableRefObject,
+  SetStateAction,
+  useState,
+} from "react";
 
 export type useDropDownProps<T> = {
   value: T | string;
@@ -30,9 +35,10 @@ function useDropDownField<T>({
   };
   const [myValue, setValue] = useState(value);
   const [inputValue, setInputValue] = useState(getValueOf("text", value));
-  const [iconValue, setIconValue] = useState(getValueOf("icon", value));
+  const [iconValue, setIconValue] = useState(() => getValueOf("icon", value));
   const [selectedIndex, setSelectedIndex] = useState(-2);
   const [isSuggestionsOpen, setIsSuggestionsOpen] = useState(false);
+
   console.log(options, myValue);
   // get the selected value and apply it to input value.
 
@@ -58,6 +64,8 @@ function useDropDownField<T>({
   //   }
   // }
 
+  const onLocalKeyDown: KeyboardEventHandler<HTMLInputElement> = () => {};
+
   const onLocalChange = () => {
     const newValue = ref.current!.value.trim();
     setInputValue(newValue);
@@ -65,11 +73,8 @@ function useDropDownField<T>({
 
   const handleSuggestSelect = (el: SetStateAction<string | T>) => {
     setValue(el);
-    const newInputValue = getValueOf("text", el as T | string);
-    setInputValue(newInputValue);
-    const newIcon = getValueOf("icon", el as T | string);
-    setIconValue(() => newIcon);
-
+    setInputValue(getValueOf("text", el as T | string));
+    setIconValue(() => getValueOf("icon", el as T | string));
     focus();
     setSelectedIndex(-2);
     setIsSuggestionsOpen(false);
@@ -82,6 +87,7 @@ function useDropDownField<T>({
     iconValue,
     selectedIndex,
     onLocalChange,
+    onLocalKeyDown,
     handleSuggestSelect,
     toggleMenu,
     isSuggestionsOpen,

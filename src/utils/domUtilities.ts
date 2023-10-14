@@ -46,3 +46,7 @@ export const deleteArrayfromArrayById = <T extends { id: string }>(
     return !b.some((elementoB) => elementoB.id === elementoA.id);
   });
 };
+
+export const isAStringOfArray = (array: unknown[]) => {
+  return array.every((element) => typeof element === "string");
+};

@@ -18,6 +18,9 @@ const meta = {
     placeholder: {
       control: "text",
     },
+    colorStates: {
+      control: "boolean",
+    },
     onClick: {},
   },
 } satisfies Meta<typeof InputWithButton>;

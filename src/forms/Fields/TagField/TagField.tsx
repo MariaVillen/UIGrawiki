@@ -33,7 +33,16 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
 
   return (
     <>
-      <div className="gwk-group-focus-visible:border-primary gwk-min-h-[40px] gwk-w-80 gwk-flex gwk-flex-col gwk-max-w-screen-mobile gwk-shadow-input gwk-rounded-[20px] gwk-overflow-hidden mobile:gwk-max-w-[855px] mobile:gwk-w-full">
+      <div
+        className={cn(
+          "gwk-min-h-[40px] gwk-w-80 gwk-flex gwk-flex-col gwk-max-w-screen-mobile gwk-shadow-input gwk-rounded-[20px] gwk-overflow-hidden mobile:gwk-max-w-[855px] mobile:gwk-w-full",
+          isError
+            ? "gwk-border gwk-border-border-negative"
+            : value
+            ? "gwk-border gwk-border-border-positive"
+            : "focus-within:gwk-border focus-within:gwk-border-border-primary",
+        )}
+      >
         <div
           className={cn(
             tagsOfArticle.length > 0 && "gwk-items-center gwk-gap-1 gwk-pl-2",
@@ -61,7 +70,7 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
               placeholder="Etiquetas"
               onChange={onLocalChange}
               onKeyDown={onLocalKeyDown}
-              className="gwk-group gwk-w-full"
+              className="gwk-w-full"
               value={value}
               ref={inputRef}
               {...rest}
