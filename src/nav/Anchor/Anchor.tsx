@@ -3,9 +3,9 @@ import { cva } from "class-variance-authority";
 import { Link, LinkProps } from "react-router-dom";
 
 export type TAnchorProps = LinkProps & {
-  size: "big" | "normal" | "small";
-  theme: "dark" | "light";
-  disabled: boolean;
+  size?: "big" | "normal" | "small";
+  theme?: "dark" | "light";
+  disabled?: boolean;
 };
 
 const anchor = cva(

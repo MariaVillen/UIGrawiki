@@ -2,7 +2,6 @@ import { ButtonHTMLAttributes } from "react";
 import { cn } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 // variante de color y tamaño
-// TODO: Problema con el size medio en el tipo icon de boton
 const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
   variants: {
     variant: {
@@ -104,7 +103,6 @@ const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof button>;
 
-//TODO: cambiar los padding por medidas de ancho width y agregar fluid button
 const Button = ({
   variant,
   size,

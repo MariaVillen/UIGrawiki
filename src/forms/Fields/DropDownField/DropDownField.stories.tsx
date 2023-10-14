@@ -73,7 +73,7 @@ export const Objects: Story = {
     placeholder: "Categorias",
     component: (elem: unknown) => {
       const { icon, text } = elem as TCategoryItem;
-      return <CategoryLabel icon={icon} text={text} />;
+      return <CategoryLabel icon={icon} text={text} size={"normal"} />;
     },
   },
   // Resto de las configuraciones...
