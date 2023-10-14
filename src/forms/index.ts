@@ -2,7 +2,7 @@
 export { default as Button } from "./Buttons/Button/Button";
 export { default as ReactionButton } from "./Buttons/ReactionButton/ReactionButton";
 export { default as ToggleButton } from "./Buttons/ToggleButton/ToggleButton";
-export { default as TagButton } from "./Buttons/TagButton/TagButton";
+export { default as TagButton } from "./Buttons/TagButton/TagButton.tsx";
 
 // Fields
 export { default as CodeToClipboard } from "./CodeToClipboard/CodeToClipboard";

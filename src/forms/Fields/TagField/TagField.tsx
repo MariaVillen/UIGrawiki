@@ -55,6 +55,7 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
                 className="gwk-my-1"
                 key={el.id}
                 onClick={() => deleteTag(el.label)}
+                withHash
               >
                 {el.label}
               </TagButton>

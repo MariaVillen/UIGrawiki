@@ -79,7 +79,7 @@ export default {
           },
         },
         border: {
-          grey: "rgba(var(--color-grey-ligth), <alpha-value> )",
+          grey: "rgba(var(--color-grey-light), <alpha-value> )",
           primary: "rgba(var(--color-blue-ligth), <alpha-value> )",
           positive: "rgba(var(--color-green), <alpha-value> )",
           negative: "rgba(var(--color-red-light), <alpha-value> )",
