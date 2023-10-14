@@ -1160,6 +1160,14 @@ html {
   padding-left: 0px;
 }
 
+.gwk-pr-1{
+  padding-right: 0.25rem;
+}
+
+.gwk-pl-1{
+  padding-left: 0.25rem;
+}
+
 .gwk-text-center{
   text-align: center;
 }
@@ -1235,6 +1243,19 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.gwk-text-text-primary{
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-blue-ligth), var(--tw-text-opacity) );
+}
+
+.gwk-underline{
+  text-decoration-line: underline;
+}
+
+.gwk-no-underline{
+  text-decoration-line: none;
+}
+
 .gwk-opacity-100{
   opacity: 1;
 }
@@ -1308,6 +1329,20 @@ html {
 .hover\:gwk-text-text-white:hover{
   --tw-text-opacity: 1;
   color: rgba(var(--color-white), var(--tw-text-opacity) );
+}
+
+.hover\:gwk-text-text-primary-dark:hover{
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-blue), var(--tw-text-opacity) );
+}
+
+.hover\:gwk-text-text-disable:hover{
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-grey), var(--tw-text-opacity) );
+}
+
+.hover\:gwk-underline:hover{
+  text-decoration-line: underline;
 }
 
 .hover\:gwk-shadow-md:hover{
