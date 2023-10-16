@@ -1,6 +1,6 @@
 import { Button } from "@ui/forms";
 import type { Meta, StoryObj } from "@storybook/react";
-import { CloseTag, NotificationOutline } from "@ui/icons";
+import { PencilFill } from "@ui/icons";
 
 const meta = {
   title: "Buttons/Button",
@@ -31,15 +31,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // DEFAULT CATEGORY
-export const WithIcon: Story = {
-  args: {
-    variant: "primary",
-    size: "small",
-    btnType: "icon",
-    children: <CloseTag className="gwk-w-full gwk-h-full gwk-p-1" />,
-  },
-};
-
 export const Default: Story = {
   args: {
     variant: "default",
@@ -50,22 +41,39 @@ export const Default: Story = {
   },
 };
 
-export const Icon: Story = {
-  args: {
-    variant: "primary",
-    size: "small",
-    btnType: "icon",
-    children: <CloseTag />,
-  },
-};
-
-export const NotificationButton: Story = {
+export const IcoOnly: Story = {
   args: {
     variant: "primary",
     size: "small",
     btnType: "icon",
     children: (
-      <NotificationOutline className="gwk-text-text-white gwk-p-1 gwk-h-full gwk-w-full" />
+      <Button.Icon
+        icon={PencilFill}
+        size={Default?.args?.size}
+        className="gwk-p-1"
+      />
+    ),
+  },
+};
+
+export const ButtonWithIcon: Story = {
+  args: {
+    ...Default.args,
+    children: (
+      <>
+        <Button.Icon icon={PencilFill} size={Default?.args?.size} /> Button
+      </>
+    ),
+  },
+};
+
+export const ButtonWithIconReverse: Story = {
+  args: {
+    ...Default.args,
+    children: (
+      <>
+        Button <Button.Icon icon={PencilFill} size={Default?.args?.size} />
+      </>
     ),
   },
 };

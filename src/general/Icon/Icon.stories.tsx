@@ -23,6 +23,7 @@ const meta = {
 
   parameters: {
     componentSubtitle: "It is a basic Icon",
+    backgrounds: { default: "light" },
   },
 } satisfies Meta<typeof Icon>;
 
@@ -32,7 +33,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     alt: "Close this Modal",
-    className: "gwk-text-white gwk-h-8 gwk-w-8 hover:gwk-text-primary",
+    className:
+      " hover:gwk-text-text-white gwk-h-8 hover:gwk-bg-red-500 gwk-w-8 gwk-text-red-500 gwk-bg-white",
     elementSrc: CloseRoundedFill,
   },
 };
@@ -42,7 +44,7 @@ export const Rounded: Story = {
     ...Default,
     elementSrc: CloseRoundedFill,
     className:
-      "gwk-text-white gwk-h-8 gwk-w-8 gwk-bg-red-500 hover:gwk-bg-red-700",
+      "hover:gwk-text-text-white gwk-h-8 hover:gwk-bg-red-500 gwk-w-8 gwk-text-red-500 gwk-bg-white",
     round: true,
   },
 };

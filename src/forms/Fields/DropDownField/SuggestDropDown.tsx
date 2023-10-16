@@ -1,12 +1,12 @@
 import { cn } from "@ui/utils";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 export type suggestDropDownProps<T> = {
   options: (T | string | number | readonly string[] | undefined)[];
   nameList: string;
   selectedItem: number;
   onSelect: (el: T | string) => void;
-  setComponent?: ((el: T) => ReactNode | JSX.Element) | undefined;
+  setComponent?: ((el: T) => ReactNode | ReactElement) | undefined;
   className: string;
 };
 

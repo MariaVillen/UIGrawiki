@@ -1,4 +1,10 @@
-import { InputHTMLAttributes, ReactNode, Ref, forwardRef } from "react";
+import {
+  InputHTMLAttributes,
+  ReactEventHandler,
+  ReactNode,
+  Ref,
+  forwardRef,
+} from "react";
 import { cn } from "@ui/utils";
 import { BaseInput } from "@ui/forms";
 
@@ -8,7 +14,7 @@ export type baseInputWithButtonProps = InputHTMLAttributes<HTMLInputElement> & {
   children?: ReactNode;
   reverse?: boolean;
   colorStates?: boolean;
-  onError?: (error: string) => string;
+  onError?: ReactEventHandler<HTMLInputElement>;
 };
 
 /* BasicInput The rendered BasicInput component.*/

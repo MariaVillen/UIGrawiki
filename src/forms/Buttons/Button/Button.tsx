@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import { cn } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
+import ButtonIcon from "./components/ButtonIcon";
 // variante de color y tamaño
 const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
   variants: {
@@ -123,3 +124,5 @@ const Button = ({
 };
 
 export default Button;
+
+Button.Icon = ButtonIcon;

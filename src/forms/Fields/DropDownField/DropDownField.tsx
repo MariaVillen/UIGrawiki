@@ -1,12 +1,18 @@
 import SuggestDropDown from "./SuggestDropDown";
 import SlipButton from "../SlipButton/SlipButton";
-import { ComponentType, InputHTMLAttributes, ReactNode, useRef } from "react";
+import {
+  ComponentType,
+  InputHTMLAttributes,
+  ReactElement,
+  ReactNode,
+  useRef,
+} from "react";
 import useDropDownField from "./useDropDownField";
 import { cn } from "@ui/utils";
 
 export type dropdownFieldProps<T> = InputHTMLAttributes<HTMLInputElement> & {
   options: (T | string | number | readonly string[] | undefined)[];
-  component?: ((el: T) => ReactNode | JSX.Element) | undefined;
+  component?: ((el: T) => ReactNode | ReactElement) | undefined;
   indexChamp?: string | keyof T;
   iconChamp?: string | keyof T;
 };

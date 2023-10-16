@@ -1,7 +1,8 @@
 import { HTMLAttributes, useState } from "react";
 import { Suggest } from "@ui/layouts";
-import { BaseInput, TagButton, useTagField, ErrorField } from "@ui/forms";
+import { BaseInput, useTagField, ErrorField } from "@ui/forms";
 import { cn } from "../../../utils";
+import TagButtonList from "./components/TagButtonList";
 
 const myData = [
   { id: "0", label: "mercado" },
@@ -49,17 +50,12 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
             " gwk-flex gwk-flex-row gwk-max-w-full gwk-flex-wrap",
           )}
         >
-          {tagsOfArticle.length > 0 &&
-            tagsOfArticle.map((el: { id: string; label: string }) => (
-              <TagButton
-                className="gwk-my-1"
-                key={el.id}
-                onClick={() => deleteTag(el.label)}
-                withHash
-              >
-                {el.label}
-              </TagButton>
-            ))}
+          <TagButtonList
+            data={tagsOfArticle}
+            className="gwk-my-1"
+            onDelete={deleteTag}
+          />
+
           <div
             className={cn(
               " gwk-px-4 gwk-flex-grow gwk-bg-transparent gwk-text-text-black",
@@ -78,6 +74,7 @@ const TagField = ({ className, ...rest }: HTMLAttributes<HTMLInputElement>) => {
             />
           </div>
         </div>
+
         <ul
           className={
             isSuggestionBoxOpen
