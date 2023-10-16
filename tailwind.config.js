@@ -21,13 +21,13 @@ export default {
     },
     extend: {
       screens: {
-        mobile: "360px",
+        mobile: "361px",
         // => @media (min-width: 360px) { ... }
 
-        mobilepp: "375px",
+        mobilepp: "376px",
         // => @media (min-width: 375px) { ... }
 
-        deskLg: "1920px",
+        deskLg: "1921px",
         // => @media (min-width: 1920px) { ... }
       },
       boxShadow: {

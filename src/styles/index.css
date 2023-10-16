@@ -834,7 +834,7 @@ html {
 }
 
 .gwk-max-w-screen-mobile{
-  max-width: 360px;
+  max-width: 361px;
 }
 
 .gwk-flex-initial{
@@ -1472,7 +1472,7 @@ html {
   background-color: rgba(var(--color-blue), var(--tw-bg-opacity));
 }
 
-@media (min-width: 360px){
+@media (min-width: 361px){
   .mobile\:gwk-flex{
     display: flex;
   }
