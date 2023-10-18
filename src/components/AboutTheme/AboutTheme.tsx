@@ -1,6 +1,6 @@
-import { Icon, ReactionBar } from "@ui/general";
-import { Writing3D } from "@ui/icons";
+import { ReactionBar } from "@ui/general";
 import { TReactions } from "@ui/interface/articles";
+import AboutWriters from "../AboutWriters/AboutWriters";
 
 export type TAboutThemeProps = {
   writers: number;
@@ -12,9 +12,7 @@ const AboutTheme = ({ writers, reactions }: TAboutThemeProps) => {
       <div className=" gwk-text-lg gwk-font-bold gwk-pr-4">
         Datos de la publicación:
       </div>
-      <div className="gwk-text-base gwk-font-normal gwk-flex gwk-justify-center gwk-items-center gwk-flex-nowrap mobile:gwk-flex-row-reverse gwk-gap-1">
-        <Icon elementSrc={Writing3D} /> <span>{writers} escritores</span>
-      </div>
+      <AboutWriters writers={writers} className="mobile:gwk-flex-row-reverse" />
       <div className="gwk-flex gwk-flex-col gwk-justify-center gwk-items-center mobile:gwk-flex-row gwk-gap-2">
         <span>Reacciones </span>
         <ReactionBar reactions={reactions} />

@@ -10,6 +10,11 @@
   "typings": "./dist/index.d.ts",
   "module": "./dist/ui-grawiki.es.js",
   "exports": {
+    "./components": {
+      "import": "./dist/components/ui-grawiki.es.js",
+      "require": "./dist/components/ui-grawiki.cjs.js",
+      "types": "./dist/components/index.d.ts"
+    },
     "./forms": {
       "import": "./dist/forms/ui-grawiki.es.js",
       "require": "./dist/forms/ui-grawiki.cjs.js",

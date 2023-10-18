@@ -63,7 +63,7 @@ export default {
             hover: "rgba(var(--color-green-light), <alpha-value> )",
           },
           warning: {
-            DEFAULT: "rgba(var(--color-yellow-ligth), <alpha-value> )",
+            DEFAULT: "rgba(var(--color-yellow), <alpha-value> )",
             hover: "rgba(var(--color-yellow-dark), <alpha-value> )",
           },
           black: {

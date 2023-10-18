@@ -22,6 +22,7 @@ export default defineConfig({
         layouts: path.resolve(__dirname, "src/layouts/index.ts"),
         general: path.resolve(__dirname, "src/general/index.ts"),
         utils: path.resolve(__dirname, "src/utils/index.ts"),
+        components: path.resolve(__dirname, "src/components/index.ts"),
         "": path.resolve(__dirname, "src/index.ts"),
       },
       name: "ui-grawiki",
@@ -61,6 +62,7 @@ export default defineConfig({
       "@ui/nav": path.resolve(__dirname, "./src/nav"),
       "@ui/assets": path.resolve(__dirname, "./src/assets"),
       "@ui/layouts": path.resolve(__dirname, "./src/layouts"),
+      "@ui/components": path.resolve(__dirname, "./src/components"),
     },
   },
 });

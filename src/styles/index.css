@@ -1108,6 +1108,11 @@ html {
   background-color: rgba(var(--color-white), var(--tw-bg-opacity) );
 }
 
+.gwk-bg-surface-warning{
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--color-yellow), var(--tw-bg-opacity) );
+}
+
 .gwk-bg-transparent{
   background-color: transparent;
 }
@@ -1147,6 +1152,10 @@ html {
 
 .gwk-p-0{
   padding: 0px;
+}
+
+.gwk-p-0\.5{
+  padding: 0.125rem;
 }
 
 .gwk-p-1{
@@ -1210,6 +1219,11 @@ html {
 .gwk-py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.gwk-py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .gwk-pl-0{
@@ -1319,6 +1333,11 @@ html {
 .gwk-text-text-black{
   --tw-text-opacity: 1;
   color: rgba(var(--color-black), var(--tw-text-opacity) );
+}
+
+.gwk-text-text-disable{
+  --tw-text-opacity: 1;
+  color: rgba(var(--color-grey), var(--tw-text-opacity) );
 }
 
 .gwk-text-text-negative{
@@ -1455,6 +1474,11 @@ html {
 .hover\:gwk-bg-surface-triarty-hover:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(var(--color-grey-light), var(--tw-bg-opacity) );
+}
+
+.hover\:gwk-bg-surface-warning-hover:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--color-yellow-dark), var(--tw-bg-opacity) );
 }
 
 .hover\:gwk-text-text-disable:hover{
@@ -1614,6 +1638,16 @@ html {
   .gwk-group:hover .group-hover\:mobile\:gwk-bg-surface-primary-hover{
     --tw-bg-opacity: 1;
     background-color: rgba(var(--color-blue), var(--tw-bg-opacity));
+  }
+}
+
+@media (min-width: 376px){
+  .mobilepp\:gwk-flex-row{
+    flex-direction: row;
+  }
+
+  .mobilepp\:gwk-gap-4{
+    gap: 1rem;
   }
 }
 

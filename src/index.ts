@@ -5,3 +5,4 @@ export * from "./layouts/Accordion";
 export * from "./layouts";
 export * from "./nav";
 export * from "./utils";
+export * from "./components";
