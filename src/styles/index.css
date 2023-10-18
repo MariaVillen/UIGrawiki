@@ -849,6 +849,12 @@ html {
   flex-grow: 0;
 }
 
+.gwk-appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .gwk-grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -1242,6 +1248,10 @@ html {
   padding-right: 0.625rem;
 }
 
+.gwk-pr-4{
+  padding-right: 1rem;
+}
+
 .gwk-text-left{
   text-align: left;
 }
@@ -1343,6 +1353,12 @@ html {
   opacity: 0.5;
 }
 
+.gwk-shadow-check{
+  --tw-shadow: 0px 0.615385px 2.46154px rgba(0, 0, 0, 0.25) inset;
+  --tw-shadow-colored: inset 0px 0.615385px 2.46154px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .gwk-shadow-input{
   --tw-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset;
   --tw-shadow-colored: inset 0px 1px 4px 0px var(--tw-shadow-color);
@@ -1352,6 +1368,42 @@ html {
 .gwk-outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.checked\:before\:gwk-absolute:checked::before{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.checked\:before\:gwk-left-1\/4:checked::before{
+  content: var(--tw-content);
+  left: 25%;
+}
+
+.checked\:before\:gwk-top-1\/4:checked::before{
+  content: var(--tw-content);
+  top: 25%;
+}
+
+.checked\:before\:gwk-h-1\/2:checked::before{
+  content: var(--tw-content);
+  height: 50%;
+}
+
+.checked\:before\:gwk-w-1\/2:checked::before{
+  content: var(--tw-content);
+  width: 50%;
+}
+
+.checked\:before\:gwk-rounded-full:checked::before{
+  content: var(--tw-content);
+  border-radius: 50%;
+}
+
+.checked\:before\:gwk-bg-surface-background-dark:checked::before{
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--color-blue-dark), var(--tw-bg-opacity) );
 }
 
 .focus-within\:gwk-border:focus-within{
@@ -1463,6 +1515,10 @@ html {
   outline-color: rgba(var(--color-blue-ligth), 1 );
 }
 
+.disabled\:gwk-opacity-5:disabled{
+  opacity: 0.05;
+}
+
 .disabled\:gwk-opacity-50:disabled{
   opacity: 0.5;
 }
@@ -1507,6 +1563,14 @@ html {
 
   .mobile\:gwk-max-w-\[855px\]{
     max-width: 855px;
+  }
+
+  .mobile\:gwk-flex-row{
+    flex-direction: row;
+  }
+
+  .mobile\:gwk-flex-row-reverse{
+    flex-direction: row-reverse;
   }
 
   .mobile\:gwk-flex-col{
