@@ -3,7 +3,7 @@ import { cn } from "@ui/utils";
 
 export type tagProps = HTMLAttributes<HTMLDivElement> & {
   children: string | ReactNode;
-  withHash: boolean;
+  withHash?: boolean;
 };
 
 function Tag({ children, className, withHash = true, ...rest }: tagProps) {
