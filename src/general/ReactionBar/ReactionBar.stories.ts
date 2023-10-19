@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 // DEFAULT CATEGORY
 export const Default: Story = {
   args: {
-    data: [
+    reactions: [
       { name: "ThumbsUp", count: 99 },
       {
         name: "Clapping",

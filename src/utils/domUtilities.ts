@@ -51,6 +51,7 @@ export const isAnArrayOfStrings = (array: unknown[]) => {
   return array.every((element) => typeof element === "string");
 };
 
+/** Remove an elemnt from the array */
 export const removeFromArray = <T>(array: T[], element: T) => {
   return array.filter((el) => el !== element);
 };

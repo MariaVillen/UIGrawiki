@@ -1154,10 +1154,6 @@ html {
   padding: 0px;
 }
 
-.gwk-p-0\.5{
-  padding: 0.125rem;
-}
-
 .gwk-p-1{
   padding: 0.25rem;
 }
@@ -1211,6 +1207,11 @@ html {
   padding-bottom: 0.125rem;
 }
 
+.gwk-py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .gwk-py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1219,11 +1220,6 @@ html {
 .gwk-py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-}
-
-.gwk-py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .gwk-pl-0{

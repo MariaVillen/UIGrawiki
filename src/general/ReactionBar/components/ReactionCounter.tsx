@@ -13,7 +13,6 @@ const ReactionCounter = ({
   reactions = customReaction,
 }: TReactionCounterProps) => {
   const reaction = reactions.find((el: TReactionIcon) => el.name === name);
-  console.log(reaction);
   return (
     <div className="gwk-flex gwk-items-center">
       {reaction && (

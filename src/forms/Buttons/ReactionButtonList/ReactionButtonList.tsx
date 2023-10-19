@@ -7,14 +7,14 @@ import { cn } from "@ui/utils";
 export type TReactionButtonList = {
   reactions?: TReactionIcon[];
   className?: string;
-  userReactions: string[];
+  userReaction: string;
   onReaction: (name: string) => void;
 };
 
 const ReactionButtonList = ({
   reactions = customReaction,
   className,
-  userReactions,
+  userReaction,
   onReaction,
 }: TReactionButtonList) => {
   const handleReaction = (name: string) => {
@@ -28,7 +28,7 @@ const ReactionButtonList = ({
           key={name}
           icon={icon}
           iconSelected={iconActive}
-          isSelected={userReactions.includes(name)}
+          isSelected={userReaction === name}
           onClick={() => handleReaction(name)}
         />
       ))}

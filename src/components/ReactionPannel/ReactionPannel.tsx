@@ -1,23 +1,22 @@
 import { useState } from "react";
 import { ReactionBar } from "@ui/general";
-import ReactionButtonList from "./ReactionButtonList";
-import { removeFromArray } from "@ui/utils";
+import ReactionButtonList from "../../forms/Buttons/ReactionButtonList/ReactionButtonList";
 
 export type TReactionPanelProps = {
-  // data of all the reactions, icons and the number of reactions
+  // data of all the reactions, icons and the number of reactions in article
   data: {
     name: string;
     count: number;
   }[];
-  // array of the reactions that the user has made
-  userReacted: string[];
+  // User reaction to the article
+  userReacted: string;
 };
 
 const ReactionPanel = ({ data, userReacted }: TReactionPanelProps) => {
-  const [userReactions, setUserReactions] = useState(userReacted);
+  const [userReaction, setUserReaction] = useState(userReacted);
   const [articleReactions, setArticleReactions] = useState(data);
 
-  const addReactionToCounter = (reaction: string) => {
+  const addReaction = (reaction: string) => {
     const updatedReactions = [...articleReactions];
     const index = updatedReactions.findIndex((item) => item.name === reaction);
     if (index === -1) {
@@ -28,9 +27,11 @@ const ReactionPanel = ({ data, userReacted }: TReactionPanelProps) => {
     setArticleReactions(updatedReactions);
   };
 
-  const deleteReactionFromCounter = (reaction: string) => {
+  const removeReaction = (oldReaction: string) => {
     const updatedReactions = [...articleReactions];
-    const index = updatedReactions.findIndex((item) => item.name === reaction);
+    const index = updatedReactions.findIndex(
+      (item) => item.name === oldReaction,
+    );
     if (index !== -1) {
       updatedReactions[index].count--;
       if (updatedReactions[index].count <= 0) {
@@ -40,22 +41,21 @@ const ReactionPanel = ({ data, userReacted }: TReactionPanelProps) => {
   };
 
   const handleReaction = (reaction: string) => {
-    if (userReactions.includes(reaction)) {
-      const newReactions = removeFromArray(userReactions, reaction);
-      deleteReactionFromCounter(reaction);
-      setUserReactions(newReactions);
+    removeReaction(userReaction);
+    if (userReaction === reaction) {
+      setUserReaction("");
     } else {
-      setUserReactions((prev) => [...prev, reaction]);
-      addReactionToCounter(reaction);
+      addReaction(reaction);
+      setUserReaction(reaction);
     }
   };
 
   return (
     <div>
-      <ReactionBar data={articleReactions} />
+      <ReactionBar reactions={articleReactions} />
       <ReactionButtonList
         onReaction={handleReaction}
-        userReactions={userReactions}
+        userReaction={userReaction}
       />
     </div>
   );
