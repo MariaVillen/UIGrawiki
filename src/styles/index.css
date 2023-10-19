@@ -983,6 +983,10 @@ html {
   border-radius: 32px;
 }
 
+.gwk-rounded-rdmd{
+  border-radius: 8px;
+}
+
 .gwk-rounded-b-\[0px\]{
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
