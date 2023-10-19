@@ -17,7 +17,7 @@ const Icon = ({ alt, elementSrc, className, round, ...rest }: iconProps) => {
   let classNames = className || "";
 
   if (round) {
-    classNames += " gwk-rounded-full";
+    classNames += "gwk-rounded-full";
   }
 
   if (typeof elementSrc === "string") {
@@ -29,7 +29,9 @@ const Icon = ({ alt, elementSrc, className, round, ...rest }: iconProps) => {
       Omit<iconProps, "elementSrc">
     >;
     if (typeof elementSrc === "function") {
-      return <Component {...rest} className={classNames} />;
+      return (
+        <Component {...rest} className={cn("gwk-w-4 gwk-h-4", classNames)} />
+      );
     } else if (isValidElement(elementSrc)) {
       return elementSrc;
     }

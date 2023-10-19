@@ -1,3 +1,9 @@
-export { default as AboutTheme } from "./AboutTheme/AboutTheme.tsx";
-export { default as AboutWriters } from "./AboutWriters/AboutWriters.tsx";
+export { default as AboutCardProfile } from "./About/AboutCardProfile/AboutCardProfile";
+export { default as AboutTheme } from "./About/AboutTheme/AboutTheme";
+export { default as AboutWriters } from "./About/AboutWriters/AboutWriters";
+export { default as Notification } from "./Notification/Notification";
+export { default as ReactionPannel } from "./ReactionPannel/ReactionPannel";
 export { default as Review } from "./Review/Review";
+export { default as TitleCard } from "./Titles/TitleCard/TitleCard";
+export { default as TitleEdit } from "./Titles/TitleEdit/TitleEdit";
+export { default as TitleEditToggle } from "./Titles/TitleEditToggle/TitleEditToggle";

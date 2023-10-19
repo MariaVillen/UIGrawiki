@@ -653,6 +653,10 @@ html {
   height: 3.5rem;
 }
 
+.gwk-h-16{
+  height: 4rem;
+}
+
 .gwk-h-20{
   height: 5rem;
 }
@@ -717,6 +721,10 @@ html {
   height: 100%;
 }
 
+.gwk-max-h-\[50px\]{
+  max-height: 50px;
+}
+
 .gwk-min-h-\[40px\]{
   min-height: 40px;
 }
@@ -735,6 +743,10 @@ html {
 
 .gwk-w-14{
   width: 3.5rem;
+}
+
+.gwk-w-16{
+  width: 4rem;
 }
 
 .gwk-w-20{
@@ -887,6 +899,10 @@ html {
   align-items: center;
 }
 
+.gwk-items-baseline{
+  align-items: baseline;
+}
+
 .gwk-justify-start{
   justify-content: flex-start;
 }
@@ -980,6 +996,11 @@ html {
 .gwk-rounded-l-rdxl{
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
+}
+
+.gwk-rounded-t-rdlg{
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .gwk-rounded-bl-rdxl{
@@ -1272,6 +1293,11 @@ html {
 
 .gwk-align-middle{
   vertical-align: middle;
+}
+
+.gwk-text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .gwk-text-\[10px\]{

@@ -7,7 +7,6 @@ export default {
     fontFamily: {
       sans: ["Lato", ...fontFamily.sans],
     },
-
     borderRadius: {
       rdsm: "4px",
       rdmd: "8px",

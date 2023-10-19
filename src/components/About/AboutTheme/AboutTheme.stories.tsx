@@ -2,7 +2,7 @@ import AboutTheme from "./AboutTheme";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Components/AboutTheme",
+  title: "Components/About/AboutTheme",
   component: AboutTheme,
   tags: ["autodocs"],
   parameters: {

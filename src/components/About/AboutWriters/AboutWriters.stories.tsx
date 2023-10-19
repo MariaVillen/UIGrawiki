@@ -2,7 +2,7 @@ import AboutWriters from "./AboutWriters";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Components/AboutWriters",
+  title: "Components/About/AboutWriters",
   component: AboutWriters,
   tags: ["autodocs"],
   parameters: {

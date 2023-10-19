@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { PencilFill } from "@ui/icons";
 
 const meta = {
-  title: "Components/TitleCard",
+  title: "Components/Titles/TitleCard",
   component: TitleCard,
   tags: ["autodocs"],
   parameters: {
