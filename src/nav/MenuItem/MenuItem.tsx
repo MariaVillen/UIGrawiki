@@ -1,8 +1,8 @@
-import { ComponentType } from "react";
+import { ComponentType, ReactElement } from "react";
 import { cn } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { Icon } from "@ui/general";
-import { Link, LinkProps } from "react-router-dom";
+import { Link, LinkProps, useLocation } from "react-router-dom";
 // variante de color y tamaño
 // TODO: Problema con el size medio en el tipo icon de boton
 
@@ -96,8 +96,8 @@ const menuIcon = cva("", {
 
 export type menuItemProps = LinkProps &
   VariantProps<typeof menuItem> & {
-    icon: ComponentType | string;
-    iconActive: ComponentType | string;
+    icon: ComponentType | ReactElement | string;
+    iconActive: ComponentType | ReactElement | string;
     iconStyles?: string;
     alt?: string;
     isActive: boolean;
@@ -112,12 +112,18 @@ const MenuItem = ({
   iconActive,
   iconStyles,
   className,
-  isActive = false,
   alt,
+  to,
   ...rest
 }: menuItemProps) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
   return (
-    <Link className={cn(menuItem({ variant, reverse }), className)} {...rest}>
+    <Link
+      className={cn(menuItem({ variant, reverse }), className)}
+      to={to}
+      {...rest}
+    >
       <Icon
         alt={alt}
         elementSrc={isActive ? iconActive : icon}

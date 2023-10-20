@@ -4,6 +4,7 @@ import { ComponentType, ReactElement } from "react";
 export type TCategoryItem = {
   id: string;
   icon: ComponentType | string | ReactElement;
+  iconActive: ComponentType | string | ReactElement;
   text: string;
   link: string;
   tags: string[];

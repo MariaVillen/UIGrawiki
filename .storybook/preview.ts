@@ -1,12 +1,13 @@
 import type { Preview } from "@storybook/react";
 import "../src/styles/index.css";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { MY_VIEWPORTS } from "./myViewports";
 import { withRouter } from "storybook-addon-react-router-v6";
 
 const preview: Preview = {
   parameters: {
     viewport: {
-      viewports: INITIAL_VIEWPORTS,
+      viewports: MY_VIEWPORTS,
     },
     backgrounds: {
       default: "dark",

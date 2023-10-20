@@ -11,9 +11,17 @@ export type iconProps = {
   elementSrc: ComponentType | string | ReactElement;
   round?: boolean;
   className?: string;
+  fluid?: boolean;
 } & HTMLAttributes<HTMLElement>;
 
-const Icon = ({ alt, elementSrc, className, round, ...rest }: iconProps) => {
+const Icon = ({
+  alt,
+  elementSrc,
+  fluid = false,
+  className,
+  round,
+  ...rest
+}: iconProps) => {
   let classNames = className || "";
 
   if (round) {
@@ -30,7 +38,14 @@ const Icon = ({ alt, elementSrc, className, round, ...rest }: iconProps) => {
     >;
     if (typeof elementSrc === "function") {
       return (
-        <Component {...rest} className={cn("gwk-w-4 gwk-h-4", classNames)} />
+        <Component
+          {...rest}
+          className={cn(
+            "gwk-w-4 gwk-h-4",
+            fluid && "gwk-w-full gwk-h-full",
+            classNames,
+          )}
+        />
       );
     } else if (isValidElement(elementSrc)) {
       return elementSrc;

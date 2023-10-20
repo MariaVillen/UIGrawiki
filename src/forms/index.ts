@@ -1,7 +1,9 @@
 // Buttons
 export { default as Button } from "./Buttons/Button/Button";
+export { SearchButton } from "./Buttons/Button/Button.tsx";
 export { default as ReactionButton } from "./Buttons/ReactionButton/ReactionButton";
 export { default as ToggleButton } from "./Buttons/ToggleButton/ToggleButton";
+export { ToggleNotification } from "./Buttons/ToggleButton/ToggleButton";
 export { default as TagButton } from "./Buttons/TagButton/TagButton.tsx";
 
 // Fields

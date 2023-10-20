@@ -8,6 +8,8 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    componentSubtitle:
+      "The `Button` component is a versatile React button component that can be customized with various variants and sizes.",
   },
   argTypes: {
     variant: {

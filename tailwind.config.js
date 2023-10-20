@@ -26,7 +26,7 @@ export default {
         mobilepp: "376px",
         // => @media (min-width: 375px) { ... }
 
-        deskLg: "1921px",
+        desktopLg: "1921px",
         // => @media (min-width: 1920px) { ... }
       },
       boxShadow: {

@@ -1,0 +1,33 @@
+---
+title: CodeToClipboard Component
+---
+
+# CodeToClipboard Component
+
+The `CodeToClipboard` component is a versatile React component that allows you to display code and provides a button to copy the code to the clipboard.
+
+## Properties
+
+| Name           | Type   | Description                                         |
+| -------------- | ------ | --------------------------------------------------- |
+| `code`         | string | The code to be displayed and copied.                |
+| `buttonStyles` | string | Additional Tailwind CSS styles for the copy button. |
+
+## Example Usages
+
+### Basic Usage
+
+```jsx
+import React from "react";
+import CodeToClipboard from "./CodeToClipboard";
+
+const MyComponent = () => {
+  const codeToCopy = 'const message = "Hello, World!";';
+
+  return (
+    <CodeToClipboard code={codeToCopy} buttonStyles="gwk-bg-blue-500">
+      {/* Your content here */}
+    </CodeToClipboard>
+  );
+};
+```

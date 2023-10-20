@@ -1,7 +1,9 @@
 import { ButtonHTMLAttributes } from "react";
-import { cn } from "@ui/utils";
+import { cn, partiallyApply } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import ButtonIcon from "./components/ButtonIcon";
+import { Icon } from "@ui/general";
+import { Find } from "@ui/icons";
 // variante de color y tamaño
 const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
   variants: {
@@ -29,7 +31,8 @@ const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
       ],
       default: [
         "gwk-text-text-black",
-        "gwk-border-border-gray",
+        "gwk-border",
+        "gwk-border-border-grey",
         "gwk-bg-surface-triarty-white",
         "hover:gwk-bg-surface-triarty-hover",
         "active:gwk-bg-surface-triarty-disable",
@@ -44,7 +47,7 @@ const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
     },
     btnType: {
       button: ["gwk-gap-0.625", "gwk-font-bold", "gwk-rounded-rdxl"],
-      icon: ["gwk-p-0", "gwk-rounded-full"],
+      icon: ["gwk-p-1", "gwk-rounded-full"],
     },
     fluid: {
       false: null,
@@ -126,3 +129,9 @@ const Button = ({
 export default Button;
 
 Button.Icon = ButtonIcon;
+
+export const SearchButton = partiallyApply(Button, {
+  btnType: "icon",
+  variant: "ghost",
+  children: <Icon elementSrc={Find} className="gwk-w-12 gwk-h-12" />,
+});

@@ -73,3 +73,19 @@ export const WithBigText: Story = {
     ),
   },
 };
+
+export const MobileWithText: Story = {
+  parameters: {
+    viewport: { defaultViewport: "mobile" },
+  },
+  args: {
+    isLogged: true,
+    user: {
+      id: "0",
+      name: "jhon doe",
+      avatar: userExample,
+    },
+    children:
+      "😊 Estás creando un nuevo tema 👏, estás ayudando a la comunidad de Grawiki 🙏 ",
+  },
+};
