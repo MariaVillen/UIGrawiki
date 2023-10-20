@@ -12,7 +12,6 @@ export type TToggleButtonProps = HTMLAttributes<HTMLButtonElement> & {
   iconTrue?: ReactElement | ComponentType | string;
   iconFalse?: ReactElement | ComponentType | string;
   isActive?: boolean;
-  className?: string;
 };
 
 const ToggleButton = ({
@@ -32,19 +31,6 @@ const ToggleButton = ({
 export default ToggleButton;
 
 export const ToggleNotification = partiallyApply(ToggleButton, {
-  className: "gwk-text-text-black",
-  iconFalse: (
-    <Icon
-      className="gwk-h-12 gwk-w-12 gwk-p-1"
-      elementSrc={NotificationOutline}
-      round
-    />
-  ),
-  iconTrue: (
-    <Icon
-      className="gwk-h-12 gwk-w-12 gwk-p-1 "
-      elementSrc={NotificationActiveFill}
-      round
-    />
-  ),
+  iconFalse: NotificationOutline,
+  iconTrue: NotificationActiveFill,
 });

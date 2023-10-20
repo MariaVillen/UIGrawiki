@@ -5,32 +5,44 @@ import {
   isValidElement,
 } from "react";
 import { cn } from "@ui/utils";
+import { VariantProps, cva } from "class-variance-authority";
 
-export type iconProps = {
-  alt?: string | undefined;
-  elementSrc: ComponentType | string | ReactElement;
-  round?: boolean;
-  className?: string;
-  fluid?: boolean;
-} & HTMLAttributes<HTMLElement>;
+const icon = cva("gwk-w-4 gwk-h-4", {
+  variants: {
+    fluid: {
+      true: "gwk-w-full gwk-h-full",
+      false: "",
+    },
+    round: {
+      true: "gwk-rounded-full",
+      false: "",
+    },
+  },
+});
+
+export type iconProps = HTMLAttributes<HTMLElement> &
+  VariantProps<typeof icon> & {
+    alt?: string | undefined;
+    elementSrc: ComponentType | string | ReactElement;
+    className?: string;
+  };
 
 const Icon = ({
   alt,
   elementSrc,
   fluid = false,
   className,
-  round,
+  round = true,
   ...rest
 }: iconProps) => {
-  let classNames = className || "";
-
-  if (round) {
-    classNames += "gwk-rounded-full";
-  }
-
   if (typeof elementSrc === "string") {
     return (
-      <img src={elementSrc} alt={alt} {...rest} className={cn(classNames)} />
+      <img
+        src={elementSrc}
+        alt={alt}
+        {...rest}
+        className={cn(icon({ fluid, round }), className)}
+      />
     );
   } else {
     const Component = elementSrc as ComponentType<
@@ -40,11 +52,7 @@ const Icon = ({
       return (
         <Component
           {...rest}
-          className={cn(
-            "gwk-w-4 gwk-h-4",
-            fluid && "gwk-w-full gwk-h-full",
-            classNames,
-          )}
+          className={cn(icon({ fluid, round, className }))}
         />
       );
     } else if (isValidElement(elementSrc)) {

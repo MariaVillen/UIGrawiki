@@ -1,8 +1,14 @@
 import { clsx, ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { extendTailwindMerge } from "tailwind-merge";
+
+const twMergeConfigExtention = {
+  prefix: "gwk-",
+};
+
+const twMerge = extendTailwindMerge(twMergeConfigExtention);
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(...inputs));
 }
 
 // // ↓ Callback passed to `createTailwindMerge()` is called when

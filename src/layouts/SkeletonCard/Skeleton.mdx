@@ -1,10 +1,12 @@
 import { Meta, Unstyled } from "@storybook/blocks";
-import { SkeletonCard, Skeleton } from "../index.ts";
+import { SkeletonCard, Skeleton } from "@ui/layouts";
+import { CodeToClipboard } from "@ui/forms";
 
 <Meta title="Layouts/SkeletonCard/SkeletonsCards" />
 <h2> We can make differents SkeletonCards layouts </h2>
 <br />
 <Unstyled>
+<div className="gwk-flex gwk-flex-col">
   <div className="gwk-bg-surface-background-dark gwk-w-full gwk-h-full gwk-p-6">
     <SkeletonCard className=" gwk-max-w-[340px] mobile:gwk-max-w-[1120px]">
       <div className="gwk-flex gwk-flex-col gwk-gap-1">
@@ -30,17 +32,87 @@ import { SkeletonCard, Skeleton } from "../index.ts";
         <SkeletonCard.Circle size="sm" />
       </div>
     </SkeletonCard>
-  </div>
+
+  </div>    
+   <CodeToClipboard
+     theme="light"
+     code="<SkeletonCard className='gwk-max-w-[340px] mobile:gwk-max-w-[1120px]'>
+      <div className='gwk-flex gwk-flex-col gwk-gap-1'>
+        <SkeletonCard.Title />
+        <SkeletonCard.Subtitle />
+      </div>
+      <Skeleton
+        shape='rectangle'
+        width='100%'
+        height='118px'
+        className=' gwk-my-sm'
+      />
+      <div className='gwk-flex gwk-justify-start gwk-gap-4 gwk-py-2.5 gwk-my-2'>
+        <SkeletonCard.TabTitle />
+        <SkeletonCard.Tab />
+        <SkeletonCard.Tab />
+        <SkeletonCard.Tab />
+        <SkeletonCard.Tab />
+      </div>
+      <div className='gwk-flex gwk-gap-5'>
+        <SkeletonCard.Circle size='sm' />
+        <SkeletonCard.Circle size='sm' />
+        <SkeletonCard.Circle size='sm' />
+      </div>
+    </SkeletonCard>"/>
+    </div>
 </Unstyled>
 <br />
 <br />
 <h2>Skeleton Elements</h2>
 You can use differents pre-built elements:
 <br />
-<p>SkeletonCard.Title</p>
-<p>SkeletonCard.Subtitle</p>
-<p>SkeletonCard.Bar</p>
-<p>SkeletonCard.BarCategory</p>
-<p> SkeletonCard.TabTitle</p>
-<p>SkeletonCard.Tab</p>
-<p>SkeletonCard.Circle: con las propiedad size: sm | md | lg</p>
+<Unstyled>
+<div className="gwk-flex gwk-gap-4 gwk-p-4 gwk-text-text-white gwk-flex-col gwk-bg-surface-background-dark">
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Title</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Title />
+  </div>
+</div>
+
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Subtitle</p>
+  <div className=" gwk-flex gwk-items-center">
+    <SkeletonCard.Subtitle />
+  </div>
+</div>
+
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Bar</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Bar />
+  </div>
+</div>
+
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.BarCategory</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.BarCategory />
+  </div>
+</div>
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.TabTitle</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.TabTitle />
+  </div>
+</div>
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Tab</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Tab />
+  </div>
+</div>
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Circle:<br/> with size propertie: sm | md | lg</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Circle size="md" />
+  </div>
+</div>
+</div>
+</Unstyled>

@@ -7,6 +7,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    backgounds: { default: "dark" },
   },
 } satisfies Meta<typeof SkeletonCard>;
 
@@ -15,4 +16,4 @@ type Story = StoryObj<typeof meta>;
 
 //TODO: Averiguar como poner jsx dentro de children DEFAULT CATEGORY
 
-export const Exemple: Story = {};
+export const Example: Story = { args: {} };

@@ -10,7 +10,7 @@ const preview: Preview = {
       viewports: MY_VIEWPORTS,
     },
     backgrounds: {
-      default: "dark",
+      default: "light",
       values: [
         {
           name: "dark",

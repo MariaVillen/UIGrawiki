@@ -1,10 +1,10 @@
 import { Avatar } from "@ui/general";
-import { cn } from "@ui/utils";
+import { cn, partiallyApply } from "@ui/utils";
 import { HTMLAttributes } from "react";
 
 export type TChatMessageProps = HTMLAttributes<HTMLDivElement> & {
   avatar?: string;
-  reverse: boolean;
+  reverse?: boolean;
   messageStyles?: string;
 };
 
@@ -32,3 +32,13 @@ const ChatMessage = ({
 };
 
 export default ChatMessage;
+
+export const ChatMessageUser = partiallyApply(ChatMessage, {
+  messageStyles: "gwk-bg-surface-primary gwk-text-text-white",
+  reverse: true,
+});
+
+export const ChatMessageBot = partiallyApply(ChatMessage, {
+  messageStyles: "gwk-bg-surface-triarty-hover gwk-text-text-black",
+  reverse: false,
+});

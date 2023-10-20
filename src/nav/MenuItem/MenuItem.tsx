@@ -71,17 +71,17 @@ const menuIcon = cva("", {
     variant: {
       horizontal: ["gwk-h-8", "gwk-w-8"],
       vertical: [
-        "gwk-rounded-full",
-        "gwk-text-text-white",
-        "gwk-p-1.5",
         "gwk-h-11",
         "gwk-w-11",
+        "gwk-p-1.5",
+        "gwk-rounded-full",
+        "gwk-text-text-white",
         "gwk-bg-surface-primary",
         "group-hover:gwk-bg-surface-primary-hover",
       ],
       responsive: [
         "gwk-h-8",
-        " gwk-w-8",
+        "gwk-w-8",
         "mobile:gwk-rounded-full",
         "mobile:gwk-text-text-white",
         "mobile:gwk-p-1.5",
@@ -100,7 +100,6 @@ export type menuItemProps = LinkProps &
     iconActive: ComponentType | ReactElement | string;
     iconStyles?: string;
     alt?: string;
-    isActive: boolean;
   };
 
 //TODO: cambiar los padding por medidas de ancho width y agregar fluid button

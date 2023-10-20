@@ -4,6 +4,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import ButtonIcon from "./components/ButtonIcon";
 import { Icon } from "@ui/general";
 import { Find } from "@ui/icons";
+
 // variante de color y tamaño
 const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
   variants: {
@@ -133,5 +134,5 @@ Button.Icon = ButtonIcon;
 export const SearchButton = partiallyApply(Button, {
   btnType: "icon",
   variant: "ghost",
-  children: <Icon elementSrc={Find} className="gwk-w-12 gwk-h-12" />,
+  children: <Icon elementSrc={Find} fluid />,
 });

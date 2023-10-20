@@ -1,5 +1,5 @@
 import { HTMLAttributes } from "react";
-import { cn } from "@ui/utils";
+import { cn, partiallyApply } from "@ui/utils";
 import { cva, VariantProps } from "class-variance-authority";
 // variante de color y tamaño
 
@@ -39,3 +39,33 @@ const Skeleton = ({
 };
 
 export default Skeleton;
+
+export const SkeletonTitle = partiallyApply(Skeleton, {
+  width: "162px",
+  height: "16px",
+});
+
+export const SkeletonSubtitle = partiallyApply(Skeleton, {
+  width: "114px",
+  height: "12px",
+});
+
+export const SkeletonBar = partiallyApply(Skeleton, {
+  width: "310px",
+  height: "26px",
+});
+
+export const SkeletonBarCategory = partiallyApply(Skeleton, {
+  width: "310px",
+  height: "45px",
+});
+
+export const SkeletonTabTitle = partiallyApply(Skeleton, {
+  width: "107px",
+  height: "30px",
+});
+
+export const SkeletonTab = partiallyApply(Skeleton, {
+  width: "81px",
+  height: "30px",
+});

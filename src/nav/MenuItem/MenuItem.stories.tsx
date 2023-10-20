@@ -39,7 +39,6 @@ type Story = StoryObj<typeof meta>;
 export const Responsive: Story = {
   args: {
     variant: "responsive",
-    isActive: false,
     icon: ControlOutline,
     iconActive: ControlFill,
     alt: "Bot Icon",
@@ -51,7 +50,6 @@ export const Responsive: Story = {
 export const Vertical: Story = {
   args: {
     variant: "vertical",
-    isActive: true,
     icon: ControlOutline,
     iconActive: ControlFill,
     children: "Panel de control",
@@ -62,7 +60,6 @@ export const Vertical: Story = {
 export const Horizontal: Story = {
   args: {
     variant: "horizontal",
-    isActive: false,
     icon: ControlOutline,
     iconActive: ControlFill,
     children: "Panel de control",

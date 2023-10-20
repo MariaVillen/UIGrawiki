@@ -7,8 +7,24 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    backgrounds: { default: "dark" },
+    docs: {
+      description: {
+        component:
+          "The `AboutWriters` component is designed to display information about the writers contributing to a publication. It offers a flexible way to present the number of writers involved in the project. Additionally, it allows for the inclusion of optional child elements to display supplementary information. Whether you're showcasing a team of authors, contributors, or creators, the `AboutWriters` component simplifies the presentation of writer-related details.",
+      },
+    },
   },
-  argTypes: {},
+  argTypes: {
+    writers: {
+      description: "The number of writers contributing to the publication.",
+      control: "number",
+    },
+    children: {
+      description: "Optional child elements to display additional information.",
+      control: "text",
+    },
+  },
 } satisfies Meta<typeof AboutWriters>;
 
 export default meta;
@@ -22,6 +38,7 @@ export const Default: Story = {
 };
 
 export const WithLastVersion: Story = {
+  storyName: "Writers information with Last Version",
   args: {
     ...Default.args,
     children: (

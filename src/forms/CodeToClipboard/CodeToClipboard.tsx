@@ -56,7 +56,7 @@ const CodeToClipboard = ({
       {showCode && (
         <div
           className={cn(
-            "gwk-flex gwk-justify-between gwk-items-center  gwk-text-text-white gwk-font-mono gwk-pl-2",
+            "gwk-flex gwk-justify-between gwk-items-center gwk-rounded-rdsm gwk-text-text-white gwk-font-mono gwk-pl-2",
             theme === "light" ? "gwk-bg-[#F8F8FF]" : "gwk-bg-[#282C34]",
             className,
           )}

@@ -1,5 +1,6 @@
 import Anchor from "./Anchor";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Icon } from "@ui/general";
 import { NewWindow } from "@ui/icons";
 import { withRouter } from "storybook-addon-react-router-v6";
 
@@ -59,7 +60,7 @@ export const WithIcon: Story = {
     size: "normal",
     children: (
       <>
-        <NewWindow className="gwk-pr-1 gwk-h-full" />
+        <Icon elementSrc={NewWindow} />
         <span>Read more</span>
       </>
     ),
@@ -75,7 +76,7 @@ export const WithIconReverse: Story = {
     children: (
       <>
         <span>Read more</span>
-        <NewWindow className="gwk-pl-1" />
+        <Icon elementSrc={NewWindow} />
       </>
     ),
     to: "/",

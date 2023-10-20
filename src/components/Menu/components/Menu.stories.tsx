@@ -10,11 +10,13 @@ import {
 } from "@ui/icons";
 import Menu from "./Menu";
 import type { Meta, StoryObj } from "@storybook/react";
+import { withRouter } from "storybook-addon-react-router-v6";
 
 const meta = {
-  title: "/Menu",
+  title: "Components/Menu/Menu",
   component: Menu,
   tags: ["autodocs"],
+  decorators: [withRouter],
   parameters: {
     layout: "padded",
   },
@@ -57,7 +59,9 @@ export const Default: Story = {
         link: "/category/Juguetes",
       },
     ],
-    variant: "horizontal",
-    selected: 1,
+    isNotification: false,
+    onSearch: () => {
+      console.log("search");
+    },
   },
 };

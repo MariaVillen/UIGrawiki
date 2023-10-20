@@ -4,8 +4,8 @@ import { PencilFill } from "@ui/icons";
 
 const meta = {
   title: "Buttons/Button",
-  component: Button,
   tags: ["autodocs"],
+  component: Button,
   parameters: {
     layout: "padded",
     componentSubtitle:
@@ -13,18 +13,30 @@ const meta = {
   },
   argTypes: {
     variant: {
+      description: "The colors of the buttons",
       control: "radio",
       options: ["default", "primary", "secondary", "ghost"],
     },
     size: {
+      description: "The differnt sizes",
       control: "radio",
       options: ["small", "normal", "medium", "big"],
     },
+    btnType: {
+      description:
+        "Choose 'icon' if the content of the button is just a single icon. If is an icon and a button choose 'button'.",
+      control: "radio",
+      options: ["button", "icon"],
+    },
     fluid: {
+      description: "The button became full width",
       control: "boolean",
     },
     onClick: {
       control: false,
+    },
+    children: {
+      control: "",
     },
   },
 } satisfies Meta<typeof Button>;

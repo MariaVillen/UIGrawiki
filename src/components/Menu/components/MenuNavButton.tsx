@@ -8,22 +8,18 @@ export type TMenuNavButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 
 const MenuNavButton = ({
   iconTrue = CloseTag,
-  children,
   iconFalse = Menu,
   isActive,
-  onClick,
+  ...rest
 }: TMenuNavButtonProps) => {
   return (
-    <div>
-      <ToggleButton
-        iconTrue={iconTrue}
-        iconFalse={iconFalse}
-        isActive={isActive}
-        onClick={onClick}
-        className="gwk-w-[50px] gwk-h-[50px]"
-      />
-      {isActive && <div>{children}</div>}
-    </div>
+    <ToggleButton
+      iconTrue={iconTrue}
+      iconFalse={iconFalse}
+      isActive={isActive}
+      className="gwk-w-[50px] gwk-h-[50px]"
+      {...rest}
+    />
   );
 };
 

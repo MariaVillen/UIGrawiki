@@ -8,9 +8,28 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
-    backgrounds: { default: "light" },
+    docs: {
+      description: {
+        component:
+          "The AboutCardProfile component is a user profile card designed for displaying user information. It includes the user's name and profile image, making it an ideal choice for user profiles in various web applications. It also features a customizable click event for interaction.",
+      },
+    },
   },
-  argTypes: {},
+  argTypes: {
+    userName: {
+      description: "The name of the user.", // Description: Description for userName prop
+      control: "text", // Control: Text input
+    },
+    userImage: {
+      description: "The URL of the user's profile image.", // Description: Description for userImage prop
+      control: "text", // Control: Text input
+    },
+    onClick: {
+      description: "Edit the Profile Card Clicking in Edit icon", // Description: Description for onClick prop
+      action: "clicked", // Control: No input control
+      control: false,
+    },
+  },
 } satisfies Meta<typeof AboutCardProfile>;
 
 export default meta;
@@ -21,8 +40,5 @@ export const Default: Story = {
   args: {
     userName: "John Doe",
     userImage: userExample,
-    onClick: (e) => {
-      console.log(e);
-    },
   },
 };

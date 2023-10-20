@@ -7,8 +7,26 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    backgrounds: { default: "dark" },
+    docs: {
+      description: {
+        component:
+          "The `AboutTheme` component provides information about a publication, including details about the writers and reactions. It's designed to display these elements in a visually appealing and informative manner.",
+      },
+    },
   },
-  argTypes: {},
+  argTypes: {
+    writers: {
+      description:
+        "The number of writers contributing to the publication. Required",
+      control: "number",
+    },
+    reactions: {
+      description:
+        "An array of reactions associated with the publication:  {name: string, count: number }[]",
+      control: "object",
+    },
+  },
 } satisfies Meta<typeof AboutTheme>;
 
 export default meta;
