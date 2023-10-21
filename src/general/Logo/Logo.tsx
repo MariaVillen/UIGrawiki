@@ -9,6 +9,7 @@ import {
   VerticalLogoWhite,
   MenuLogoWhite,
 } from "@ui/assets";
+import { cn } from "@ui/utils";
 
 export type LogoProps = HTMLAttributes<HTMLLinkElement> & {
   type: "horizontal" | "vertical" | "menu" | "base";
@@ -30,11 +31,11 @@ const chosenLogo = {
   },
 };
 
-const Logo = ({ type, theme = "light" }: LogoProps) => {
+const Logo = ({ type, className, theme = "light" }: LogoProps) => {
   return (
     <Link
       to="/"
-      className=" gwk-inline-block"
+      className={cn("gwk-inline-block", className)}
       aria-label="Ir a la página principal de grawiki"
     >
       <img

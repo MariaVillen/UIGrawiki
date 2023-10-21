@@ -25,24 +25,24 @@ const Menu = ({
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="gwk-flex gwk-flex-col mobile:gwk-w-32 mobile:gwk-h-[1080px] mobile:gwk-pt-9 mobile:gwk-pb-5">
+    <header className="gwk-p-5 gwk-flex gwk-flex-col gwk-shadow-menu mobile:gwk-w-32 mobile:gwk-h-[1080px] mobile:gwk-pt-9 mobile:gwk-pb-5 mobile:gwk-p-0 mobile:gwk-shadow-none">
       <div className="gwk-flex gwk-justify-between gwk-items-center gwk-relative mobile:gwk-flex-col mobile:gwk-flex-grow">
         <Logo
           type={width > 360 ? "menu" : "vertical"}
           theme="light"
-          className="gwk-w-[115px] gwk-h-[41px]"
+          className="gwk-w-[120px] gwk-h-[50px] mobile:gwk-h-[102px]"
         />
         <div className="gwk-flex">
           <Menu.Search
             onClick={onSearch}
             variant="ghost"
-            className="gwk-w-[50px] gwk-h-[50px] gwk-text-text-black hover:gwk-bg-transparent hover:gwk-text-text-primary mobile:gwk-hidden"
+            className="gwk-w-12 gwk-h-12 gwk-text-text-black hover:gwk-bg-transparent hover:gwk-text-text-primary mobile:gwk-hidden"
           />
           {isLogged && (
             <Menu.Notification
               onClick={() => console.log("notificaciones")}
               isActive={isNotification}
-              className="gwk-w-[50px] gwk-h-[50px] mobile:gwk-hidden"
+              className="gwk-w-12 gwk-h-12 mobile:gwk-hidden"
             />
           )}
           <Menu.NavButton
@@ -79,10 +79,11 @@ const Menu = ({
           <ul>
             <MenuList.Li className="gwk-mt-[20px]">
               <MenuList.Item
-                icon={isLogged ? AvatarOutline : CloseTag}
-                iconActive={isLogged ? AvatarFill : CloseTag}
+                icon={isLogged ? CloseTag : AvatarOutline}
+                iconActive={isLogged ? CloseTag : AvatarFill}
                 to={isLogged ? "/logout" : "/login"}
                 variant="responsive"
+                className="gwk-w-full mobile:gwk-w-full"
               >
                 {isLogged ? "Cerrar sesión" : "Iniciar sesión"}
               </MenuList.Item>
