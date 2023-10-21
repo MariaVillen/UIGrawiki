@@ -61,6 +61,5 @@ export const Default: Story = {
       },
     ],
     variant: "horizontal",
-    selected: 1,
   },
 };

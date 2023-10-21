@@ -18,7 +18,7 @@ const meta = {
   tags: ["autodocs"],
   decorators: [withRouter],
   parameters: {
-    layout: "padded",
+    layout: "fullscreen",
   },
   argTypes: {},
 } satisfies Meta<typeof Menu>;
@@ -59,9 +59,39 @@ export const Default: Story = {
         link: "/category/Juguetes",
       },
     ],
+    isLogged: false,
     isNotification: false,
     onSearch: () => {
       console.log("search");
     },
+  },
+};
+
+export const DesktopLogged: Story = {
+  args: {
+    ...Default.args,
+    isLogged: true,
+  },
+};
+
+export const Mobile: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile",
+    },
+  },
+  args: {
+    ...Default.args,
+  },
+};
+export const MobileLogged: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile",
+    },
+  },
+  args: {
+    ...Default.args,
+    isLogged: true,
   },
 };

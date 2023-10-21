@@ -1,6 +1,7 @@
 import { ToggleButton } from "@ui/forms";
 import { TToggleButtonProps } from "@ui/forms/Buttons/ToggleButton/ToggleButton";
 import { CloseTag, Menu } from "@ui/icons";
+import { cn } from "@ui/utils";
 import { ButtonHTMLAttributes } from "react";
 
 export type TMenuNavButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
@@ -10,6 +11,7 @@ const MenuNavButton = ({
   iconTrue = CloseTag,
   iconFalse = Menu,
   isActive,
+  className,
   ...rest
 }: TMenuNavButtonProps) => {
   return (
@@ -17,8 +19,8 @@ const MenuNavButton = ({
       iconTrue={iconTrue}
       iconFalse={iconFalse}
       isActive={isActive}
-      className="gwk-w-[50px] gwk-h-[50px]"
       {...rest}
+      className={cn("gwk-w-[50px] gwk-h-[50px]", className)}
     />
   );
 };

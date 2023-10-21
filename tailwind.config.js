@@ -33,6 +33,7 @@ export default {
         input: "0px 1px 4px 0px rgba(0, 0, 0, 0.25) inset",
         inputReverse: "0px -2px 4px -1px rgba(0,0,0,0.25) inset",
         check: "0px 0.615385px 2.46154px rgba(0, 0, 0, 0.25) inset",
+        button: "0px 2px 6px 0px rgba(0, 0, 0, 0.20) inset",
       },
       width: {
         bigBtn: "17.5rem",

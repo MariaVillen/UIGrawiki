@@ -7,3 +7,4 @@ export { default as Review } from "./Review/Review";
 export { default as TitleCard } from "./Titles/TitleCard/TitleCard";
 export { default as TitleEdit } from "./Titles/TitleEdit/TitleEdit";
 export { default as TitleEditToggle } from "./Titles/TitleEditToggle/TitleEditToggle";
+export { default as Menu } from "./Menu/Menu";
