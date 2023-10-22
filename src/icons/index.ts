@@ -34,7 +34,7 @@ export { default as InstagramColor } from "./InstagramColor";
 export { default as InterfaceFill } from "./InterfaceFill";
 export { default as InterfaceOutline } from "./InterfaceOutline";
 export { default as Italic } from "./Italic";
-export { default as LindedinColor } from "./LindedinColor";
+export { default as LinkedinColor } from "./LinkedinColor";
 export { default as List } from "./List";
 export { default as Menu } from "./Menu";
 export { default as MessagFill } from "./MessagFill";

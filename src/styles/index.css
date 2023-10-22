@@ -729,10 +729,6 @@ html {
   height: 30px;
 }
 
-.gwk-h-\[48px\]{
-  height: 48px;
-}
-
 .gwk-h-\[50px\]{
   height: 50px;
 }
@@ -955,6 +951,10 @@ html {
   justify-content: space-between;
 }
 
+.gwk-justify-evenly{
+  justify-content: space-evenly;
+}
+
 .gwk-gap-0{
   gap: 0px;
 }
@@ -981,6 +981,10 @@ html {
 
 .gwk-gap-5{
   gap: 1.25rem;
+}
+
+.gwk-gap-6{
+  gap: 1.5rem;
 }
 
 .gwk-gap-8{
