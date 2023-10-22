@@ -8,6 +8,7 @@ const skeleton = cva(["gwk-bg-surface-triarty-hover", "gwk-bg-opacity-25"], {
     shape: {
       circle: [" gwk-rounded-full"],
       rectangle: ["gwk-rounded-rdlg"],
+      sharp: "",
     },
     defaultVariants: {
       shape: "rectangle",
@@ -17,8 +18,8 @@ const skeleton = cva(["gwk-bg-surface-triarty-hover", "gwk-bg-opacity-25"], {
 
 export type SkeletonProps = HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof skeleton> & {
-    width: string;
-    height: string;
+    width?: string;
+    height?: string;
   };
 
 //TODO: cambiar los padding por medidas de ancho width y agregar fluid button
@@ -32,7 +33,7 @@ const Skeleton = ({
   return (
     <div
       className={cn(skeleton({ shape }), className)}
-      style={{ width: width, height: height }}
+      style={{ width, height }}
       {...rest}
     ></div>
   );

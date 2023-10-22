@@ -8,7 +8,7 @@ export type SkeletonCircleProps = HTMLAttributes<HTMLDivElement> & {
 const SkeletonCircle = ({ size }: SkeletonCircleProps) => {
   const sizes = {
     sm: { width: "22px", height: "22px" },
-    md: { width: "26px", height: "26px" },
+    md: { width: "24px", height: "24px" },
     lg: { width: "32px", height: "32px" },
   };
   return <Skeleton shape="circle" {...sizes[size]} />;

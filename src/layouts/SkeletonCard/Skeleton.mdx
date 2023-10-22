@@ -1,67 +1,12 @@
-import { Meta, Unstyled } from "@storybook/blocks";
+import { Meta, Unstyled, Canvas } from "@storybook/blocks";
 import { SkeletonCard, Skeleton } from "@ui/layouts";
 import { CodeToClipboard } from "@ui/forms";
+import * as SkeletonCardStories from "./SkeletonCard.stories.tsx";
 
 <Meta title="Layouts/SkeletonCard/SkeletonsCards" />
 <h2> We can make differents SkeletonCards layouts </h2>
 <br />
-<Unstyled>
-<div className="gwk-flex gwk-flex-col">
-  <div className="gwk-bg-surface-background-dark gwk-w-full gwk-h-full gwk-p-6">
-    <SkeletonCard className=" gwk-max-w-[340px] mobile:gwk-max-w-[1120px]">
-      <div className="gwk-flex gwk-flex-col gwk-gap-1">
-        <SkeletonCard.Title />
-        <SkeletonCard.Subtitle />
-      </div>
-      <Skeleton
-        shape="rectangle"
-        width="100%"
-        height="118px"
-        className=" gwk-my-sm"
-      />
-      <div className="gwk-flex gwk-justify-start gwk-gap-4 gwk-py-2.5 gwk-my-2">
-        <SkeletonCard.TabTitle />
-        <SkeletonCard.Tab />
-        <SkeletonCard.Tab />
-        <SkeletonCard.Tab />
-        <SkeletonCard.Tab />
-      </div>
-      <div className="gwk-flex gwk-gap-5">
-        <SkeletonCard.Circle size="sm" />
-        <SkeletonCard.Circle size="sm" />
-        <SkeletonCard.Circle size="sm" />
-      </div>
-    </SkeletonCard>
-
-  </div>    
-   <CodeToClipboard
-     theme="light"
-     code="<SkeletonCard className='gwk-max-w-[340px] mobile:gwk-max-w-[1120px]'>
-      <div className='gwk-flex gwk-flex-col gwk-gap-1'>
-        <SkeletonCard.Title />
-        <SkeletonCard.Subtitle />
-      </div>
-      <Skeleton
-        shape='rectangle'
-        width='100%'
-        height='118px'
-        className=' gwk-my-sm'
-      />
-      <div className='gwk-flex gwk-justify-start gwk-gap-4 gwk-py-2.5 gwk-my-2'>
-        <SkeletonCard.TabTitle />
-        <SkeletonCard.Tab />
-        <SkeletonCard.Tab />
-        <SkeletonCard.Tab />
-        <SkeletonCard.Tab />
-      </div>
-      <div className='gwk-flex gwk-gap-5'>
-        <SkeletonCard.Circle size='sm' />
-        <SkeletonCard.Circle size='sm' />
-        <SkeletonCard.Circle size='sm' />
-      </div>
-    </SkeletonCard>"/>
-    </div>
-</Unstyled>
+<Canvas of={SkeletonCardStories.Example} />
 <br />
 <br />
 <h2>Skeleton Elements</h2>

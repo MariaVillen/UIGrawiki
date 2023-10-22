@@ -7,14 +7,12 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    backgrounds: { default: "dark" },
   },
   argTypes: {
     shape: {
       control: "radio",
       options: ["circle", "rectangle"],
-    },
-    defaultVariants: {
-      control: false,
     },
     width: {
       control: "text",
@@ -23,7 +21,6 @@ const meta = {
     height: {
       control: "text",
     },
-
     onClick: {
       control: false,
     },
