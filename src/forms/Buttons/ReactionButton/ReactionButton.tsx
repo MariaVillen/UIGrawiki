@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, ComponentType } from "react";
-import { Icon } from "@ui/general";
+import ToggleButton from "../ToggleButton/ToggleButton";
 
 export type ReactionButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   /* Not Selected Icon */
@@ -17,16 +17,14 @@ const ReactionButton = ({
   ...rest
 }: ReactionButtonProps) => {
   return (
-    <button
-      type="button"
+    <ToggleButton
+      isActive={isSelected}
+      iconTrue={iconSelected}
+      iconFalse={icon}
       className=" gwk-flex gwk-justify-center gwk-items-center gwk-bg-transparent gwk-w-20 gwk-h-10 gwk-rounded-rdlg hover:gwk-bg-surface-triarty-hover"
+      iconStyles=" gwk-w-6 gwk-h-6"
       {...rest}
-    >
-      <Icon
-        className="gwk-w-6 gwk-h-6"
-        elementSrc={isSelected ? iconSelected || icon : icon}
-      />
-    </button>
+    />
   );
 };
 

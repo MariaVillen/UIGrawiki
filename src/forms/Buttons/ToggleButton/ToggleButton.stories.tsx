@@ -1,12 +1,6 @@
-import {
-  ArrowDown,
-  ArrowTop,
-  NotificationActiveFill,
-  NotificationOutline,
-} from "@ui/icons";
+import { ArrowDown, ArrowTop } from "@ui/icons";
 import ToggleButton from "./ToggleButton";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Icon } from "@ui/general";
 
 const meta = {
   title: "Buttons/ToggleButton",
@@ -14,15 +8,44 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     backgrounds: { default: "ligth" },
+    docs: {
+      description: {
+        component:
+          "A versatile ToggleButton component for toggling between two states.",
+        // You can add additional details here about usage, props, etc.
+      },
+    },
   },
   argTypes: {
-    onClick: {
-      control: false,
-    },
-    iconTrue: {
-      control: false,
+    isActive: {
+      control: "boolean",
+      description: "Whether the button is in the active state.",
     },
     iconFalse: {
+      control: {
+        type: "select",
+        options: ["ArrowDown", "NotificationOutline"],
+      },
+      description:
+        "Icon to display when the button is in the false (inactive) state.",
+    },
+    iconTrue: {
+      control: {
+        type: "select",
+        options: ["ArrowTop", "NotificationActiveFill"],
+      },
+      description:
+        "Icon to display when the button is in the true (active) state.",
+    },
+    iconStyles: {
+      control: "text",
+      description: "Additional CSS styles for the icon element.",
+    },
+    className: {
+      control: "text",
+      description: "Additional CSS classes for styling purposes.",
+    },
+    onClick: {
       control: false,
     },
   },
@@ -36,29 +59,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isActive: false,
-    iconFalse: <ArrowDown />,
-    iconTrue: <ArrowTop />,
-    className: "gwk-text-triarty-white",
-  },
-};
-
-export const Notification = {
-  args: {
-    ...Default.args,
-    iconFalse: (
-      <Icon
-        elementSrc={NotificationOutline}
-        round
-        className="gwk-bg-surface-primary gwk-h-8 gwk-w-8 gwk-p-1 hover:gwk-bg-surface-primary-hover "
-      />
-    ),
-    iconTrue: (
-      <Icon
-        elementSrc={NotificationActiveFill}
-        round
-        className="gwk-bg-surface-primary gwk-h-8 gwk-w-8 gwk-p-1 hover:gwk-bg-surface-primary-hover "
-      />
-    ),
-    className: "gwk-text-text-white",
+    iconFalse: ArrowDown,
+    iconTrue: ArrowTop,
   },
 };

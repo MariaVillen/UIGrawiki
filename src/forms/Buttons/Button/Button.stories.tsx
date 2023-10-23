@@ -9,7 +9,7 @@ const meta = {
   parameters: {
     layout: "padded",
     componentSubtitle:
-      "The `Button` component is a versatile React button component that can be customized with various variants and sizes.",
+      "The `Button` component is a versatile React button component that can be customized with various variants and sizes. Use a Button.Icon component to add Icons to the button.",
   },
   argTypes: {
     variant: {
@@ -30,6 +30,7 @@ const meta = {
     },
     fluid: {
       description: "The button became full width",
+      if: { arg: "btnType", eq: "button" },
       control: "boolean",
     },
     onClick: {
@@ -55,16 +56,16 @@ export const Default: Story = {
   },
 };
 
-export const IcoOnly: Story = {
+export const IconOnly: Story = {
   args: {
     variant: "primary",
     size: "small",
     btnType: "icon",
     children: (
       <Button.Icon
+        className="gwk-text-text-white"
         icon={PencilFill}
         size={Default?.args?.size}
-        className="gwk-p-1"
       />
     ),
   },

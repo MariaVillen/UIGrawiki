@@ -7,10 +7,32 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A versatile TagButton component for interacting with labeled elements.",
+        // You can add additional details here about usage, props, etc.
+      },
+    },
   },
   argTypes: {
+    children: {
+      control: "text",
+      description: "The content displayed on the button.",
+    },
+    type: {
+      control: {
+        type: "select",
+        options: ["close", "arrow"],
+      },
+      description: "Button type (close or arrow).",
+    },
+    withHash: {
+      control: "boolean",
+      description: "Include a hash symbol with the text in the tag.",
+    },
     onClick: {
-      control: false,
+      control: false, // Hiding the control for onClick as per the original configuration.
     },
   },
 } satisfies Meta<typeof TagButton>;

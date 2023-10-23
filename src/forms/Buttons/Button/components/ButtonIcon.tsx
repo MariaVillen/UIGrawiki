@@ -10,6 +10,7 @@ const buttonIcon = cva("", {
       normal: "gwk-h-6 gwk-w-6",
       medium: "gwk-h-6 gwk-w-6",
       big: "gwk-h-8 gwk-w-8",
+      fluid: "gwk-w-full gwk-h-full",
     },
   },
   defaultVariants: {

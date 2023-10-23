@@ -2,7 +2,7 @@ import { ToggleNotification } from "./ToggleButton";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Buttons/ToggleNotification",
+  title: "Buttons/ToggleButton/ToggleNotification",
   component: ToggleNotification,
   tags: ["autodocs"],
   parameters: {
