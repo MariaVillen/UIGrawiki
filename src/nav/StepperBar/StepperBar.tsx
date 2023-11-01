@@ -4,14 +4,14 @@ import StepperBtnControl from "./components/StepperBtnControl";
 import { ArrowLeft, ArrowRigth } from "@ui/icons";
 import useStepperBar from "./useStepperBar";
 
-interface IStepperBarProps {
+export type TStepperBarProps = {
   pages: number;
   initPage: number;
   pagesToShow: number;
   currentPage: number;
   format: "circle" | "number";
   onChange: (page: number) => void;
-}
+};
 
 const StepperBar = ({
   pages,
@@ -20,7 +20,7 @@ const StepperBar = ({
   currentPage,
   format,
   onChange,
-}: IStepperBarProps) => {
+}: TStepperBarProps) => {
   const {
     handlePageChange,
     isBackActive,

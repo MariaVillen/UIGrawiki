@@ -1,10 +1,11 @@
 import { cn } from "@ui/utils";
+import { InputHTMLAttributes } from "react";
 
-interface ICheckInput extends React.InputHTMLAttributes<HTMLInputElement> {
+export type TCheckInputProps = InputHTMLAttributes<HTMLInputElement> & {
   className?: string;
-}
+};
 
-const CheckInput = ({ className, ...rest }: ICheckInput) => {
+const CheckInput = ({ className, ...rest }: TCheckInputProps) => {
   return (
     <input
       type="checkbox"

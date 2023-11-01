@@ -1337,11 +1337,6 @@ html {
   padding-bottom: 0.5rem;
 }
 
-.gwk-px-\[60px\]{
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
 .gwk-py-\[50px\]{
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1753,12 +1748,12 @@ html {
     max-width: 348px;
   }
 
-  .mobile\:gwk-max-w-\[855px\]{
-    max-width: 855px;
-  }
-
   .mobile\:gwk-max-w-\[440px\]{
     max-width: 440px;
+  }
+
+  .mobile\:gwk-max-w-\[855px\]{
+    max-width: 855px;
   }
 
   .mobile\:gwk-flex-grow{

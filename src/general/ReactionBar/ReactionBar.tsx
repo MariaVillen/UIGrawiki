@@ -5,7 +5,7 @@ import { cn } from "@ui/utils";
 
 export type TReactionBarProps = {
   reactions: TReactions[];
-  className: CSSProperties | string;
+  className?: CSSProperties | string;
 };
 
 const ReactionBar = ({ reactions, className }: TReactionBarProps) => (
