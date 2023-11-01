@@ -1,22 +1,12 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgFacebookColor = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgFacebookColor = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill="#1877F2"
       d="M27.993 4H4.007A.007.007 0 0 0 4 4.007v23.986c0 .004.003.007.007.007h23.986a.007.007 0 0 0 .007-.007V4.007A.007.007 0 0 0 27.993 4Z"

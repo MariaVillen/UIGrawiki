@@ -1,22 +1,12 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgBankOutline = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgBankOutline = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill="currentColor"
       d="M16.331 11.135a1.405 1.405 0 1 0 0-2.81 1.405 1.405 0 0 0 0 2.81Z"

@@ -1,22 +1,12 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgLindedinColor = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgLindedinColor = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill="#0076B2"
       d="M26.23 4H5.77A1.753 1.753 0 0 0 4 5.731v20.542A1.753 1.753 0 0 0 5.77 28h20.46A1.756 1.756 0 0 0 28 26.267V5.725A1.757 1.757 0 0 0 26.23 4Z"

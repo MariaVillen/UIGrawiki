@@ -1,22 +1,12 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgPencil3D = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgPencil3D = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill="url(#Pencil3D_svg__a)"
       d="M23.037 2.506a1.5 1.5 0 0 1 2.121 0l4.363 4.363a1.5 1.5 0 0 1 0 2.121L9.464 29.048l-6.485-6.485L23.038 2.506Z"

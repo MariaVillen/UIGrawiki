@@ -1,22 +1,11 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgBotOutline = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgBotOutline = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill="currentColor"
       d="M18.75 9.25a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM11.25 10.75a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"

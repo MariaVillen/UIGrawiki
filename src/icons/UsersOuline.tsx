@@ -1,22 +1,11 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgUsersOuline = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgUsersOuline = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <g clipPath="url(#UsersOuline_svg__a)">
       <mask id="UsersOuline_svg__b" fill="#fff">
         <path d="M4 22.023a4.006 4.006 0 0 1 4.005-4.005h6.009a4.006 4.006 0 0 1 4.005 4.005v4.006c0 .553-.448 1.001-1.001 1.001H5A1.001 1.001 0 0 1 4 26.029v-4.006Z" />

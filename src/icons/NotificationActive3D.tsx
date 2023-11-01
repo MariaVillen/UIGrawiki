@@ -1,22 +1,12 @@
-import * as React from "react";
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgNotificationActive3D = ({
-  title,
-  titleId,
-  ...props
-}: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgNotificationActive3D = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <circle cx={16} cy={25} r={3} fill="url(#NotificationActive3D_svg__a)" />
     <circle cx={16} cy={25} r={3} fill="url(#NotificationActive3D_svg__b)" />
     <circle cx={16} cy={25} r={3} fill="url(#NotificationActive3D_svg__c)" />
