@@ -21,7 +21,7 @@ const AboutCardProfile = ({
         <span className="gwk-text-2xl gwk-p-2 gwk-font-bold">{userName}</span>
       </div>
       <Button btnType="icon" onClick={onClick} size="small" variant="primary">
-        <Button.Icon className="gwk-p-1" icon={PencilFill} size="normal" />
+        <Button.Icon icon={PencilFill} />
       </Button>
     </div>
   );

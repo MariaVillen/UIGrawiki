@@ -7,13 +7,26 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
-    backgrounds: { default: "light" },
+    docs: {
+      description: {
+        component:
+          "TagField is a component designed for adding tags with auto-suggestions. It provides a user-friendly interface for adding and managing tags, along with error handling. This component supports customization options, including custom CSS classes and suggestions. It uses useTagField hook",
+      },
+    },
   },
   argTypes: {
-    placeholder: {
-      control: "text",
+    className: {
+      description: "Custom CSS classes for styling the TagField component.",
+      control: {
+        type: "text",
+      },
     },
-    onClick: {},
+    placeholder: {
+      description: "Placeholder text for the TagField input field.",
+      control: {
+        type: "text",
+      },
+    },
   },
 } satisfies Meta<typeof TagField>;
 

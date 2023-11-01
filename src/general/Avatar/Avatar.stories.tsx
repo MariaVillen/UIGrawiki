@@ -7,22 +7,43 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
-    backgrounds: { default: "light" },
+    docs: {
+      description: {
+        component:
+          "The Avatar component displays a user avatar. It allows you to set an image, alt text, size, and disable it if needed.",
+      },
+    },
   },
   argTypes: {
-    disable: {
-      control: "boolean",
-    },
-    size: {
-      control: "radio",
-      options: ["sm", "md", "lg"],
+    image: {
+      control: {
+        type: "text",
+      },
+      description: "The image URL for the avatar.",
     },
     alt: {
-      control: "text",
+      control: {
+        type: "text",
+      },
+      description: "The alternative text for the avatar image.",
     },
-    image: {},
-    onClick: {
-      control: false,
+    size: {
+      control: {
+        type: "select",
+        options: ["sm", "md", "lg"],
+      },
+      description: "The size of the avatar.",
+    },
+    disable: {
+      control: {
+        type: "boolean",
+      },
+      description: "Set to true to disable the avatar.",
+    },
+    defaultVariants: {
+      table: {
+        disable: true,
+      },
     },
   },
 } satisfies Meta<typeof Avatar>;

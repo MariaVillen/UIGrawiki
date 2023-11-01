@@ -18,6 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    isLogged: true,
     data: [
       { name: "ThumbsDown", count: 99 },
       { name: "Clapping", count: 3 },

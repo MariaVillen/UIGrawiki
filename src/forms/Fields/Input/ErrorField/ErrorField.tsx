@@ -22,26 +22,3 @@ const ErrorField = ({ className, children }: errorFormProps) => {
 };
 
 export default ErrorField;
-
-/**
- * @use "../../../ui/styles/variables" as *
-
-.errorMsg
-  display: flex
-  align-items: center
-  gap: 7px
-  height: 100%
-  margin: 2px
-  flex: 0 1
-
-  &_icon
-    height: 14px
-    with: 14px
-
-  &_text
-    color: $negative
-    line-height: 17px
-    font-size: 14px
-    font-weight: 400
-
- */

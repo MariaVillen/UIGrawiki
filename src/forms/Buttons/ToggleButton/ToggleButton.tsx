@@ -16,23 +16,19 @@ export type TToggleButtonProps = HTMLAttributes<HTMLButtonElement> & {
 };
 
 const ToggleButton = ({
-  iconTrue: IconTrue = <ArrowTop />,
-  iconFalse: IconFalse = <ArrowDown />,
+  iconTrue: IconTrue = ArrowTop,
+  iconFalse: IconFalse = ArrowDown,
   isActive = false,
   iconStyles,
   className,
   ...rest
 }: TToggleButtonProps) => {
   return (
-    <button
-      type="button"
-      {...rest}
-      className={cn("gwk-w-6 gwk-h-6", className)}
-    >
+    <button type="button" {...rest} className={cn("gwk-w-6", className)}>
       <Icon
         elementSrc={isActive ? IconTrue : IconFalse}
-        fluid
         className={iconStyles}
+        fluid
       />
     </button>
   );

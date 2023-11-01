@@ -6,7 +6,7 @@ const meta = {
   component: Notification,
   tags: ["autodocs"],
   parameters: {
-    layout: "padded",
+    layout: "fullscreen",
   },
   argTypes: {},
 } satisfies Meta<typeof Notification>;
@@ -15,10 +15,32 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Custom: Story = {
   args: {
+    variant: "custom",
     label: "Nuevos cambios a su tema",
     children:
       'El tema que has creado "Moneda de circulación" fue editado por un usuario.',
+  },
+};
+
+export const Primary: Story = {
+  args: {
+    variant: "primary",
+    ...Custom.args,
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+    ...Custom.args,
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    variant: "warning",
+    ...Custom.args,
   },
 };

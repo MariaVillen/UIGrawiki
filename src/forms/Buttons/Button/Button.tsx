@@ -8,32 +8,33 @@ import { Find } from "@ui/icons";
 const button = cva(["gwk-flex", "gwk-justify-center", "gwk-items-center"], {
   variants: {
     variant: {
+      /*TODO: No pilla tailwind el color blanco del boton cuando lo uso en about card*/
       primary: [
-        "gwk-text-text-white",
         "gwk-bg-surface-primary",
+        "gwk-text-text-white",
         "hover:gwk-bg-surface-primary-hover",
         "active:gwk-bg-surface-background-dark",
         "disabled:gwk-opacity-50",
       ],
       secondary: [
-        "gwk-text-text-white",
         "gwk-bg-surface-negative",
+        "gwk-text-text-white",
         "hover:gwk-bg-surface-negative-hover",
         "active:gwk-bg-surface-negative-pressed",
         "disabled:gwk-opacity-50",
       ],
       ghost: [
-        "gwk-text-text-white",
         "gwk-bg-transparent",
+        "gwk-text-text-white",
         "hover:gwk-bg-surface-black-30",
         "active:gwk-bg-surface-black-50",
         "disabled:gwk-opacity-50",
       ],
       default: [
-        "gwk-text-text-black",
         "gwk-border",
         "gwk-border-border-grey",
         "gwk-bg-surface-triarty-white",
+        "gwk-text-text-black",
         "hover:gwk-bg-surface-triarty-hover",
         "active:gwk-bg-surface-triarty-disable",
         "disabled:gwk-opacity-50",

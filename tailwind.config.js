@@ -46,6 +46,10 @@ export default {
         smallBtn: "2.0625rem",
       },
       colors: {
+        gradient: {
+          lila: "rgba(159, 166, 232, 0.20)", // 0.20 para opacidad del 20%
+          skyBlue: "rgba(6, 54, 125, 0.20)", //
+        },
         surface: {
           primary: {
             DEFAULT: "rgba(var(--color-blue-ligth), <alpha-value> )",
@@ -97,7 +101,6 @@ export default {
           disable: "rgba(var(--color-grey), <alpha-value> )",
         },
       },
-
       // gradientColorStopPositions: {
       //   bannersm:
       //     "linear-gradient(9.42deg, var(--color-red-light) 23.19%, var(--color-blue-dark) 85.18%)",

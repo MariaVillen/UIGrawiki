@@ -52,7 +52,7 @@ const Icon = ({
       return (
         <Component
           {...rest}
-          className={cn(icon({ fluid, round, className }))}
+          className={cn(icon({ round, fluid, className }))}
         />
       );
     } else if (isValidElement(elementSrc)) {

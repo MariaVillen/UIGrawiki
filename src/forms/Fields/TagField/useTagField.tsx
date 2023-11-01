@@ -5,12 +5,12 @@ import {
   focusNextElement,
 } from "../../../utils/domUtilities";
 
-import { tagDataPropos } from "@ui/interface/tag";
+import { TtagDataProps } from "@ui/interface/tag";
 
 export type useTagFieldProps = {
-  data: tagDataPropos[];
-  articleTags: tagDataPropos[];
-  onChange: (value: tagDataPropos[]) => void;
+  data: TtagDataProps[];
+  articleTags: TtagDataProps[];
+  onChange: (value: TtagDataProps[]) => void;
   onError: (error: string) => void;
 };
 
@@ -64,7 +64,7 @@ const useTagField = ({
   };
 
   // Function: add a tag to de list of value tag array
-  const AddTag = ({ id, label }: tagDataPropos) => {
+  const AddTag = ({ id, label }: TtagDataProps) => {
     const val = label.toLowerCase();
     if (validateOnlyAlphaNumerics(val)) {
       /* Add tags to the list (limit of tags 5) and reset input value */
@@ -152,7 +152,7 @@ const useTagField = ({
     }
   };
 
-  const applyValue = (el: tagDataPropos) => {
+  const applyValue = (el: TtagDataProps) => {
     setValue(el.label);
     focus();
   };

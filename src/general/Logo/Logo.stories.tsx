@@ -8,19 +8,36 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
+    docs: {
+      description: {
+        component:
+          "The Logo component is used to display a logo. It allows you to choose between different logo types and themes (dark or light).",
+      },
+    },
   },
   decorators: [withRouter],
   argTypes: {
-    theme: {
-      control: "radio",
-      options: ["light", "dark"],
-    },
     type: {
-      control: "radio",
-      options: ["horizontal", "vertical", "menu", "base"],
+      control: {
+        type: "select",
+        options: ["horizontal", "vertical", "menu", "base"],
+      },
+      description:
+        "The type of logo to display (horizontal, vertical, menu, or base).",
     },
-    onClick: {
-      control: false,
+    theme: {
+      control: {
+        type: "select",
+        options: ["dark", "light"],
+      },
+      description: "The theme of the logo (dark or light).",
+    },
+    className: {
+      control: {
+        type: "text",
+      },
+      description:
+        "Additional CSS classes to customize the logo style (optional).",
     },
   },
 } satisfies Meta<typeof Logo>;

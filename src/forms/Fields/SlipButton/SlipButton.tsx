@@ -7,20 +7,21 @@ import {
 } from "react";
 import { ArrowDown, ArrowTop } from "@ui/icons";
 import { ToggleButton } from "@ui/forms";
-import SlipButtonInput from "./SlipButtonInput";
+import SlipButtonInput, { TSlipButtonInputProps } from "./SlipButtonInput";
 import { cn } from "@ui/utils";
 
 /**
  * Component SlipButton
  * Description: A selector with suggestions
  */
-export type SlipButtonProps = InputHTMLAttributes<HTMLInputElement> & {
-  onToggle: (val: boolean) => void;
-  isOpened: boolean;
-  children?: ReactNode;
-  icon?: ComponentType | string;
-  alt?: string;
-};
+export type SlipButtonProps = InputHTMLAttributes<HTMLInputElement> &
+  TSlipButtonInputProps & {
+    onToggle: (val: boolean) => void;
+    isOpened: boolean;
+    children?: ReactNode;
+    icon?: ComponentType | string;
+    alt?: string;
+  };
 const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
   (
     {
@@ -56,11 +57,7 @@ const SlipButton = forwardRef<HTMLInputElement, SlipButtonProps>(
           />
         </div>
 
-        <div
-          className="{
-            isOpen ? classes.dataList_list_open : classes.dataList_list
-          }"
-        >
+        <div className={isOpened ? "gwk-w-flex" : "gwk-hidden"}>
           <ul className={"classes.dataList_containerList"}>{children}</ul>
         </div>
       </div>

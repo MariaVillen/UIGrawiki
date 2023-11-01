@@ -1,8 +1,8 @@
-import { InputHTMLAttributes, Ref, forwardRef } from "react";
+import { CSSProperties, InputHTMLAttributes, Ref, forwardRef } from "react";
 import { cn } from "@ui/utils";
 
 export type baseInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  className?: string;
+  className?: CSSProperties;
   fluid?: boolean;
 };
 

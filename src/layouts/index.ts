@@ -9,3 +9,4 @@ export { default as Skeleton } from "./Skeleton/Skeleton";
 export { default as SkeletonCard } from "./SkeletonCard/SkeletonCard";
 export { default as SkeletonCircle } from "./SkeletonCard/SkeletonCircle";
 export { default as Suggest } from "./Suggest/Suggest";
+export { default as LogoCard } from "./LogoCard/LogoCard";

@@ -1,8 +1,9 @@
-import { HTMLAttributes, Ref, forwardRef, useState } from "react";
+import { Ref, forwardRef, useState } from "react";
 import { InputWithButton, ToggleButton } from "@ui/forms";
 import { PasswordHideOutline, PasswordShowOutline } from "@ui/icons";
+import { TInputWithButtonProps } from "../Input/InputWithButton/InputWithButton";
 
-export type passwordFieldProps = HTMLAttributes<HTMLInputElement>;
+export type passwordFieldProps = TInputWithButtonProps;
 
 const PasswordField = forwardRef<HTMLInputElement, passwordFieldProps>(
   ({ ...rest }: passwordFieldProps, ref: Ref<HTMLInputElement>) => {
@@ -14,12 +15,14 @@ const PasswordField = forwardRef<HTMLInputElement, passwordFieldProps>(
         type={isShown ? "text" : "password"}
         reverse
         placeholder="Contraseña"
+        padding={true}
         ref={ref}
         {...rest}
       >
         <ToggleButton
-          iconTrue={<PasswordShowOutline className="gwk-h-8 gwk-w-8" />}
-          iconFalse={<PasswordHideOutline className="gwk-h-8 gwk-w-8" />}
+          className="gwk-w-10 gwk-h-10"
+          iconTrue={PasswordShowOutline}
+          iconFalse={PasswordHideOutline}
           isActive={isShown}
           onClick={toggleView}
         />

@@ -9,10 +9,15 @@ export type TReactionPanelProps = {
     count: number;
   }[];
   // User reaction to the article
-  userReacted: string;
+  userReacted?: string | undefined;
+  isLogged: boolean;
 };
 
-const ReactionPanel = ({ data, userReacted }: TReactionPanelProps) => {
+const ReactionPanel = ({
+  data,
+  userReacted,
+  isLogged = true,
+}: TReactionPanelProps) => {
   const [userReaction, setUserReaction] = useState(userReacted);
   const [articleReactions, setArticleReactions] = useState(data);
 
@@ -41,7 +46,7 @@ const ReactionPanel = ({ data, userReacted }: TReactionPanelProps) => {
   };
 
   const handleReaction = (reaction: string) => {
-    removeReaction(userReaction);
+    if (userReaction) removeReaction(userReaction);
     if (userReaction === reaction) {
       setUserReaction("");
     } else {
@@ -52,11 +57,14 @@ const ReactionPanel = ({ data, userReacted }: TReactionPanelProps) => {
 
   return (
     <div>
-      <ReactionBar reactions={articleReactions} />
-      <ReactionButtonList
-        onReaction={handleReaction}
-        userReaction={userReaction}
-      />
+      <ReactionBar reactions={articleReactions} className="gwk-ml-4" />
+      {isLogged && userReaction && (
+        <ReactionButtonList
+          className="gwk-border-t "
+          onReaction={handleReaction}
+          userReaction={userReaction}
+        />
+      )}
     </div>
   );
 };

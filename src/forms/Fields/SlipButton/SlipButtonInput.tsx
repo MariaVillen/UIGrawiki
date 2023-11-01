@@ -2,15 +2,15 @@ import { ComponentType, HTMLAttributes, Ref, forwardRef } from "react";
 import { cn } from "../../../utils";
 import { Icon } from "../../../general";
 
-export type SlipButtonInputProps = HTMLAttributes<HTMLInputElement> & {
+export type TSlipButtonInputProps = HTMLAttributes<HTMLInputElement> & {
   icon?: ComponentType | string;
   alt?: string;
   inputStyles?: string;
 };
 
-const SlipButtonInput = forwardRef<HTMLInputElement, SlipButtonInputProps>(
+const SlipButtonInput = forwardRef<HTMLInputElement, TSlipButtonInputProps>(
   (
-    { icon, alt, className, inputStyles, ...rest }: SlipButtonInputProps,
+    { icon, alt, className, inputStyles, ...rest }: TSlipButtonInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
     return (

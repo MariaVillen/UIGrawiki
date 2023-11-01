@@ -1,45 +1,9 @@
 import { DropDownField } from "@ui/forms";
 import type { Meta, StoryObj } from "@storybook/react";
 import { TCategoryItem } from "@ui/interface/categories";
-import {
-  HealthOutline,
-  ToysOutline,
-  BankOutline,
-  GovernmentOutline,
-} from "@ui/icons";
+import { categoryList } from "@ui/interface/categories";
 
 import CategoryLabel from "@ui/general/CategoryLabel/CategoryLabel";
-
-const data: Array<TCategoryItem> = [
-  {
-    id: "1",
-    icon: HealthOutline,
-    text: "Salud",
-    link: "/category/health",
-    tags: ["9", "13"],
-  },
-  {
-    id: "2",
-    icon: ToysOutline,
-    text: "Juguetes",
-    link: "/category/Toys",
-    tags: ["10", "11", "12"],
-  },
-  {
-    id: "3",
-    icon: BankOutline,
-    text: "Bancos",
-    link: "/category/banks",
-    tags: ["1", "3", "4", "5", "6", "7", "8"],
-  },
-  {
-    id: "4",
-    icon: GovernmentOutline,
-    text: "Gobierno",
-    link: "/category/government",
-    tags: ["1", "2", "8"],
-  },
-];
 
 const meta = {
   title: "Fields/DropDownField",
@@ -67,7 +31,7 @@ export const Default: Story = {
 
 export const Objects: Story = {
   args: {
-    options: data,
+    options: categoryList,
     indexChamp: "text",
     iconChamp: "icon",
     placeholder: "Categorias",

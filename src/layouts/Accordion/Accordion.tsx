@@ -2,12 +2,12 @@ import { HTMLAttributes, ReactNode, useState } from "react";
 import AccordionContext from "./AccordionContext";
 import { ToggleButton } from "@ui/forms";
 import AccordionBar from "./AccordionBar";
-import { partiallyApply, cn } from "@ui/utils";
+import { cn, partiallyApply } from "@ui/utils";
+import { ArrowDown, ArrowTop } from "@ui/icons";
 
 export type accordionProps = HTMLAttributes<HTMLElement> & {
   bar: ReactNode;
   rounded?: boolean;
-  headerStyle?: string;
 };
 
 export const Accordion = ({
@@ -22,28 +22,29 @@ export const Accordion = ({
     <>
       <div
         className={cn(
-          "gwk-flex",
+          "gwk-flex gwk-text-text-white gwk-p-4",
           rounded
             ? isOpen
-              ? " gwk-rounded-tl-rdxl gwk-rounded-tr-rdxl gwk-overflow-hidden"
-              : "gwk-rounded-bl-rdxl gwk-rounded-br-rdxl gwk-rounded-tl-rdxl gwk-rounded-tr-rdxl gwk-overflow-hidden"
+              ? "gwk-rounded-tl-rdlg gwk-rounded-tr-rdlg gwk-overflow-hidden"
+              : "gwk-rounded-bl-rdlg gwk-rounded-br-rdlg gwk-rounded-tl-rdlg gwk-rounded-tr-rdlg gwk-overflow-hidden"
             : "",
           className,
         )}
         {...rest}
       >
-        {Bar}
+        <div className="gwk-flex-grow">{Bar}</div>
         <ToggleButton
-          className="gwk-text-1 gwk-text-triarty-white gwk-px-4 gwk-bg-transparent"
           isActive={isOpen}
           onClick={() => setIsOpen(!isOpen)}
+          iconTrue={ArrowTop}
+          iconFalse={ArrowDown}
         />
       </div>
       {isOpen && (
         <div
           className={`${
             rounded &&
-            "gwk-rounded-bl-rdxl gwk-rounded-br-rdxl gwk-overflow-hidden"
+            "gwk-rounded-bl-rdlg gwk-rounded-br-rdlg gwk-overflow-hidden"
           }`}
         >
           {children}
