@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ReactionBar } from "@ui/general";
 import ReactionButtonList from "../../forms/Buttons/ReactionButtonList/ReactionButtonList";
+import { cn } from "@ui/utils";
 
 export type TReactionPanelProps = {
   // data of all the reactions, icons and the number of reactions in article
@@ -11,12 +12,14 @@ export type TReactionPanelProps = {
   // User reaction to the article
   userReacted?: string | undefined;
   isLogged: boolean;
+  className?: string;
 };
 
 const ReactionPanel = ({
   data,
   userReacted,
   isLogged = true,
+  className,
 }: TReactionPanelProps) => {
   const [userReaction, setUserReaction] = useState(userReacted);
   const [articleReactions, setArticleReactions] = useState(data);
@@ -56,8 +59,11 @@ const ReactionPanel = ({
   };
 
   return (
-    <div>
-      <ReactionBar reactions={articleReactions} className="gwk-ml-4" />
+    <div className={className}>
+      <ReactionBar
+        reactions={articleReactions}
+        className={cn("gwk-ml-4", isLogged ? "gwk-p-0" : "gwk-p-1")}
+      />
       {isLogged && userReaction && (
         <ReactionButtonList
           className="gwk-border-t "

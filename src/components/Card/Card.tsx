@@ -5,6 +5,7 @@ import ReactionPanel from "../ReactionPannel/ReactionPannel";
 import CardContainer from "./components/CardContainer";
 
 export type TCardProps = {
+  id: string;
   subtitle: string;
   title: string;
   lastVersion: string;
@@ -16,9 +17,11 @@ export type TCardProps = {
   onDelete: () => void;
   onEdit: () => void;
   isLogged: boolean;
+  isOpen: boolean;
 };
 
 const Card = ({
+  id,
   subtitle,
   title,
   lastVersion,
@@ -30,9 +33,10 @@ const Card = ({
   onDelete,
   onEdit,
   isLogged,
+  isOpen,
 }: TCardProps) => {
   return (
-    <div>
+    <div className="gwk-rounded-rdlg gwk-overflow-hidden gwk-p-0">
       <TitleCard subtitle={subtitle} title={title}>
         {isLogged && <StateIcon icon={PencilFill} round state="secondary" />}
       </TitleCard>
@@ -42,15 +46,21 @@ const Card = ({
           lastVersion={lastVersion}
           onDelete={onDelete}
           onEdit={onEdit}
+          isOpen={isOpen}
           writers={writersQuantity}
         />
       )}
-      <CardContainer tags={tags}>{content}</CardContainer>
-      <ReactionPanel
-        isLogged={isLogged}
-        data={reactions}
-        userReacted={userReaction}
-      />
+      <div className="gwk-bg-surface-triarty-white">
+        <CardContainer tags={tags} isOpen={isOpen} id={id}>
+          {content} isOpen={isOpen}
+        </CardContainer>
+        <ReactionPanel
+          className="mobile:gwk-pt-1"
+          isLogged={isLogged}
+          data={reactions}
+          userReacted={userReaction}
+        />
+      </div>
     </div>
   );
 };

@@ -38,7 +38,6 @@ export const Default: Story = {
 };
 
 export const WithLastVersion: Story = {
-  storyName: "Writers information with Last Version",
   args: {
     ...Default.args,
     children: (

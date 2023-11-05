@@ -568,12 +568,24 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
+.gwk-static{
+  position: static;
+}
+
 .gwk-absolute{
   position: absolute;
 }
 
 .gwk-relative{
   position: relative;
+}
+
+.gwk-bottom-0{
+  bottom: 0px;
+}
+
+.gwk-left-2\/4{
+  left: 50%;
 }
 
 .gwk-left-\[calc\(100\%\+4rem\)\]{
@@ -708,6 +720,10 @@ html {
   height: 2.25rem;
 }
 
+.gwk-h-\[118px\]{
+  height: 118px;
+}
+
 .gwk-h-\[18px\]{
   height: 18px;
 }
@@ -734,6 +750,10 @@ html {
 
 .gwk-h-\[84px\]{
   height: 84px;
+}
+
+.gwk-h-auto{
+  height: auto;
 }
 
 .gwk-h-full{
@@ -1002,6 +1022,10 @@ html {
   overflow: hidden;
 }
 
+.gwk-overflow-y-hidden{
+  overflow-y: hidden;
+}
+
 .gwk-whitespace-nowrap{
   white-space: nowrap;
 }
@@ -1235,8 +1259,14 @@ html {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
+.gwk-from-gradient-cardTransparent{
+  --tw-gradient-from: rgba(0, 18, 45, 0.00) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(0, 18, 45, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .gwk-from-gradient-lila{
-  --tw-gradient-from: rgba(159, 166, 232, 0.20) var(--tw-gradient-from-position);
+  --tw-gradient-from: rgba(159, 166, 232, 0.00) var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(159, 166, 232, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -1245,6 +1275,10 @@ html {
   --tw-gradient-from: rgba(var(--color-blue-dark), 1 ) var(--tw-gradient-from-position);
   --tw-gradient-to: rgba(var(--color-blue-dark), 0 ) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.gwk-to-gradient-blueDark{
+  --tw-gradient-to: rgba(1, 26, 63, 0.80) var(--tw-gradient-to-position);
 }
 
 .gwk-to-gradient-skyBlue{
@@ -1342,6 +1376,15 @@ html {
   padding-bottom: 50px;
 }
 
+.gwk-py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.gwk-pb-4{
+  padding-bottom: 1rem;
+}
+
 .gwk-pb-6{
   padding-bottom: 1.5rem;
 }
@@ -1376,6 +1419,10 @@ html {
 
 .gwk-pt-4{
   padding-top: 1rem;
+}
+
+.gwk-pl-6{
+  padding-left: 1.5rem;
 }
 
 .gwk-text-left{
@@ -1833,6 +1880,10 @@ html {
 
   .mobile\:gwk-pt-9{
     padding-top: 2.25rem;
+  }
+
+  .mobile\:gwk-pt-1{
+    padding-top: 0.25rem;
   }
 
   .mobile\:gwk-text-text-black{

@@ -1,6 +1,6 @@
 import { ToggleButton } from "@ui/forms";
 import { TToggleButtonProps } from "@ui/forms/Buttons/ToggleButton/ToggleButton";
-import { CloseTag, Menu } from "@ui/icons";
+import { CloseTag, MenuHamburguer } from "@ui/icons";
 import { cn } from "@ui/utils";
 import { ButtonHTMLAttributes } from "react";
 
@@ -9,7 +9,7 @@ export type TMenuNavButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 
 const MenuNavButton = ({
   iconTrue = CloseTag,
-  iconFalse = Menu,
+  iconFalse = MenuHamburguer,
   isActive,
   className,
   ...rest

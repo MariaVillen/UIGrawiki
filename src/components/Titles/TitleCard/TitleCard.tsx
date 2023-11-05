@@ -4,6 +4,7 @@ import { HTMLAttributes } from "react";
 export type TTitleCardProps = HTMLAttributes<HTMLDivElement> & {
   title: string;
   subtitle: string;
+  rounded?: boolean;
 };
 
 const TitleCard = ({
@@ -11,11 +12,13 @@ const TitleCard = ({
   subtitle,
   children,
   className,
+  rounded = false,
 }: TTitleCardProps) => {
   return (
     <div
       className={cn(
-        "gwk-py-1 gwk-px-4 gwk-flex gwk-items-center gwk-justify-between gwk-text-text-white gwk-bg-surface-primary-hover",
+        " gwk-py-1 gwk-px-4 gwk-flex gwk-items-center gwk-justify-between gwk-text-text-white gwk-bg-surface-primary-hover",
+        rounded && "gwk-rounded-t-rdlg",
         className,
       )}
     >

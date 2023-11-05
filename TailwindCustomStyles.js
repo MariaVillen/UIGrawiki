@@ -45,8 +45,10 @@ export const configTailwindExtention = {
     },
     colors: {
       gradient: {
-        lila: "rgba(159, 166, 232, 0.20)", // 0.20 para opacidad del 20%
+        lila: "rgba(159, 166, 232, 0.00)", // 0.20 para opacidad del 20%
         skyBlue: "rgba(6, 54, 125, 0.20)", //
+        cardTransparent: "rgba(0, 18, 45, 0.00)",
+        blueDark: "rgba(1, 26, 63, 0.80)",
       },
       surface: {
         primary: {

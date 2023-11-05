@@ -17,3 +17,5 @@ export { default as TagField } from "./Fields/TagField/TagField";
 export { default as useTagField } from "./Fields/TagField/useTagField";
 export { default as PasswordField } from "./Fields/PasswordField/PasswordField";
 export { default as DropDownField } from "./Fields/DropDownField/DropDownField.tsx";
+export { default as FieldGroup } from "./Fields/FieldGroup/FieldGroup.tsx";
+export { default as CheckInput } from "./Fields/Input/CheckInput/CheckInput.tsx";

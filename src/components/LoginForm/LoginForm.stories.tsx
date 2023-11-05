@@ -1,3 +1,4 @@
+import { withRouter } from "storybook-addon-react-router-v6";
 import LoginForm from "./LoginForm";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -8,6 +9,7 @@ const meta = {
   parameters: {
     layout: "padded",
   },
+  decorators: [withRouter],
   argTypes: {},
 } satisfies Meta<typeof LoginForm>;
 
