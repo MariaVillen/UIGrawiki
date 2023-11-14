@@ -1,20 +1,20 @@
-import GwkEditor from "./Editor";
+import RichEditor from "./RichEditor";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Components/Editor",
-  component: GwkEditor,
+  title: "Editors/RichEditor",
+  component: RichEditor,
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
   },
   argTypes: {},
-} satisfies Meta<typeof GwkEditor>;
+} satisfies Meta<typeof RichEditor>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: { value: "", type: "html" },
+  args: {},
 };
