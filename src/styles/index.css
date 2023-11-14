@@ -612,6 +612,11 @@ html {
   margin: 0.5rem;
 }
 
+.gwk-mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .gwk-mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -638,6 +643,10 @@ html {
 
 .gwk-ml-4{
   margin-left: 1rem;
+}
+
+.gwk-mt-1{
+  margin-top: 0.25rem;
 }
 
 .gwk-mt-\[20px\]{
@@ -1371,14 +1380,14 @@ html {
   padding-bottom: 0.5rem;
 }
 
-.gwk-py-\[50px\]{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
 .gwk-py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.gwk-py-\[50px\]{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .gwk-pb-4{
@@ -1419,10 +1428,6 @@ html {
 
 .gwk-pt-4{
   padding-top: 1rem;
-}
-
-.gwk-pl-6{
-  padding-left: 1.5rem;
 }
 
 .gwk-text-left{
@@ -1492,6 +1497,10 @@ html {
 
 .gwk-font-normal{
   font-weight: 400;
+}
+
+.gwk-leading-8{
+  line-height: 2rem;
 }
 
 .gwk-text-red-500{
@@ -1640,6 +1649,10 @@ html {
 
 .hover\:gwk-bg-surface-black-30:hover{
   background-color: rgba(var(--color-black), 0.3 );
+}
+
+.hover\:gwk-bg-surface-black-50:hover{
+  background-color: rgba(var(--color-black), 0.5 );
 }
 
 .hover\:gwk-bg-surface-negative-hover:hover{
@@ -1874,16 +1887,16 @@ html {
     padding-bottom: 1.25rem;
   }
 
+  .mobile\:gwk-pt-1{
+    padding-top: 0.25rem;
+  }
+
   .mobile\:gwk-pt-14{
     padding-top: 3.5rem;
   }
 
   .mobile\:gwk-pt-9{
     padding-top: 2.25rem;
-  }
-
-  .mobile\:gwk-pt-1{
-    padding-top: 0.25rem;
   }
 
   .mobile\:gwk-text-text-black{
