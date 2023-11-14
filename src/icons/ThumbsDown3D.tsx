@@ -1,19 +1,11 @@
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgThumbsDown3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgThumbsDown3D = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <g filter="url(#ThumbsDown3D_svg__a)">
       <path
         fill="url(#ThumbsDown3D_svg__b)"
@@ -39,7 +31,10 @@ const SvgThumbsDown3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> &
       />
     </g>
     <g filter="url(#ThumbsDown3D_svg__g)">
-      <path fill="#F8A047" d="M22.08 18.802c-3.643-2.24-7.3-.667-8.247 0l-.84-1.08c5.38-2.563 8.247-.361 9.088 1.08Z" />
+      <path
+        fill="#F8A047"
+        d="M22.08 18.802c-3.643-2.24-7.3-.667-8.247 0l-.84-1.08c5.38-2.563 8.247-.361 9.088 1.08Z"
+      />
     </g>
     <rect
       width={5.784}
@@ -467,7 +462,11 @@ const SvgThumbsDown3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> &
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} />
         <feGaussianBlur stdDeviation={0.5} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -485,7 +484,10 @@ const SvgThumbsDown3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> &
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9818" stdDeviation={1} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9818"
+          stdDeviation={1}
+        />
       </filter>
       <filter
         id="ThumbsDown3D_svg__g"
@@ -498,7 +500,10 @@ const SvgThumbsDown3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> &
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9818" stdDeviation={0.75} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9818"
+          stdDeviation={0.75}
+        />
       </filter>
     </defs>
   </svg>

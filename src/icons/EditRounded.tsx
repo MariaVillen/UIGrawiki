@@ -1,19 +1,12 @@
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgEditRounded = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgEditRounded = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
     fill="none"
     viewBox="0 0 26 26"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <circle cx={13} cy={13} r={13} fill="currentColor" />
     <path
       fill="#fff"

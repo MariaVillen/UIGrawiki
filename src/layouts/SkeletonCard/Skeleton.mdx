@@ -1,0 +1,63 @@
+import { Meta, Unstyled, Canvas } from "@storybook/blocks";
+import { SkeletonCard, Skeleton } from "@ui/layouts";
+import { CodeToClipboard } from "@ui/forms";
+import * as SkeletonCardStories from "./SkeletonCard.stories.tsx";
+
+<Meta title="Layouts/SkeletonCard/SkeletonsCards" />
+<h2> We can make differents SkeletonCards layouts </h2>
+<br />
+<Canvas of={SkeletonCardStories.Example} />
+<br />
+<br />
+<h2>Skeleton Elements</h2>
+You can use differents pre-built elements:
+<br />
+<Unstyled>
+<div className="gwk-flex gwk-gap-4 gwk-p-4 gwk-text-text-white gwk-flex-col gwk-bg-surface-background-dark">
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Title</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Title />
+  </div>
+</div>
+
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Subtitle</p>
+  <div className=" gwk-flex gwk-items-center">
+    <SkeletonCard.Subtitle />
+  </div>
+</div>
+
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Bar</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Bar />
+  </div>
+</div>
+
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.BarCategory</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.BarCategory />
+  </div>
+</div>
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.TabTitle</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.TabTitle />
+  </div>
+</div>
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Tab</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Tab />
+  </div>
+</div>
+<div className=" gwk-flex gwk-align-middle gwk-gap-4">
+  <p>SkeletonCard.Circle:<br/> with size propertie: sm | md | lg</p>
+  <div className=" gwk-p-4 gwk-flex gwk-items-center">
+    <SkeletonCard.Circle size="md" />
+  </div>
+</div>
+</div>
+</Unstyled>

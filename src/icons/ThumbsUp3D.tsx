@@ -1,19 +1,11 @@
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgThumbsUp3D = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <g filter="url(#ThumbsUp3D_svg__a)">
       <path
         fill="url(#ThumbsUp3D_svg__b)"
@@ -43,13 +35,48 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       />
     </g>
     <g filter="url(#ThumbsUp3D_svg__i)" transform="rotate(90 26.04 10.86)">
-      <rect width={5.82} height={9.043} x={26.04} y={10.861} fill="url(#ThumbsUp3D_svg__j)" rx={2.91} />
-      <rect width={5.82} height={9.043} x={26.04} y={10.861} fill="url(#ThumbsUp3D_svg__k)" rx={2.91} />
+      <rect
+        width={5.82}
+        height={9.043}
+        x={26.04}
+        y={10.861}
+        fill="url(#ThumbsUp3D_svg__j)"
+        rx={2.91}
+      />
+      <rect
+        width={5.82}
+        height={9.043}
+        x={26.04}
+        y={10.861}
+        fill="url(#ThumbsUp3D_svg__k)"
+        rx={2.91}
+      />
     </g>
     <g filter="url(#ThumbsUp3D_svg__l)" transform="rotate(90 25.74 24.145)">
-      <rect width={5.664} height={8.861} x={25.74} y={24.145} fill="url(#ThumbsUp3D_svg__m)" rx={2.832} />
-      <rect width={5.664} height={8.861} x={25.74} y={24.145} fill="url(#ThumbsUp3D_svg__n)" rx={2.832} />
-      <rect width={5.664} height={8.861} x={25.74} y={24.145} fill="url(#ThumbsUp3D_svg__o)" rx={2.832} />
+      <rect
+        width={5.664}
+        height={8.861}
+        x={25.74}
+        y={24.145}
+        fill="url(#ThumbsUp3D_svg__m)"
+        rx={2.832}
+      />
+      <rect
+        width={5.664}
+        height={8.861}
+        x={25.74}
+        y={24.145}
+        fill="url(#ThumbsUp3D_svg__n)"
+        rx={2.832}
+      />
+      <rect
+        width={5.664}
+        height={8.861}
+        x={25.74}
+        y={24.145}
+        fill="url(#ThumbsUp3D_svg__o)"
+        rx={2.832}
+      />
     </g>
     <rect
       width={5.664}
@@ -70,7 +97,14 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       transform="rotate(90 25.74 24.145)"
     />
     <g filter="url(#ThumbsUp3D_svg__r)">
-      <rect width={5.37} height={1.476} x={19.705} y={25.829} fill="url(#ThumbsUp3D_svg__s)" rx={0.738} />
+      <rect
+        width={5.37}
+        height={1.476}
+        x={19.705}
+        y={25.829}
+        fill="url(#ThumbsUp3D_svg__s)"
+        rx={0.738}
+      />
     </g>
     <rect
       width={5.964}
@@ -83,16 +117,58 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       transform="rotate(90 27.039 19.865)"
     />
     <g filter="url(#ThumbsUp3D_svg__t)" transform="rotate(90 27.039 19.865)">
-      <rect width={5.964} height={10.159} x={27.039} y={19.865} fill="url(#ThumbsUp3D_svg__u)" rx={2.91} />
-      <rect width={5.964} height={10.159} x={27.039} y={19.865} fill="url(#ThumbsUp3D_svg__v)" rx={2.91} />
-      <rect width={5.964} height={10.159} x={27.039} y={19.865} fill="url(#ThumbsUp3D_svg__w)" rx={2.91} />
+      <rect
+        width={5.964}
+        height={10.159}
+        x={27.039}
+        y={19.865}
+        fill="url(#ThumbsUp3D_svg__u)"
+        rx={2.91}
+      />
+      <rect
+        width={5.964}
+        height={10.159}
+        x={27.039}
+        y={19.865}
+        fill="url(#ThumbsUp3D_svg__v)"
+        rx={2.91}
+      />
+      <rect
+        width={5.964}
+        height={10.159}
+        x={27.039}
+        y={19.865}
+        fill="url(#ThumbsUp3D_svg__w)"
+        rx={2.91}
+      />
     </g>
     <g filter="url(#ThumbsUp3D_svg__x)">
-      <rect width={6.725} height={1.476} x={19.315} y={21.959} fill="url(#ThumbsUp3D_svg__y)" rx={0.738} />
+      <rect
+        width={6.725}
+        height={1.476}
+        x={19.315}
+        y={21.959}
+        fill="url(#ThumbsUp3D_svg__y)"
+        rx={0.738}
+      />
     </g>
     <g filter="url(#ThumbsUp3D_svg__z)" transform="rotate(90 26.993 15.415)">
-      <rect width={5.833} height={10.114} x={26.993} y={15.415} fill="url(#ThumbsUp3D_svg__A)" rx={2.91} />
-      <rect width={5.833} height={10.114} x={26.993} y={15.415} fill="url(#ThumbsUp3D_svg__B)" rx={2.91} />
+      <rect
+        width={5.833}
+        height={10.114}
+        x={26.993}
+        y={15.415}
+        fill="url(#ThumbsUp3D_svg__A)"
+        rx={2.91}
+      />
+      <rect
+        width={5.833}
+        height={10.114}
+        x={26.993}
+        y={15.415}
+        fill="url(#ThumbsUp3D_svg__B)"
+        rx={2.91}
+      />
     </g>
     <path
       fill="url(#ThumbsUp3D_svg__C)"
@@ -103,13 +179,34 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       d="M15.64 2a3.289 3.289 0 0 0-3.289 3.289V7.84l-.002-.001c0 .563-.078 1.776-.48 2.524-.464.862-1.344 1.39-2.064 1.82-.219.132-.423.254-.596.375.994.797 3.032 2.389 3.082 2.351.05-.037 2.343-1.255 3.484-1.859l-.049-.69a3.289 3.289 0 0 0 3.202-3.288V5.289A3.289 3.289 0 0 0 15.64 2Z"
     />
     <g filter="url(#ThumbsUp3D_svg__E)">
-      <rect width={6.136} height={2.516} x={18.94} y={11.655} fill="url(#ThumbsUp3D_svg__F)" rx={1.258} />
+      <rect
+        width={6.136}
+        height={2.516}
+        x={18.94}
+        y={11.655}
+        fill="url(#ThumbsUp3D_svg__F)"
+        rx={1.258}
+      />
     </g>
     <g filter="url(#ThumbsUp3D_svg__G)">
-      <rect width={7.172} height={2.516} x={18.868} y={16.13} fill="url(#ThumbsUp3D_svg__H)" rx={1.258} />
+      <rect
+        width={7.172}
+        height={2.516}
+        x={18.868}
+        y={16.13}
+        fill="url(#ThumbsUp3D_svg__H)"
+        rx={1.258}
+      />
     </g>
     <g filter="url(#ThumbsUp3D_svg__I)">
-      <rect width={2.865} height={7.997} x={15.234} y={3.243} fill="url(#ThumbsUp3D_svg__J)" rx={1.433} />
+      <rect
+        width={2.865}
+        height={7.997}
+        x={15.234}
+        y={3.243}
+        fill="url(#ThumbsUp3D_svg__J)"
+        rx={1.433}
+      />
     </g>
     <defs>
       <linearGradient
@@ -398,7 +495,11 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} />
         <feGaussianBlur stdDeviation={1} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -416,7 +517,10 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={1} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9812"
+          stdDeviation={1}
+        />
       </filter>
       <filter
         id="ThumbsUp3D_svg__i"
@@ -429,7 +533,11 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} />
         <feGaussianBlur stdDeviation={0.75} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -447,7 +555,11 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} dy={-0.5} />
         <feGaussianBlur stdDeviation={0.75} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -465,7 +577,10 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9812"
+          stdDeviation={0.625}
+        />
       </filter>
       <filter
         id="ThumbsUp3D_svg__t"
@@ -478,7 +593,11 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} dy={-0.5} />
         <feGaussianBlur stdDeviation={0.75} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -496,7 +615,10 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9812"
+          stdDeviation={0.625}
+        />
       </filter>
       <filter
         id="ThumbsUp3D_svg__z"
@@ -509,7 +631,11 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} dy={-0.5} />
         <feGaussianBlur stdDeviation={0.75} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -527,7 +653,10 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9812"
+          stdDeviation={0.625}
+        />
       </filter>
       <filter
         id="ThumbsUp3D_svg__G"
@@ -540,7 +669,10 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9812"
+          stdDeviation={0.625}
+        />
       </filter>
       <filter
         id="ThumbsUp3D_svg__I"
@@ -553,7 +685,10 @@ const SvgThumbsUp3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9812" stdDeviation={0.625} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9812"
+          stdDeviation={0.625}
+        />
       </filter>
     </defs>
   </svg>

@@ -1,0 +1,84 @@
+import { Meta, IconGallery, Unstyled, IconItem } from "@storybook/blocks";
+import * as Icons from "@ui/icons";
+import { CodeToClipboard } from "@ui/forms";
+import { CloseRoundedFill as Close } from "@ui/icons";
+import MyIcon from "../general/Icon/Icon.tsx";
+
+<Meta title="Foundation/icons" />
+<Unstyled>
+<h3 className="gwk-text-4xl gwk-font-bold"> Icons </h3>
+<p className="gwk-p-2">
+  We can use the Icons using the different icons components, or we can use the Icon Component.<br/>
+  Icon Component allows you to use a react component or an image as an icon.
+</p>
+
+<p className="gwk-p-2">Example:</p>
+
+<div className="gwk-p-6">
+  <MyIcon
+    alt="Close this modal"
+    elementSrc={Close}
+    className="gwk-text-text-black gwk-h-8 gwk-w-8 gwk-rounded-full"
+  />
+</div>
+<CodeToClipboard
+  showButton={false}
+  theme="light"
+  className="gwk-text-[10px] gwk-w-[100%] gwk-flex gwk-justify-between gwk-items-center"
+  code='<Icon alt="Close this modal" elementSrc={CloseRoundedFill} className="gwk-text-white gwk-h-8 gwk-w-8 gwk-rounded-full gwk-bg-black"/>'
+/>
+<p className="gwk-p-2">
+  You can also use un image instead. You need to use the url or path to the
+  image:
+</p>
+<div className="gwk-p-6">
+  <MyIcon
+    alt="GrawikiLogo"
+    elementSrc="/vite.svg"
+    className="gwk-h-8 gwk-w-8"
+    showButton={false}
+    theme="light"
+  />
+</div>
+<CodeToClipboard
+  showButton={false}
+  theme="light"
+  code={`<Icon alt="GrawikiLogo" elementSrc="../../public/vite.svg" className="gwk-h-8 gwk-w-8" />`}
+  className="gwk-text-[10px] gwk-w-[100%] gwk-flex gwk-justify-between gwk-items-center"
+/>
+
+<h3 className="gwk-text-4xl gwk-font-bold gwk-pb-6 gwk-pt-12">
+  {" "}
+  Icon Gallery{" "}
+</h3>
+<p className="gwk-p-2"> Icon SVG Collection </p>
+
+<IconGallery>
+  <div className="gwk-flex gwk-flex-wrap gwk-gap-4 ">
+    {Object.entries(Icons).map(([name, Icon]) => {
+      return (
+
+        <div
+          className=" gwk-flex gwk-flex-col gwk-w-[32%] gwk-justify-center gwk-items-center "
+          key={name}
+        >
+          <div
+            name={name}
+            className="gwk-flex gwk-flex-col gwk-m-2 hover:gwk-shadow-md "
+          >
+            <Icon width="3em" height="3em" />
+          </div>
+          <CodeToClipboard
+            showButton={false}
+            codeStyles={{fontSize:"14px", whiteSpace: "nowrap" }}
+            theme="light"
+            code={`<${name} />`}
+            copyStyles= "gwk-bg-slate-300 gwk-text-text-black hover:gwk-bg-slate-500 hover:gwk-text-text-white"
+          />
+        </div>
+      );
+    })}
+
+  </div>
+</IconGallery>
+</Unstyled>

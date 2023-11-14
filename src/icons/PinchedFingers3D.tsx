@@ -1,19 +1,12 @@
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgPinchedFingers3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgPinchedFingers3D = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path
       fill="#FFE643"
       d="M23.24 2.4c-.42-.25-.9-.4-1.42-.4a2.659 2.659 0 0 0-1.08 5.09c.35.3.89.79 1.41 1.47 1.09 1.4 1.64 2.93 1.64 4.52 0 2.31-1.18 4.21-2.18 5.39-1.43 1.7-3.12 2.7-4.12 3.04a2.625 2.625 0 0 0 .84 5.11c.28 0 .56-.04.84-.14 2.24-.75 4.66-2.49 6.47-4.64 1.56-1.85 3.41-4.87 3.41-8.77-.02-6.77-5.58-10.52-5.81-10.67Z"
@@ -209,7 +202,11 @@ const SvgPinchedFingers3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElemen
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
         <feOffset dx={0.5} dy={-1} />
         <feGaussianBlur stdDeviation={1} />
         <feComposite in2="hardAlpha" k2={-1} k3={1} operator="arithmetic" />
@@ -227,7 +224,10 @@ const SvgPinchedFingers3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElemen
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9808" stdDeviation={0.75} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9808"
+          stdDeviation={0.75}
+        />
       </filter>
       <linearGradient
         id="PinchedFingers3D_svg__n"

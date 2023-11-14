@@ -1,19 +1,12 @@
 import type { SVGProps } from "react";
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+
+const SvgClapping3D = ({ ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
     fill="none"
     viewBox="0 0 32 32"
-    aria-labelledby={titleId}
     {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <g clipPath="url(#Clapping3D_svg__a)">
       <path
         fill="#FF9D25"
@@ -159,7 +152,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
         fill="url(#Clapping3D_svg__D)"
         d="M12.374 13.986a3.3 3.3 0 0 0-.131-.05c-.037-.07-.151-.288-.477-.893a1.57 1.57 0 0 1-.102-.234c.333-.004.733.107 1.087.25a4.2 4.2 0 0 1 1.175.708c.202.18.415.472.615.777.208.318.431.697.653 1.084.135.235.269.472.399.702.306.544.592 1.051.827 1.414a.5.5 0 0 1-.84.543c-.252-.39-.563-.942-.877-1.5l-.376-.662c-.22-.383-.432-.741-.623-1.033-.2-.305-.35-.495-.442-.578a3.21 3.21 0 0 0-.888-.528Z"
       />
-      <path fill="url(#Clapping3D_svg__E)" d="M13.889 9.99a1.86 1.86 0 0 0-.397-.035c.184-.014.318.009.397.034Z" />
+      <path
+        fill="url(#Clapping3D_svg__E)"
+        d="M13.889 9.99a1.86 1.86 0 0 0-.397-.035c.184-.014.318.009.397.034Z"
+      />
       <path
         fill="url(#Clapping3D_svg__F)"
         d="M15.176 10.646A2.726 2.726 0 0 0 13.944 10a1.788 1.788 0 0 1-.435-1.046c.598-.006 1.496.203 2.331.945.206.183.467.549.725.94.272.414.583.922.894 1.44.232.387.462.778.677 1.143.37.627.695 1.18.909 1.51a.5.5 0 1 1-.84.543c-.224-.347-.57-.933-.95-1.577-.212-.361-.435-.74-.654-1.105a40.443 40.443 0 0 0-.871-1.403c-.274-.416-.465-.664-.554-.744Z"
@@ -455,39 +451,102 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
         <stop offset={0.345} stopColor="#E39C2A" stopOpacity={0.649} />
         <stop offset={0.735} stopColor="#FFC03C" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__u" x1={2.891} x2={3.443} y1={4.547} y2={5.065} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__u"
+        x1={2.891}
+        x2={3.443}
+        y1={4.547}
+        y2={5.065}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#2065A3" />
         <stop offset={1} stopColor="#2067AE" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__v" x1={3.602} x2={3.91} y1={6.586} y2={5.872} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__v"
+        x1={3.602}
+        x2={3.91}
+        y1={6.586}
+        y2={5.872}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset={0.605} stopColor="#1C60FF" />
         <stop offset={1} stopColor="#1963FF" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__w" x1={4.766} x2={4.362} y1={4.578} y2={4.791} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__w"
+        x1={4.766}
+        x2={4.362}
+        y1={4.578}
+        y2={4.791}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#2093F1" />
         <stop offset={1} stopColor="#2294F3" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__x" x1={6.672} x2={6.934} y1={1.891} y2={2.755} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__x"
+        x1={6.672}
+        x2={6.934}
+        y1={1.891}
+        y2={2.755}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#2065A3" />
         <stop offset={1} stopColor="#2067AE" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__y" x1={6.375} x2={6.919} y1={4.586} y2={4.188} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__y"
+        x1={6.375}
+        x2={6.919}
+        y1={4.586}
+        y2={4.188}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset={0.605} stopColor="#1C60FF" />
         <stop offset={1} stopColor="#1963FF" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__z" x1={7.938} x2={7.663} y1={3.047} y2={3.033} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__z"
+        x1={7.938}
+        x2={7.663}
+        y1={3.047}
+        y2={3.033}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#2093F1" />
         <stop offset={1} stopColor="#2294F3" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__A" x1={1} x2={1.672} y1={8.181} y2={8.344} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__A"
+        x1={1}
+        x2={1.672}
+        y1={8.181}
+        y2={8.344}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#2065A3" />
         <stop offset={1} stopColor="#2067AE" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__B" x1={2.5} x2={2.438} y1={9.734} y2={8.938} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__B"
+        x1={2.5}
+        x2={2.438}
+        y1={9.734}
+        y2={8.938}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset={0.605} stopColor="#1C60FF" />
         <stop offset={1} stopColor="#1963FF" stopOpacity={0} />
       </linearGradient>
-      <linearGradient id="Clapping3D_svg__C" x1={2.91} x2={2.621} y1={7.496} y2={7.918} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id="Clapping3D_svg__C"
+        x1={2.91}
+        x2={2.621}
+        y1={7.496}
+        y2={7.918}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#2093F1" />
         <stop offset={1} stopColor="#2294F3" stopOpacity={0} />
       </linearGradient>
@@ -537,7 +596,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={1.25} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={1.25}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__s"
@@ -550,7 +612,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.5}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__H"
@@ -563,7 +628,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.5}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__I"
@@ -576,7 +644,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.5}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__J"
@@ -589,7 +660,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.25} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.25}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__L"
@@ -602,7 +676,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.25} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.25}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__N"
@@ -615,7 +692,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.5}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__O"
@@ -628,7 +708,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.5}
+        />
       </filter>
       <filter
         id="Clapping3D_svg__P"
@@ -641,7 +724,10 @@ const SvgClapping3D = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
       >
         <feFlood floodOpacity={0} result="BackgroundImageFix" />
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur result="effect1_foregroundBlur_45_9816" stdDeviation={0.5} />
+        <feGaussianBlur
+          result="effect1_foregroundBlur_45_9816"
+          stdDeviation={0.5}
+        />
       </filter>
       <clipPath id="Clapping3D_svg__a">
         <path fill="#fff" d="M0 0h32v32H0z" />

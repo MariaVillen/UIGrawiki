@@ -1,15 +1,16 @@
 import { HTMLAttributes, ReactNode, useState } from "react";
 import AccordionContext from "./AccordionContext";
-import ToggleButton from "../../forms/ToggleButton/ToggleButton";
+import { ToggleButton } from "@ui/forms";
 import AccordionBar from "./AccordionBar";
-import { partiallyApply } from "../../utils/partiallyApply/partiallyApply";
+import { cn, partiallyApply } from "@ui/utils";
+import { ArrowDown, ArrowTop } from "@ui/icons";
 
 export type accordionProps = HTMLAttributes<HTMLElement> & {
   bar: ReactNode;
   rounded?: boolean;
 };
 
-const Accordion = ({
+export const Accordion = ({
   bar: Bar,
   rounded,
   children,
@@ -20,24 +21,30 @@ const Accordion = ({
   return (
     <>
       <div
-        className={`gwk-flex ${
-          rounded && isOpen
-            ? "gwk-rounded-tl-l gwk-rounded-tr-l gwk-overflow-hidden"
-            : "gwk-rounded-bl-l gwk-rounded-br-l gwk-rounded-tl-l gwk-rounded-tr-l gwk-overflow-hidden"
-        } ${className ? className : null}`}
+        className={cn(
+          "gwk-flex gwk-text-text-white gwk-p-4",
+          rounded
+            ? isOpen
+              ? "gwk-rounded-tl-rdlg gwk-rounded-tr-rdlg gwk-overflow-hidden"
+              : "gwk-rounded-bl-rdlg gwk-rounded-br-rdlg gwk-rounded-tl-rdlg gwk-rounded-tr-rdlg gwk-overflow-hidden"
+            : "",
+          className,
+        )}
         {...rest}
       >
-        {Bar}
+        <div className="gwk-flex-grow">{Bar}</div>
         <ToggleButton
-          className="gwk-text-1 gwk-text-triarty-white gwk-px-4 gwk-bg-transparent"
-          isOpen={isOpen}
+          isActive={isOpen}
           onClick={() => setIsOpen(!isOpen)}
+          iconTrue={ArrowTop}
+          iconFalse={ArrowDown}
         />
       </div>
       {isOpen && (
         <div
           className={`${
-            rounded && "gwk-rounded-bl-l gwk-rounded-br-l gwk-overflow-hidden"
+            rounded &&
+            "gwk-rounded-bl-rdlg gwk-rounded-br-rdlg gwk-overflow-hidden"
           }`}
         >
           {children}
@@ -53,13 +60,10 @@ Accordion.Context = AccordionContext;
 Accordion.Bar = AccordionBar;
 
 export const BlueAccordion = partiallyApply(Accordion, {
-  rounded: true,
   className:
-    "gwk-mh-[3.125rem] gwk-w-full gwk-text-triarty-white gwk-bg-primary-hover gwk-p-[0.8125rem] gwk-text-lg",
+    "gwk-items-center gwk-justify-between gwk-bg-surface-primary-hover gwk-text-text-white gwk-font-bold gwk-text-lg gwk-w-full gwk-h-12",
 });
-
 export const RedAccordion = partiallyApply(Accordion, {
-  rounded: true,
   className:
-    "gwk-mh-[3.125rem] gwk-w-full gwk-text-triarty-white gwk-bg-negative-hover gwk-p-[0.8125rem] gwk-text-lg",
+    "gwk-items-center gwk-justify-between gwk-bg-surface-negative-hover gwk-text-text-white gwk-font-bold gwk-text-lg gwk-w-full gwk-h-12",
 });
